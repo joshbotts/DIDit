@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D45394023652E4B008F0283 /* Date Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Extension.swift */; };
+		8D09C96B236627B700F88AC7 /* DataControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45394523653A4F008F0283 /* DataControllers.swift */; };
+		8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Helper Extension.swift */; };
 		8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */; };
 		8D70066F236218900069850B /* PrincipalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70066E236218900069850B /* PrincipalAddView.swift */; };
 		8D700671236218B30069850B /* ChiefAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D700670236218B30069850B /* ChiefAddView.swift */; };
@@ -29,6 +30,11 @@
 		8D70069823622D940069850B /* PersonEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70068B23622D940069850B /* PersonEditView.swift */; };
 		8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D82C56423637E1600962BFF /* InstanceAddView.swift */; };
 		8D991AF02363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */; };
+		8DBE75B6236750E9008C3101 /* WorkflowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B5236750E9008C3101 /* WorkflowListView.swift */; };
+		8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */; };
+		8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */; };
+		8DBE75BC23675417008C3101 /* PersonWithoutSexViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */; };
+		8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */; };
 		8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A12360D94A00400C3F /* AppDelegate.swift */; };
 		8DD766A42360D94A00400C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A32360D94A00400C3F /* SceneDelegate.swift */; };
 		8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A52360D94A00400C3F /* POCOM.xcdatamodeld */; };
@@ -50,7 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D45393F23652E4B008F0283 /* Date Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Extension.swift"; sourceTree = "<group>"; };
+		8D45393F23652E4B008F0283 /* Date Helper Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Helper Extension.swift"; sourceTree = "<group>"; };
 		8D45394523653A4F008F0283 /* DataControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllers.swift; sourceTree = "<group>"; };
 		8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDataView.swift; sourceTree = "<group>"; };
 		8D5ED6CF23632A6C00F9BE28 /* DIDit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DIDit.entitlements; sourceTree = "<group>"; };
@@ -74,6 +80,11 @@
 		8D70068B23622D940069850B /* PersonEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
 		8D82C56423637E1600962BFF /* InstanceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceAddView.swift; sourceTree = "<group>"; };
 		8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonForNewInstanceViewList.swift; sourceTree = "<group>"; };
+		8DBE75B5236750E9008C3101 /* WorkflowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowListView.swift; sourceTree = "<group>"; };
+		8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonWithoutBirthYearViewList.swift; path = "DIDit/Views/Workflow Views/PersonWithoutBirthYearViewList.swift"; sourceTree = SOURCE_ROOT; };
+		8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonWithoutDeathYearViewList.swift; sourceTree = "<group>"; };
+		8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonWithoutSexViewList.swift; sourceTree = "<group>"; };
+		8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryWithoutChiefViewList.swift; path = "DIDit/Views/Workflow Views/CountryWithoutChiefViewList.swift"; sourceTree = SOURCE_ROOT; };
 		8DD7669E2360D94A00400C3F /* DIDit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIDit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD766A12360D94A00400C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD766A32360D94A00400C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,14 +142,14 @@
 			path = Enumerations;
 			sourceTree = "<group>";
 		};
-		8D45394323653A22008F0283 /* Model Object Classess */ = {
+		8D45394323653A22008F0283 /* Model Object Classes */ = {
 			isa = PBXGroup;
 			children = (
 				8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */,
 				8DD766BB2360D97800400C3F /* PocomInstance.swift */,
 				8DD766BA2360D97800400C3F /* PocomPerson.swift */,
 			);
-			path = "Model Object Classess";
+			path = "Model Object Classes";
 			sourceTree = "<group>";
 		};
 		8D45394423653A45008F0283 /* Controllers */ = {
@@ -153,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD766A82360D94A00400C3F /* ContentView.swift */,
-				8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */,
+				8DBE75B4236750BB008C3101 /* Workflow Views */,
 				8D70068623622D940069850B /* People Views */,
 				8D70068123622D940069850B /* Principals Views */,
 				8D70067C23622D940069850B /* Chiefs Views */,
@@ -165,11 +176,11 @@
 		8D45394723653A89008F0283 /* Adding Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D700670236218B30069850B /* ChiefAddView.swift */,
-				8D82C56423637E1600962BFF /* InstanceAddView.swift */,
-				8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */,
 				8DD766CE2360DD1700400C3F /* PersonAddView.swift */,
+				8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */,
+				8D82C56423637E1600962BFF /* InstanceAddView.swift */,
 				8D70066E236218900069850B /* PrincipalAddView.swift */,
+				8D700670236218B30069850B /* ChiefAddView.swift */,
 			);
 			path = "Adding Views";
 			sourceTree = "<group>";
@@ -178,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				8D70067D23622D940069850B /* ChiefViewList.swift */,
+				8D70068023622D940069850B /* ChiefViewRow.swift */,
 				8D70067E23622D940069850B /* ChiefRoleViewList.swift */,
 				8D70067F23622D940069850B /* ChiefRoleViewRow.swift */,
-				8D70068023622D940069850B /* ChiefViewRow.swift */,
 			);
 			path = "Chiefs Views";
 			sourceTree = "<group>";
@@ -188,10 +199,10 @@
 		8D70068123622D940069850B /* Principals Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D70068223622D940069850B /* PrincipalRoleViewRow.swift */,
+				8D70068523622D940069850B /* PrincipalViewList.swift */,
 				8D70068323622D940069850B /* PrincipalViewRow.swift */,
 				8D70068423622D940069850B /* PrincipalRoleViewList.swift */,
-				8D70068523622D940069850B /* PrincipalViewList.swift */,
+				8D70068223622D940069850B /* PrincipalRoleViewRow.swift */,
 			);
 			path = "Principals Views";
 			sourceTree = "<group>";
@@ -199,13 +210,26 @@
 		8D70068623622D940069850B /* People Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D70068723622D940069850B /* PersonViewDetail.swift */,
-				8D70068823622D940069850B /* PersonViewRow.swift */,
-				8D70068923622D940069850B /* PocomInstanceForPersonDetailViewRow.swift */,
 				8D70068A23622D940069850B /* PersonViewList.swift */,
+				8D70068823622D940069850B /* PersonViewRow.swift */,
+				8D70068723622D940069850B /* PersonViewDetail.swift */,
+				8D70068923622D940069850B /* PocomInstanceForPersonDetailViewRow.swift */,
 				8D70068B23622D940069850B /* PersonEditView.swift */,
 			);
 			path = "People Views";
+			sourceTree = "<group>";
+		};
+		8DBE75B4236750BB008C3101 /* Workflow Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DBE75B5236750E9008C3101 /* WorkflowListView.swift */,
+				8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */,
+				8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */,
+				8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */,
+				8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */,
+				8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */,
+			);
+			path = "Workflow Views";
 			sourceTree = "<group>";
 		};
 		8DD766952360D94A00400C3F = {
@@ -228,14 +252,14 @@
 			isa = PBXGroup;
 			children = (
 				8D45394423653A45008F0283 /* Controllers */,
-				8D45394323653A22008F0283 /* Model Object Classess */,
+				8D45394323653A22008F0283 /* Model Object Classes */,
 				8D453942236539F2008F0283 /* Enumerations */,
 				8D453941236539C9008F0283 /* Bundled Data */,
 				8D45394623653A57008F0283 /* Views */,
 				8D5ED6CF23632A6C00F9BE28 /* DIDit.entitlements */,
 				8DD766A12360D94A00400C3F /* AppDelegate.swift */,
 				8DD766A32360D94A00400C3F /* SceneDelegate.swift */,
-				8D45393F23652E4B008F0283 /* Date Extension.swift */,
+				8D45393F23652E4B008F0283 /* Date Helper Extension.swift */,
 				8DD766AA2360D94B00400C3F /* Assets.xcassets */,
 				8DD766AF2360D94B00400C3F /* LaunchScreen.storyboard */,
 				8DD766B22360D94B00400C3F /* Info.plist */,
@@ -328,20 +352,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */,
 				8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */,
 				8DD766C82360D98B00400C3F /* Career.swift in Sources */,
 				8D70069323622D940069850B /* PrincipalViewList.swift in Sources */,
+				8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */,
+				8DBE75B6236750E9008C3101 /* WorkflowListView.swift in Sources */,
 				8DD766BD2360D97800400C3F /* PocomInstance.swift in Sources */,
 				8DD766C62360D98B00400C3F /* XmlCountry.swift in Sources */,
 				8DD766CD2360D9D600400C3F /* JsonIntermediateTypes.swift in Sources */,
 				8D70069223622D940069850B /* PrincipalRoleViewList.swift in Sources */,
 				8D70069823622D940069850B /* PersonEditView.swift in Sources */,
 				8D70069623622D940069850B /* PocomInstanceForPersonDetailViewRow.swift in Sources */,
-				8D45394023652E4B008F0283 /* Date Extension.swift in Sources */,
+				8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */,
 				8DD766C72360D98B00400C3F /* State.swift in Sources */,
 				8D70069723622D940069850B /* PersonViewList.swift in Sources */,
 				8D70069423622D940069850B /* PersonViewDetail.swift in Sources */,
 				8D70066F236218900069850B /* PrincipalAddView.swift in Sources */,
+				8D09C96B236627B700F88AC7 /* DataControllers.swift in Sources */,
 				8D991AF02363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift in Sources */,
 				8D70068F23622D940069850B /* ChiefViewRow.swift in Sources */,
 				8DD766C92360D98B00400C3F /* XmlCOMRole.swift in Sources */,
@@ -350,6 +378,7 @@
 				8DD766C42360D98B00400C3F /* XmlPrincipalOfficerRole.swift in Sources */,
 				8DD766A92360D94A00400C3F /* ContentView.swift in Sources */,
 				8D70068D23622D940069850B /* ChiefRoleViewList.swift in Sources */,
+				8DBE75BC23675417008C3101 /* PersonWithoutSexViewList.swift in Sources */,
 				8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */,
 				8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */,
 				8D70069523622D940069850B /* PersonViewRow.swift in Sources */,
@@ -357,6 +386,7 @@
 				8D70068E23622D940069850B /* ChiefRoleViewRow.swift in Sources */,
 				8DD766C52360D98B00400C3F /* DataSource.swift in Sources */,
 				8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */,
+				8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */,
 				8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */,
 				8D70069023622D940069850B /* PrincipalRoleViewRow.swift in Sources */,
 				8D70069123622D940069850B /* PrincipalViewRow.swift in Sources */,
@@ -508,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.10.25;
+				MARKETING_VERSION = 2019.10.28;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -533,7 +563,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.10.25;
+				MARKETING_VERSION = 2019.10.28;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;

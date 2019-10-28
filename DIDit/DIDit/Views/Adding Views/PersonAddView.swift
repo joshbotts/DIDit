@@ -13,6 +13,7 @@ struct PersonAddView: View {
     
     @EnvironmentObject var pocom: PocomStore
     
+    @State var provenance: String = ""
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var middleName: String = ""
@@ -27,6 +28,8 @@ struct PersonAddView: View {
     var body: some View {
         Form {
             Section {
+                TextField("provenance (recommended)", text: self.$provenance)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("first name", text: self.$firstName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("middle name (optional)", text: self.$middleName)
@@ -61,6 +64,12 @@ struct PersonAddView: View {
             Section {
             Button("Save new person and copy xml element to clipboard")
                 {
+                    var provenance: String?
+                    if self.provenance == "" {
+                        provenance = nil
+                    } else {
+                        provenance = self.provenance
+                    }
                     var middleName: String?
                     if self.middleName == "" {
                         middleName = nil
@@ -97,7 +106,7 @@ struct PersonAddView: View {
                     } else {
                         sex = self.sex
                     }
-                    let newPerson = PocomPerson.init(firstName: self.firstName, lastName: self.lastName, middleName: middleName, genName: genName, altName: altName, birthYear: birthYearInt, deathYear: deathYearInt, career: self.career, stateOfResidence: self.stateOfResidence, sex: sex)
+                    let newPerson = PocomPerson.init(firstName: self.firstName, lastName: self.lastName, middleName: middleName, genName: genName, altName: altName, birthYear: birthYearInt, deathYear: deathYearInt, career: self.career, stateOfResidence: self.stateOfResidence, sex: sex, provenance: provenance)
                     self.pocom.appendPerson(newPerson)
                     let exportedPerson = newPerson.exportPersonElement()
                     UIPasteboard.general.string = exportedPerson

@@ -12,7 +12,7 @@ import Combine
 struct PrincipalAddView: View {
     var person: PocomPerson
     @EnvironmentObject var pocom: PocomStore
-    
+    @State var provenance: String = ""
     @State var poRole = XmlPrincipalOfficerRole.none
     @State var startDate: Date = Date("3001-01-01")
     @State var startNote: String = ""
@@ -26,6 +26,10 @@ struct PrincipalAddView: View {
     
     var body: some View {
         Form {
+            Section {
+            TextField("provenance (recommended)", text: self.$provenance)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
             Section {
                 Picker(selection: self.$poRole, label: Text("Principal Officer Role")) {
                     ForEach(XmlPrincipalOfficerRole.allCases, id: \.self.rawValue) { XmlPrincipalOfficerRole in
@@ -63,6 +67,12 @@ struct PrincipalAddView: View {
             Section {
                 Button("Save new principal role and copy xml element to clipboard")
                 {
+                    var provenance: String?
+                    if self.provenance == "" {
+                        provenance = nil
+                    } else {
+                        provenance = self.provenance
+                    }
                     var startDateForInit: Date?
                     if self.startDate == Date("3001-01-01") {
                         startDateForInit = nil
@@ -117,7 +127,7 @@ struct PrincipalAddView: View {
                     } else {
                         stateOfResidenceForInit = self.stateOfResidence
                     }
-                    let newPrincipalInstance = PocomInstance.init(poRole: self.poRole, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, dutyDate: dutyDateForInit, dutyNote: dutyNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: careerForInit, stateOfResidence: stateOfResidenceForInit)
+                    let newPrincipalInstance = PocomInstance.init(poRole: self.poRole, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, dutyDate: dutyDateForInit, dutyNote: dutyNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: careerForInit, stateOfResidence: stateOfResidenceForInit, provenance: provenance)
                     self.pocom.appendPrincipal(newPrincipalInstance)
                     let exportedPrincipal = newPrincipalInstance.exportPrincipalElement()
                     UIPasteboard.general.string = exportedPrincipal

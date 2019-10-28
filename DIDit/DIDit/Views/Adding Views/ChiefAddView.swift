@@ -12,7 +12,7 @@ import Combine
 struct ChiefAddView: View {
     var person: PocomPerson
     @EnvironmentObject var pocom: PocomStore
-    
+    @State var provenance: String = ""
     @State var country = XmlCountry.none
     @State var comRole = XmlCOMRole.none
     @State var startDate: Date = Date("3001-01-01")
@@ -29,6 +29,10 @@ struct ChiefAddView: View {
     
     var body: some View {
         Form {
+            Section {
+            TextField("provenance (recommended)", text: self.$provenance)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
             Section {
                 Picker(selection: self.$country, label: Text("Country")) {
                     ForEach(XmlCountry.allCases, id: \.self.rawValue) { XmlCountry in
@@ -76,6 +80,12 @@ struct ChiefAddView: View {
             Section {
                 Button("Save new chief role and copy xml element to clipboard")
                 {
+                    var provenance: String?
+                    if self.provenance == "" {
+                        provenance = nil
+                    } else {
+                        provenance = self.provenance
+                    }
                     var startDateForInit: Date?
                     if self.startDate == Date("3001-01-01") {
                         startDateForInit = nil
@@ -142,7 +152,7 @@ struct ChiefAddView: View {
                     } else {
                         stateOfResidenceForInit = self.stateOfResidence
                     }
-                    let newChiefInstance = PocomInstance.init(comRole: self.comRole, country: self.country, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, chargeDate: chargeDateForInit, chargeNote: chargeNoteForInit, credentialDate: credentialDateForInit, credentialNote: credentialNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: careerForInit, stateOfResidence: stateOfResidenceForInit)
+                    let newChiefInstance = PocomInstance.init(comRole: self.comRole, country: self.country, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, chargeDate: chargeDateForInit, chargeNote: chargeNoteForInit, credentialDate: credentialDateForInit, credentialNote: credentialNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: careerForInit, stateOfResidence: stateOfResidenceForInit, provenance: provenance)
                     self.pocom.appendChief(newChiefInstance)
                     let exportedChief = newChiefInstance.exportChiefElement()
                     UIPasteboard.general.string = exportedChief
@@ -157,6 +167,6 @@ struct ChiefAddView: View {
 
 struct ChiefAddView_Previews: PreviewProvider {
     static var previews: some View {
-        ChiefAddView(person: PocomPerson(firstName: "Joshua", lastName: "Botts", middleName: "D.", genName: nil, altName: "Josh Botts", birthYear: 1979, deathYear: nil, career: Career.nonCareer, stateOfResidence: USState.maryland, sex: "Male"))
+        ChiefAddView(person: PocomPerson(firstName: "Joshua", lastName: "Botts", middleName: "D.", genName: nil, altName: "Josh Botts", birthYear: 1979, deathYear: nil, career: Career.nonCareer, stateOfResidence: USState.maryland, sex: "Male", provenance: "me, myself, and I"))
     }
 }

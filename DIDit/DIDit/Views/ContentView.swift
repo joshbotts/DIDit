@@ -58,10 +58,10 @@ struct ContentView: View {
                                     .font(.headline)
                             }
                         }
-                        NavigationLink(destination: AddedDataView()) {
+                        NavigationLink(destination: WorkflowListView()) {
                             HStack {
                                 Image(systemName: "square.and.arrow.up.on.square.fill")
-                                Text("View/export data entered with app")
+                                Text("DID Team action items")
                                     .font(.headline)
                             }
                         }

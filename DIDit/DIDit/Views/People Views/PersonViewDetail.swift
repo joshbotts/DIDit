@@ -84,6 +84,11 @@ struct PersonViewDetail: View {
     }
     .padding()
         .navigationBarTitle("\(person.firstName) \(person.lastName)")
+        .navigationBarItems(trailing:
+            NavigationLink(destination: PersonEditView(person: person)) {
+            Text("Edit")
+        }
+        )
     }
 }
 
