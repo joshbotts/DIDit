@@ -63,17 +63,23 @@ struct ChiefRoleViewRow: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-        HStack {
-            Text(personName)
-                .font(.headline)
-        }
             VStack(alignment: .leading) {
-            Text(instanceStartDate)
-            Text(instanceEndDate)
+                HStack {
+                VStack(alignment: .leading) {
+                    Text(personName)
+                    .font(.headline)
+                    Text(instanceStartDate)
+                    .font(.body)
+                    Text(instanceEndDate)
+                    .font(.body)
+
+                        }
+                    Spacer()
+                    NavigationLink(destination: PersonForChiefInstanceEditViewList(chief: chief))  {
+                    Text("Edit Role")
+                        }
                 }
-    }
-        .font(.body)
+        }
     }
 }
 

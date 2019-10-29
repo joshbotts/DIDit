@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8D09C96B236627B700F88AC7 /* DataControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45394523653A4F008F0283 /* DataControllers.swift */; };
+		8D2261412368918D009C2D23 /* ChiefsWithoutCredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */; };
+		8D2261432368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */; };
+		8D2261452368BAF1009C2D23 /* PrincipalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */; };
+		8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261462368BB04009C2D23 /* ChiefEditView.swift */; };
+		8D2261492368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */; };
+		8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */; };
 		8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Helper Extension.swift */; };
 		8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */; };
 		8D70066F236218900069850B /* PrincipalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70066E236218900069850B /* PrincipalAddView.swift */; };
@@ -56,6 +62,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiefsWithoutCredentialsView.swift; sourceTree = "<group>"; };
+		8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWithoutChiefViewRow.swift; sourceTree = "<group>"; };
+		8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalEditView.swift; sourceTree = "<group>"; };
+		8D2261462368BB04009C2D23 /* ChiefEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiefEditView.swift; sourceTree = "<group>"; };
+		8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonForChiefInstanceEditViewList.swift; sourceTree = "<group>"; };
+		8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonForPrincipalInstanceEditViewList.swift; sourceTree = "<group>"; };
 		8D45393F23652E4B008F0283 /* Date Helper Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Helper Extension.swift"; sourceTree = "<group>"; };
 		8D45394523653A4F008F0283 /* DataControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllers.swift; sourceTree = "<group>"; };
 		8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDataView.swift; sourceTree = "<group>"; };
@@ -192,6 +204,8 @@
 				8D70068023622D940069850B /* ChiefViewRow.swift */,
 				8D70067E23622D940069850B /* ChiefRoleViewList.swift */,
 				8D70067F23622D940069850B /* ChiefRoleViewRow.swift */,
+				8D2261462368BB04009C2D23 /* ChiefEditView.swift */,
+				8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */,
 			);
 			path = "Chiefs Views";
 			sourceTree = "<group>";
@@ -203,6 +217,8 @@
 				8D70068323622D940069850B /* PrincipalViewRow.swift */,
 				8D70068423622D940069850B /* PrincipalRoleViewList.swift */,
 				8D70068223622D940069850B /* PrincipalRoleViewRow.swift */,
+				8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */,
+				8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */,
 			);
 			path = "Principals Views";
 			sourceTree = "<group>";
@@ -228,6 +244,8 @@
 				8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */,
 				8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */,
 				8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */,
+				8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */,
+				8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */,
 			);
 			path = "Workflow Views";
 			sourceTree = "<group>";
@@ -354,6 +372,8 @@
 			files = (
 				8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */,
 				8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */,
+				8D2261492368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift in Sources */,
+				8D2261432368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift in Sources */,
 				8DD766C82360D98B00400C3F /* Career.swift in Sources */,
 				8D70069323622D940069850B /* PrincipalViewList.swift in Sources */,
 				8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */,
@@ -368,6 +388,7 @@
 				8DD766C72360D98B00400C3F /* State.swift in Sources */,
 				8D70069723622D940069850B /* PersonViewList.swift in Sources */,
 				8D70069423622D940069850B /* PersonViewDetail.swift in Sources */,
+				8D2261452368BAF1009C2D23 /* PrincipalEditView.swift in Sources */,
 				8D70066F236218900069850B /* PrincipalAddView.swift in Sources */,
 				8D09C96B236627B700F88AC7 /* DataControllers.swift in Sources */,
 				8D991AF02363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift in Sources */,
@@ -378,14 +399,17 @@
 				8DD766C42360D98B00400C3F /* XmlPrincipalOfficerRole.swift in Sources */,
 				8DD766A92360D94A00400C3F /* ContentView.swift in Sources */,
 				8D70068D23622D940069850B /* ChiefRoleViewList.swift in Sources */,
+				8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */,
 				8DBE75BC23675417008C3101 /* PersonWithoutSexViewList.swift in Sources */,
 				8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */,
+				8D2261412368918D009C2D23 /* ChiefsWithoutCredentialsView.swift in Sources */,
 				8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */,
 				8D70069523622D940069850B /* PersonViewRow.swift in Sources */,
 				8D70068C23622D940069850B /* ChiefViewList.swift in Sources */,
 				8D70068E23622D940069850B /* ChiefRoleViewRow.swift in Sources */,
 				8DD766C52360D98B00400C3F /* DataSource.swift in Sources */,
 				8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */,
+				8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */,
 				8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */,
 				8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */,
 				8D70069023622D940069850B /* PrincipalRoleViewRow.swift in Sources */,
@@ -538,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.10.28;
+				MARKETING_VERSION = 2019.10.29;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -563,7 +587,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.10.28;
+				MARKETING_VERSION = 2019.10.29;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;

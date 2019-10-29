@@ -9,23 +9,42 @@
 import SwiftUI
 
 struct CountryWithoutChiefViewList: View {
+    @EnvironmentObject var pocom: PocomStore
+    var countriesWithoutChiefs: [XmlCountry] {
+        var countriesWithoutChiefs: [XmlCountry] = []
+        for country in XmlCountry.allCases {
+            let chiefsForCountry = pocom.instancesForCountry(country: country)
+            var chiefsWhoServed = chiefsForCountry.filter { $0.startDate != nil || $0.chargeDate != nil || $0.credentialDate != nil }
+            chiefsWhoServed.sort { $0.sortDate() > $1.sortDate() }
+            if !chiefsWhoServed.isEmpty {
+            let lastChief = chiefsWhoServed.first!
+            if lastChief.endDate != nil {
+                if lastChief.endDate! < Date(timeIntervalSinceNow: -31536000) {
+                countriesWithoutChiefs.append(country)
+            }
+            }
+        }
+        }
+        var existingCountriesWithoutChiefs = countriesWithoutChiefs.filter { $0 != XmlCountry.czechoslovakia }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.germanDemocraticRepublic }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.hawaii }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.texas }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.twoSicilies }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.vietnamSouth }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.yugoslavia }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.unid }
+        existingCountriesWithoutChiefs = existingCountriesWithoutChiefs.filter { $0 != XmlCountry.usoa }
+            return existingCountriesWithoutChiefs
+    }
+    
 //    @State private var searchQuery: String = ""
 //    @State private var queryString: String = ""
 //    @State private var searchBool: Bool = false
     
     var body: some View {
-        VStack {
-            Text("In progress.")
-//            TextField("search", text: self.$searchQuery, onCommit: {self.searchBool = true; self.queryString = self.searchQuery})
-//            if searchBool == true {
-//                CountryWithoutChiefViewSearchList(search: $queryString)
-//            }
-//            else
-//            {
-//                CountryWithoutChiefViewNoSearchList()
-//            }
+        List(countriesWithoutChiefs) { XmlCountry in
+            CountryWithoutChiefViewRow(country: XmlCountry)
         }
-//        .navigationBarTitle("Countries and Organizations")
     }
 }
 

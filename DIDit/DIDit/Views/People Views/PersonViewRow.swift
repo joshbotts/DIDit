@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PersonViewRow: View {
-    
+    @EnvironmentObject var pocom: PocomStore
     var person: PocomPerson
     var personMiddleName: String {
         var middleName = ""

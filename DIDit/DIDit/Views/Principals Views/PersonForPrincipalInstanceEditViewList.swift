@@ -1,47 +1,41 @@
 //
-//  PersonViewList.swift
-//  DID IT
+//  PersonForNewInstanceViewList.swift
+//  POCOM
 //
-//  Created by Joshua Botts on 10/3/19.
+//  Created by Joshua Botts on 10/25/19.
 //  Copyright © 2019 Joshua Botts. All rights reserved.
 //
 
 import SwiftUI
 
-struct PersonWithoutDeathYearViewList: View {
+struct PersonForPrincipalInstanceEditViewList: View {
     @EnvironmentObject var pocom: PocomStore
+    var principal: PocomInstance
     @State private var searchQuery: String = ""
     @State private var queryString: String = ""
     @State private var searchBool: Bool = false
-    
     
     var body: some View {
         VStack {
         TextField("search", text: self.$searchQuery, onCommit: {self.searchBool = true; self.queryString = self.searchQuery})
         if searchBool == true {
-            PersonWithoutDeathYearViewSearchList(search: $queryString)
+            PersonForPrincipalInstanceEditViewSearchList(principal: self.principal, search: $queryString)
         }
         else
         {
-            PersonWithoutDeathYearViewNoSearchList()
+            PersonForPrincipalInstanceEditViewNoSearchList(principal: self.principal)
         }
         }
-        .navigationBarTitle("People")
+    .navigationBarTitle("Select person for new role")
     }
 }
 
-struct PersonWithoutDeathYearViewSearchList: View {
+struct PersonForPrincipalInstanceEditViewSearchList: View {
+    var principal: PocomInstance
     @Binding var search: String
     @EnvironmentObject var pocom: PocomStore
     var people: [PocomPerson] {
-        var peopleWithoutDeathYear: [PocomPerson] = []
-        for person in pocom.people {
-            if person.deathYear == nil {
-                peopleWithoutDeathYear.append(person)
-            }
-        }
-        peopleWithoutDeathYear.sort { $0.id < $1.id }
-        return peopleWithoutDeathYear
+        return pocom.sortPeople()
     }
     
     var body: some View {
@@ -51,7 +45,7 @@ struct PersonWithoutDeathYearViewSearchList: View {
                 $0.id.contains(self.search.lowercased())
                 },
                     id: \.self.id) { person in
-                        NavigationLink(destination: PersonViewDetail(person: person))
+                        NavigationLink(destination: PrincipalEditView(principal: self.principal, person: person))
                         {
                             PersonViewRow(person: person)
                         }
@@ -60,23 +54,17 @@ struct PersonWithoutDeathYearViewSearchList: View {
     }
 }
 
-struct PersonWithoutDeathYearViewNoSearchList: View {
+struct PersonForPrincipalInstanceEditViewNoSearchList: View {
+    var principal: PocomInstance
     @EnvironmentObject var pocom: PocomStore
     var people: [PocomPerson] {
-        var peopleWithoutDeathYear: [PocomPerson] = []
-        for person in pocom.people {
-            if person.deathYear == nil {
-                peopleWithoutDeathYear.append(person)
-            }
-        }
-        peopleWithoutDeathYear.sort { $0.id < $1.id }
-        return peopleWithoutDeathYear
+        return pocom.sortPeople()
     }
     
     var body: some View {
         List {
             ForEach(people) { person in
-                NavigationLink(destination: PersonViewDetail(person: person))
+                NavigationLink(destination: PrincipalEditView(principal: self.principal, person: person))
                 {
                     PersonViewRow(person: person)
                 }
@@ -85,8 +73,8 @@ struct PersonWithoutDeathYearViewNoSearchList: View {
     }
 }
 
-//struct PersonViewList_Previews: PreviewProvider {
+//struct PersonForNewInstanceView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PersonViewList()
+//        PersonForNewInstanceView()
 //    }
 //}

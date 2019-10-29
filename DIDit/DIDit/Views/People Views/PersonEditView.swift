@@ -22,6 +22,7 @@ struct PersonEditView: View {
     @State var career: Career = Career.none
     @State var stateOfResidence: USState = USState.none
     @State var sex: String = ""
+    @State var provenance: String = ""
     var personBirthYear: String? {
     if person.birthYear != nil {
     return String(person.birthYear!)
@@ -40,6 +41,8 @@ struct PersonEditView: View {
     var body: some View {
         Form {
             Section {
+                TextField(person.provenance ?? "provenance (recommended)", text: self.$provenance)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField(person.firstName, text: self.$firstName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField(person.middleName ?? "middle name (optional)", text: self.$middleName)
@@ -78,6 +81,10 @@ struct PersonEditView: View {
                     didDateFormatter.locale = Locale(identifier: "en_US")
                     didDateFormatter.dateFormat = "yyyy-MM-dd"
                     let currentDateString = didDateFormatter.string(from: currentDate)
+                    var provenance: String? = self.provenance
+                    if self.provenance == "" {
+                        provenance = self.person.provenance
+                    }
                     var firstName: String = self.firstName
                     if self.firstName == "" {
                         firstName = self.person.firstName
@@ -147,6 +154,7 @@ struct PersonEditView: View {
                     self.person.createdWith = DataSource.app
                     self.person.modificationDate = currentDateString
                     self.person.modificationBy = "DIDit.app"
+                    self.person.provenance = provenance
                     UIPasteboard.general.string = self.person.exportPersonElement()
                 }) {
                     Text("Edit person and copy xml element to clipboard")

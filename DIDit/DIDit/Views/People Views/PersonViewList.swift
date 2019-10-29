@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct PersonViewList: View {
+    @EnvironmentObject var pocom: PocomStore
     @State private var searchQuery: String = ""
     @State private var queryString: String = ""
     @State private var searchBool: Bool = false

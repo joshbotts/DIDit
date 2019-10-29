@@ -63,16 +63,22 @@ struct PrincipalRoleViewRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(personName)
-                    .font(.headline)
-                    }
             VStack(alignment: .leading) {
+                Text(personName)
+                .font(.headline)
                 Text(instanceStartDate)
+                .font(.body)
                 Text(instanceEndDate)
+                .font(.body)
+
                     }
-            .font(.body)
-        }
+                Spacer()
+                NavigationLink(destination: PersonForPrincipalInstanceEditViewList(principal: principal))  {
+                Text("Edit Role")
+                    }
+            }
     }
+}
 }
 
 //struct PrincipalRoleViewRow_Previews: PreviewProvider {

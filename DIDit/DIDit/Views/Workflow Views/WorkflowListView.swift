@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct WorkflowListView: View {
+    @EnvironmentObject var pocom: PocomStore
     var body: some View {
         List {
             NavigationLink(destination: AddedDataView()) {
@@ -43,6 +44,13 @@ struct WorkflowListView: View {
                 HStack {
                     Image(systemName: "briefcase.fill")
                     Text("Countries without a COM for longer than 12 months")
+                        .font(.headline)
+                }
+            }
+            NavigationLink(destination: ChiefsWithoutCredentialsView()) {
+                HStack {
+                    Image(systemName: "briefcase.fill")
+                    Text("Chiefs of Mission without a credentials date")
                         .font(.headline)
                 }
             }

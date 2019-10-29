@@ -50,7 +50,7 @@ struct AddedDataView: View {
                     Text(person.lastName)
                     Text(person.firstName)
                     Spacer()
-                    Button("Copy", action: {let exportedPerson = person.exportPersonElement()
+                    Button("Copy xml element", action: {let exportedPerson = person.exportPersonElement()
                         UIPasteboard.general.string = exportedPerson})
                 }
             }
@@ -61,7 +61,7 @@ struct AddedDataView: View {
                     Text(principal.poRole!.getPORoleName())
                     Text(principal.personID)
                     Spacer()
-                    Button("Copy", action: {let exportedPrincipal = principal.exportPrincipalElement()
+                    Button("Copy xml element", action: {let exportedPrincipal = principal.exportPrincipalElement()
                         UIPasteboard.general.string = exportedPrincipal})
                 }
             }
@@ -72,7 +72,7 @@ struct AddedDataView: View {
                     Text(chief.country!.getCountryName())
                     Text(chief.personID)
                     Spacer()
-                    Button("Copy 􀉄", action: {let exportedChief = chief.exportChiefElement()
+                    Button("Copy xml element", action: {let exportedChief = chief.exportChiefElement()
                         UIPasteboard.general.string = exportedChief})
                 }
             }

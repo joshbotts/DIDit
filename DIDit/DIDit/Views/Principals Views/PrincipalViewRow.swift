@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct PrincipalViewRow: View {
+    @EnvironmentObject var pocom: PocomStore
     var role: XmlPrincipalOfficerRole
     var body: some View {
         NavigationLink(destination: PrincipalRoleViewList(role: role)) {

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct PocomInstanceForPersonDetailViewRow: View {
+    @EnvironmentObject var pocom: PocomStore
     var instance: PocomInstance
     var instanceStartDateString: String {
         let perInstanceDateFormatter = DateFormatter()
