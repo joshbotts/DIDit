@@ -15,7 +15,7 @@ struct PrincipalRoleViewRow: View {
         var middleName = ""
         pocom.associatePerson(instance: principal)
         if principal.person!.middleName  != nil {
-            middleName = principal.person!.middleName!
+            middleName = " " + principal.person!.middleName!
         }
         return middleName
     }
@@ -23,13 +23,13 @@ struct PrincipalRoleViewRow: View {
         var genName = ""
         pocom.associatePerson(instance: principal)
         if principal.person!.genName  != nil {
-            genName = principal.person!.genName!
+            genName = " " + principal.person!.genName!
         }
         return genName
     }
     var personName: String {
         pocom.associatePerson(instance: principal)
-        return String(principal.person!.firstName + " " + personMiddleName + " " + principal.person!.lastName + " " + personGenName)
+        return String(principal.person!.firstName + personMiddleName + " " + principal.person!.lastName + personGenName)
     }
     
     var instanceStartDate: String {
@@ -73,9 +73,9 @@ struct PrincipalRoleViewRow: View {
 
                     }
                 Spacer()
-                NavigationLink(destination: PersonForPrincipalInstanceEditViewList(principal: principal))  {
-                Text("Edit Role")
-                    }
+//                NavigationLink(destination: PrincipalEditView(principal: principal))  {
+//                Text("Edit Role")
+//                    }
             }
     }
 }

@@ -75,9 +75,9 @@ struct ChiefRoleViewRow: View {
 
                         }
                     Spacer()
-                    NavigationLink(destination: PersonForChiefInstanceEditViewList(chief: chief))  {
-                    Text("Edit Role")
-                        }
+//                    NavigationLink(destination: ChiefEditView(chief: chief))  {
+//                    Text("Edit Role")
+//                        }
                 }
         }
     }

@@ -105,6 +105,7 @@ final class PocomStore : ObservableObject {
     @Published var people: [PocomPerson]
     @Published var principals: [PocomInstance]
     @Published var chiefs: [PocomInstance]
+    @Published var export: [Any]
     
     func associatePerson(instance: PocomInstance) {
         if instance.person == nil {
@@ -201,6 +202,7 @@ final class PocomStore : ObservableObject {
         } else {
             self.chiefs = bundledChiefs
         }
+        self.export = []
     }
     
     func appendPerson(_ person: PocomPerson) {
@@ -252,6 +254,76 @@ final class PocomStore : ObservableObject {
         self.people = BundledStore().peopleJson
         self.principals = BundledStore().principalsJson
         self.chiefs = BundledStore().chiefsJson
+    }
+    
+    func saveAddedElementsStore() {
+        var peopleAdded: [PocomPerson] {
+            var people: [PocomPerson] = []
+            for person in self.people {
+                if person.createdWith == DataSource.app {
+                    people.append(person)
+                }
+                people.sort { $0.id < $1.id }
+            }
+            return people
+        }
+        var peopleAddedElements: String {
+            var elements: [String] = []
+            for person in peopleAdded {
+                elements.append(person.exportPersonElement())
+            }
+            return elements.joined(separator: "\n")
+        }
+        var principalsAdded: [PocomInstance] {
+            var principals: [PocomInstance] = []
+            for principal in self.principals {
+                if principal.createdWith == DataSource.app {
+                    principals.append(principal)
+                }
+                principals.sort { $0.id < $1.id }
+            }
+            return principals
+        }
+        var principalsAddedElements: String {
+            var elements: [String] = []
+            for principal in principalsAdded {
+                elements.append(principal.exportPrincipalElement())
+            }
+            return elements.joined(separator: "\n")
+        }
+        var chiefsAdded: [PocomInstance] {
+            var chiefs: [PocomInstance] = []
+            for chief in self.chiefs {
+                if chief.createdWith == DataSource.app {
+                    chiefs.append(chief)
+                }
+                chiefs.sort { $0.id < $1.id }
+            }
+            return chiefs
+        }
+        var chiefsAddedElements: String {
+            var elements: [String] = []
+            for chief in chiefsAdded {
+                elements.append(chief.exportChiefElement())
+            }
+            return elements.joined(separator: "\n")
+        }
+        var allAddedElements: String {
+            return peopleAddedElements + "\n" + principalsAddedElements + "\n" + chiefsAddedElements
+        }
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let propertyListEncoder = PropertyListEncoder()
+        let addedElementArchiveURL = documentsDirectory.appendingPathComponent("addedElements").appendingPathExtension("txt")
+//        let addedPeopleArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
+//        let addedPrincipalsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
+//        let addedChiefsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
+        try? allAddedElements.write(to: addedElementArchiveURL, atomically: true, encoding: String.Encoding.utf8)
+//        let encodedPersonData = try? propertyListEncoder.encode(peopleAdded)
+//        try? encodedPersonData?.write(to: addedPeopleArchiveURL, options: .noFileProtection)
+//        let encodedPrincipalData = try? propertyListEncoder.encode(principalsAdded)
+//        try? encodedPrincipalData?.write(to: addedPrincipalsArchiveURL, options: .noFileProtection)
+//        let encodedChiefData = try? propertyListEncoder.encode(chiefsAdded)
+//        try? encodedChiefData?.write(to: addedChiefsArchiveURL, options: .noFileProtection)
     }
     
     deinit {
