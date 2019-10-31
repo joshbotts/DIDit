@@ -26,7 +26,7 @@ struct PersonWithoutDeathYearViewList: View {
             PersonWithoutDeathYearViewNoSearchList()
         }
         }
-        .navigationBarTitle("People")
+        .navigationBarTitle("People Without Years of Death")
     }
 }
 

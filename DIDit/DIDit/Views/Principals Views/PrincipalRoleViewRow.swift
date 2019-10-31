@@ -61,24 +61,27 @@ struct PrincipalRoleViewRow: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
             HStack {
-            VStack(alignment: .leading) {
-                Text(personName)
-                .font(.headline)
-                Text(instanceStartDate)
-                .font(.body)
-                Text(instanceEndDate)
-                .font(.body)
-
-                    }
+                VStack(alignment: .leading) {
+                    Text(personName)
+                        .font(.headline)
+                    Text(instanceStartDate)
+                        .font(.body)
+                    Text(instanceEndDate)
+                        .font(.body)
+                    
+                }
                 Spacer()
-//                NavigationLink(destination: PrincipalEditView(principal: principal))  {
-//                Text("Edit Role")
-//                    }
+//                NavigationLink(destination: PersonViewDetail(person: principal.person!)) {
+//                    Text("View Person")
+//                }
+                VStack(alignment: .trailing) {
+                NavigationLink(destination: PrincipalEditView(principal: principal))  {
+                    Text("Edit Role Data")
+                }
             }
+        }
     }
-}
 }
 
 //struct PrincipalRoleViewRow_Previews: PreviewProvider {

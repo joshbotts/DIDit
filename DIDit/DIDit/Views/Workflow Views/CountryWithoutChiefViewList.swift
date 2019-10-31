@@ -45,6 +45,7 @@ struct CountryWithoutChiefViewList: View {
         List(countriesWithoutChiefs) { XmlCountry in
             CountryWithoutChiefViewRow(country: XmlCountry)
         }
+    .navigationBarTitle("Countries where last COM left over a year ago")
     }
 }
 

@@ -13,21 +13,20 @@ struct PrincipalRoleViewList: View {
     var role: XmlPrincipalOfficerRole
     
     var principalsForRole: [PocomInstance] {
-        let principals = pocom.instancesForRole(role: role)
+        var principals = pocom.instancesForRole(role: role)
         for principal in principals {
             if principal.person == nil {
                 pocom.associatePerson(instance: principal)
             }
         }
+        principals.sort { $0.sortDate() < $1.sortDate() }
         return principals
     }
     
     
     var body: some View {
         List(principalsForRole) { principal in
-            NavigationLink(destination: PersonViewDetail(person: principal.person!)) {
             PrincipalRoleViewRow(principal: principal)
-        }
         }
         .navigationBarTitle("\(role.getPORoleName())")
         // make a dictionary of PO role pluralizations to use here

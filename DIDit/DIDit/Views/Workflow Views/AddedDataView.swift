@@ -48,6 +48,7 @@ struct AddedDataView: View {
     var body: some View {
         
         VStack(alignment: .leading) {
+            HStack {
             Button("Copy selected elements to clipboard") {
                 let instancesToExport = self.pocom.export
                 var exportedElements: [String] = []
@@ -65,6 +66,7 @@ struct AddedDataView: View {
                 }
                 UIPasteboard.general.string = exportedElements.joined(separator: "\n")
             }
+                Spacer()
             Button("Save selected elements to device") {
                 let instancesToExport = self.pocom.export
                 var exportedElements: [String] = []
@@ -88,6 +90,8 @@ struct AddedDataView: View {
                 //        let addedChiefsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
                         try? elementsToSave.write(to: exportedElementArchiveURL, atomically: true, encoding: String.Encoding.utf8)
             }
+            }
+            .padding()
             List(peopleAdded) { instance in
                 AddedDataRowView(instance: instance)
             }

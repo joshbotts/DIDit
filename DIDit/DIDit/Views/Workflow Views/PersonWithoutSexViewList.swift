@@ -26,7 +26,7 @@ struct PersonWithoutSexViewList: View {
             PersonWithoutSexViewNoSearchList()
         }
         }
-        .navigationBarTitle("People")
+        .navigationBarTitle("People Without Identified Sex")
     }
 }
 

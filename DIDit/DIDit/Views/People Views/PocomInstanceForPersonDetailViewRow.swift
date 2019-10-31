@@ -11,6 +11,9 @@ import SwiftUI
 struct PocomInstanceForPersonDetailViewRow: View {
     @EnvironmentObject var pocom: PocomStore
     var instance: PocomInstance
+    var instanceRole: String {
+        return instance.instanceRole()
+    }
     var instanceStartDateString: String {
         let perInstanceDateFormatter = DateFormatter()
         perInstanceDateFormatter.locale = Locale(identifier: "en_US")
@@ -127,26 +130,50 @@ struct PocomInstanceForPersonDetailViewRow: View {
         return instanceNominationEndDateString
     }
     
+    var instanceInformation: String {
+        var information: String = instanceStartDateString
+        if instanceChargeDateString != nil {
+            information += "\n" + instanceChargeDateString!
+        }
+        if instanceCredentialDateString != nil {
+            information += "\n" + instanceCredentialDateString!
+        }
+        if instanceDutyDateString != nil {
+            information += "\n" + instanceDutyDateString!
+        }
+        information += "\n" + instanceEndDateString
+        return information
+    }
+    
+    var instanceNote: String {
+        if instance.note != nil {
+            return instance.note!
+        } else {
+            return ""
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text(String(instance.instanceRole()))
+            Text(String(instanceRole))
                 .font(.headline)
                 .lineLimit(nil)
                 .layoutPriority(1)
                 .fixedSize(horizontal: false, vertical: true)
 //            Text(String(instanceNominationDateString))
 //            Text(String(instanceNominationEndDateString))
-            Text(String(instanceStartDateString))
+            Text(String(instanceInformation))
                 .font(.body)
-            instanceChargeDateString.map {Text($0)}
-                .font(.body)
-            instanceDutyDateString.map {Text($0)}
-                .font(.body)
-            instanceCredentialDateString.map {Text($0)}
-                .font(.body)
-            Text(String(instanceEndDateString))
-                .font(.body)
-            instance.note.map {Text($0)}
+                .lineLimit(nil)
+//            instanceChargeDateString.map {Text($0)}
+//                .font(.body)
+//            instanceDutyDateString.map {Text($0)}
+//                .font(.body)
+//            instanceCredentialDateString.map {Text($0)}
+//                .font(.body)
+//            Text(instanceEndDateString)
+//                .font(.body)
+            Text(String(instanceNote))
                 .font(.body)
                 .lineLimit(nil)
         }

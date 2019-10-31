@@ -13,21 +13,20 @@ struct ChiefRoleViewList: View {
     var country: XmlCountry
     
     var chiefsForCountry: [PocomInstance] {
-        let chiefs = pocom.instancesForCountry(country: country)
+        var chiefs = pocom.instancesForCountry(country: country)
         for chief in chiefs {
             if chief.person == nil {
                 pocom.associatePerson(instance: chief)
             }
         }
+        chiefs.sort { $0.sortDate() < $1.sortDate() }
         return chiefs
     }
     
     
     var body: some View {
         List(chiefsForCountry) { chief in
-            NavigationLink(destination: PersonViewDetail(person: chief.person!)) {
             ChiefRoleViewRow(chief: chief)
-        }
         }
         .navigationBarTitle("Chiefs of Mission in \(country.getCountryName())")
     }

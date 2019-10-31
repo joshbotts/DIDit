@@ -35,12 +35,16 @@ struct InstanceAddView: View {
             {
                 Text("Adding a new role for \(personName)")
                 Text("Select the type of role to add:")
+                HStack {
                 NavigationLink(destination: PrincipalAddView(person: self.person)) {
                     Text("Principal Officer")
                 }
+                    Spacer()
                 NavigationLink(destination: ChiefAddView(person: self.person)) {
                     Text("Chief of Mission")
                 }
+                }
+            .padding()
         }
         .navigationBarTitle("Add a new role for \(person.lastName)")
     }

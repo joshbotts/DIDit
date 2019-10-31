@@ -55,6 +55,7 @@ struct WorkflowListView: View {
                 }
             }
         }
+    .navigationBarTitle("DID Team Action Items")
     }
 }
 
