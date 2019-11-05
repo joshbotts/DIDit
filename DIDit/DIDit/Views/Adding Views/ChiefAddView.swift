@@ -161,6 +161,15 @@ struct ChiefAddView: View {
             
         }
         .navigationBarTitle("Add COM Role for \(person.lastName)")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+        .navigationBarItems(trailing:
+            NavigationLink(destination: ChiefViewList()) {
+                Text("Back to Chiefs Data")
+        })
     }
     
 }

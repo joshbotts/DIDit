@@ -20550,5 +20550,21 @@
         "createdDate": "2010-05-20",
         "lastModifiedBy": "marrsaw",
         "lastModifiedDate": "2013-10-01"
+    },
+    {
+        "id": "affa-2019-dest",
+        "personID": "destro-robert-a",
+        "roleTitleID": "assistant-secretary-for-democracy-human-rights-labor-affairs",
+        "appointedDate": "2019-09-20",
+        "appointedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "DIDit.app",
+        "createdDate": "2019-11-05",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-11-05"
     }
 ]

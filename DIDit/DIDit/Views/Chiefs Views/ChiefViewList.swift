@@ -26,6 +26,11 @@ struct ChiefViewList: View {
             }
         }
         .navigationBarTitle("Countries and Organizations")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
     }
 }
 

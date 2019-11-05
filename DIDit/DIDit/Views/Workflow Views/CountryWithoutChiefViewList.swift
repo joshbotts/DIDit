@@ -1,5 +1,5 @@
 //
-//  ChiefViewList.swift
+//  CountryWithoutChiefViewList.swift
 //  DID IT
 //
 //  Created by Joshua Botts on 10/6/19.
@@ -48,33 +48,6 @@ struct CountryWithoutChiefViewList: View {
     .navigationBarTitle("Countries where last COM left over a year ago")
     }
 }
-
-//struct CountryWithoutChiefViewSearchList: View {
-//    @Binding var search: String
-//    @EnvironmentObject var pocom: PocomStore
-//
-//    var body: some View {
-//
-//        List {
-//            ForEach(XmlCountry.allCases.filter {
-//                $0.rawValue.contains(self.search.lowercased())
-//                },
-//                    id: \.self.id) { XmlCountry in
-//                        ChiefViewRow(country: XmlCountry)
-//            }
-//        }
-//    }
-//}
-//
-//struct CountryWithoutChiefViewNoSearchList: View {
-//    @EnvironmentObject var pocom: PocomStore
-//
-//    var body: some View {
-//        List(XmlCountry.allCases) { XmlCountry in
-//            ChiefViewRow(country: XmlCountry)
-//        }
-//    }
-//}
 
 //struct PrincipalViewList_Previews: PreviewProvider {
 //    static var previews: some View {

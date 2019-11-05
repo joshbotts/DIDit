@@ -29,6 +29,15 @@ struct ChiefRoleViewList: View {
             ChiefRoleViewRow(chief: chief)
         }
         .navigationBarTitle("Chiefs of Mission in \(country.getCountryName())")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+        .navigationBarItems(trailing:
+            NavigationLink(destination: ChiefViewList()) {
+                Text("Back to Chiefs Data")
+        })
     }
 }
 

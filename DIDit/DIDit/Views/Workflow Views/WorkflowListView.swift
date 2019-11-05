@@ -36,7 +36,7 @@ struct WorkflowListView: View {
             NavigationLink(destination: PersonWithoutSexViewList()) {
                 HStack {
                     Image(systemName: "person.crop.circle.fill.badge.exclam")
-                    Text("People missing sex")
+                    Text("People without identified sex")
                         .font(.headline)
                 }
             }

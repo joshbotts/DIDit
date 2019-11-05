@@ -140,6 +140,15 @@ struct PrincipalEditView: View {
         }
     .padding()
         .navigationBarTitle("Edit PO Role")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+        .navigationBarItems(trailing:
+            NavigationLink(destination: PrincipalViewList()) {
+                Text("Back to Principals Data")
+        })
     }
     }
 

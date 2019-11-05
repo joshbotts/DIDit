@@ -84,11 +84,11 @@ struct PersonViewDetail: View {
     }
     .padding()
         .navigationBarTitle("\(person.firstName) \(person.lastName)")
-        .navigationBarItems(leading:
-            NavigationLink(destination: PersonViewList()) {
-            Text("People")
-        }
-        )
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
         .navigationBarItems(trailing:
             NavigationLink(destination: PersonEditView(person: person)) {
             Text("Edit")

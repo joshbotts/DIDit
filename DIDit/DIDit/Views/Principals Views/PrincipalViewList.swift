@@ -26,6 +26,11 @@ struct PrincipalViewList: View {
             }
         }
         .navigationBarTitle("Principal  Officer Roles")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
     }
 }
 

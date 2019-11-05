@@ -148,9 +148,9 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
                 didDateFormatter.dateFormat = "yyyy-MM-dd"
                 let startDateString = didDateFormatter.string(from: startDate!)
                 let startYear = startDateString.prefix(4)
-                id += "-\(startYear)-\(person.id.prefix(4))"
+                id += "-\(startYear)-\(person.id.prefix(4))-01"
             } else {
-                id += "-----\(person.id.prefix(4))"
+                id += "-----\(person.id.prefix(4))-01"
             }
             return id.lowercased()}
         else {
@@ -263,9 +263,9 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
                 id += "-----\(person.id.prefix(4))"
             }
     self.id = id.lowercased()
-    self.creationBy = "DIDITapp"
+    self.creationBy = "DIDit.app"
     self.creationDate = currentDateString
-    self.modificationBy = "DIDITapp"
+    self.modificationBy = "DIDit.app"
     self.modificationDate = currentDateString
     self.createdWith = DataSource.app
     self.instanceType = PocomInstanceType.principal
@@ -292,14 +292,14 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             if startDate != nil {
                 let startDateString = didDateFormatter.string(from: startDate!)
                 let startYear = startDateString.prefix(4)
-                id += "-\(startYear)-\(person.id.prefix(4))"
+                id += "-\(startYear)-\(person.id.prefix(4))-01"
             } else {
-                id += "-----\(person.id.prefix(4))"
+                id += "-----\(person.id.prefix(4))-01"
             }
         self.id = id.lowercased()
-        self.creationBy = "DIDITapp"
+        self.creationBy = "DIDit.app"
         self.creationDate = currentDateString
-        self.modificationBy = "DIDITapp"
+        self.modificationBy = "DIDit.app"
         self.modificationDate = currentDateString
         self.createdWith = DataSource.app
         self.instanceType = PocomInstanceType.chief

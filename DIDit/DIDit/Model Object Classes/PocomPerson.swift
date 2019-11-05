@@ -112,7 +112,11 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
                     }
                 }
             if genName != nil {
+                if genName!.contains(".") {
+                id += "-\(genName!.dropLast())"
+                }  else {
             id += "-\(genName!)"
+            }
             }
             return id.lowercased()
         }
@@ -140,9 +144,9 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         self.career = career
         self.stateOfResidence = stateOfResidence
         self.sex = sex
-        self.creationBy = "DIDITapp"
+        self.creationBy = "DIDit.app"
         self.creationDate = currentDateString
-        self.modificationBy = "DIDITapp"
+        self.modificationBy = "DIDit.app"
         self.modificationDate = currentDateString
         self.createdWith = DataSource.app
         self.provenance = provenance
@@ -172,8 +176,12 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
                     }
                 }
             if genName != nil {
+                if genName!.contains(".") {
+                id += "-\(genName!.dropLast())"
+                }  else {
             id += "-\(genName!)"
             }
+        }
             return id.lowercased()
         }
     

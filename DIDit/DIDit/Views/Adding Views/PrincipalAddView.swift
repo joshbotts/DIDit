@@ -135,6 +135,15 @@ struct PrincipalAddView: View {
             }
         }
         .navigationBarTitle("Add PO Role for \(person.lastName)")
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+        .navigationBarItems(trailing:
+            NavigationLink(destination: PrincipalViewList()) {
+                Text("Back to Principals Data")
+        })
     }
     
 }

@@ -27,6 +27,11 @@ struct PersonViewList: View {
         }
         }
         .navigationBarTitle("People")
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+//        .navigationBarBackButtonHidden(true)
     }
 }
 

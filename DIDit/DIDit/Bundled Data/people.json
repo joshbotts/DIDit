@@ -9321,12 +9321,12 @@
     "genName": "Jr.",
     "birth": 1947,
     
-    "careerType": "career",
+    "careerType": "non-career",
     "stateID": "va",
     "createdBy": "wicentowskijc",
     "createdDate": "2010-05-20",
-    "lastModifiedBy": "wicentowskijc",
-    "lastModifiedDate": "2012-04-09"
+    "lastModifiedBy": "bottsjd",
+    "lastModifiedDate": "2019-11-05"
 },
 {
     "id": "terra-daniel-james",
@@ -57110,5 +57110,116 @@
     "createdDate": "2010-05-20",
     "lastModifiedBy": "wicentowskijc",
     "lastModifiedDate": "2010-05-20"
+},
+{
+    "id": "shukan-brian",
+    "surname": "Shukan",
+    "forename": "Brian",
+    "careerType": "career",
+    "stateID": "ma",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "rakolta-john-jr",
+    "surname": "Rakolta",
+    "forename": "John",
+    "genName": "Jr.",
+    "careerType": "non-career",
+    "stateID": "mi",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "mustafa-herro-k",
+    "surname": "Mustafa",
+    "forename": "Herro K.",
+    "careerType": "career",
+    "stateID": "ca",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "marks-lana-j",
+    "surname": "Marks",
+    "forename": "Lana J.",
+    "careerType": "non-career",
+    "stateID": "fl",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "howery-kenneth-a",
+    "surname": "Howery",
+    "forename": "Kenneth A.",
+    "careerType": "non-career",
+    "stateID": "tx",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "godfrey-anthony-f",
+    "surname": "Godfrey",
+    "forename": "Anthony F.",
+    "careerType": "career",
+    "stateID": "va",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "bremberg-andrew-p",
+    "surname": "Bremberg",
+    "forename": "Andrew P.",
+    "careerType": "non-career",
+    "stateID": "va",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "carwile-john-l",
+    "surname": "Carwile",
+    "forename": "John L.",
+    "careerType": "career",
+    "stateID": "md",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "cella-joseph",
+    "surname": "Cella",
+    "forename": "Joseph",
+    "careerType": "non-career",
+    "stateID": "mi",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "destro-robert-a",
+    "surname": "Destro",
+    "forename": "Robert A.",
+    "careerType": "non-career",
+    "stateID": "va",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-05",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-05"
 }
 ]

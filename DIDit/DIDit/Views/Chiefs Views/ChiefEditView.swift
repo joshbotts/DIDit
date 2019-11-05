@@ -168,6 +168,15 @@ var body: some View {
     }
 .padding()
     .navigationBarTitle("Edit COM Role")
+//    .navigationBarBackButtonHidden(true)
+//    .navigationBarItems(leading:
+//        NavigationLink(destination: ContentView()) {
+//            Text("Back Home")
+//    })
+    .navigationBarItems(trailing:
+        NavigationLink(destination: ChiefViewList()) {
+            Text("Back to Chiefs Data")
+    })
 }
 }
 

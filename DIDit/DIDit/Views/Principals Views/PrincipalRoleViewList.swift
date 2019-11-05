@@ -29,7 +29,15 @@ struct PrincipalRoleViewList: View {
             PrincipalRoleViewRow(principal: principal)
         }
         .navigationBarTitle("\(role.getPORoleName())")
-        // make a dictionary of PO role pluralizations to use here
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarItems(leading:
+//            NavigationLink(destination: ContentView()) {
+//                Text("Back Home")
+//        })
+//        .navigationBarItems(trailing:
+//            NavigationLink(destination: PrincipalViewList()) {
+//                Text("Back to Principals Data")
+//        })
     }
 }
 
