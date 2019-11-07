@@ -24,6 +24,33 @@ struct PrincipalEditView: View {
     @State var note: String = ""
     @State var career: Career = Career.none
     @State var stateOfResidence: USState = USState.none
+    static let didDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter
+    }()
+    var startDateString: String {
+        if principal.startDate != nil {
+            return PrincipalEditView.self.didDateFormatter.string(from: principal.startDate!)
+        } else {
+            return "None identified"
+        }
+    }
+    var dutyDateString: String {
+        if principal.dutyDate != nil {
+            return PrincipalEditView.self.didDateFormatter.string(from: principal.dutyDate!)
+        } else {
+            return "None identified"
+        }
+    }
+    var endDateString: String {
+        if principal.endDate != nil {
+            return PrincipalEditView.self.didDateFormatter.string(from: principal.endDate!)
+        } else {
+            return "None identified"
+        }
+    }
 
     var body: some View {
         Form {
@@ -39,13 +66,13 @@ struct PrincipalEditView: View {
 //                }
 //            }
             Section {
-                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date (optional)") })
+                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date: (optional) \(startDateString)") })
                 TextField("Start note: (optional) \(principal.startNote ?? "")", text: self.$startNote)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                DatePicker(selection: self.$dutyDate, in: ...Date(), displayedComponents: .date, label: { Text("Duty date (optional)") })
+                DatePicker(selection: self.$dutyDate, in: ...Date(), displayedComponents: .date, label: { Text("Duty date: (optional) \(dutyDateString)") })
                 TextField("Duty note: (optional) \(principal.dutyNote ?? "")", text: self.$dutyNote)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                DatePicker(selection: self.$endDate, in: ...Date(), displayedComponents: .date, label: { Text("End date (optional)") })
+                DatePicker(selection: self.$endDate, in: ...Date(), displayedComponents: .date, label: { Text("End date: (optional) \(endDateString)") })
                 TextField("End note: (optional) \(principal.endNote ?? "")", text: self.$endNote)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Instance note: (optional) \(principal.note ?? "")", text: self.$note)

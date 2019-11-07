@@ -163,7 +163,7 @@ struct PersonEditView: View {
             }
         }
         .navigationBarTitle("Edit \(person.lastName)")
-        .navigationBarBackButtonHidden(true)
+//        .navigationBarBackButtonHidden(true)
 //        .navigationBarItems(leading:
 //            NavigationLink(destination: ContentView()) {
 //                Text("Back Home")
