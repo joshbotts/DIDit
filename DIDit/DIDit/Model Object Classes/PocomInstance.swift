@@ -191,6 +191,64 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         }
     }
     
+//    static let didDateFormatter: DateFormatter = {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "en_US")
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        return dateFormatter
+//    }()
+    
+    func startDateString() -> String {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "MMMM dd, yyyy"
+        if self.startDate != nil {
+            return "Appointed: " + didDateFormatter.string(from: self.startDate!)
+        } else {
+            return "No date of appointment identified."
+        }
+    }
+    func chargeDateString() -> String {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "MMMM dd, yyyy"
+        if self.chargeDate != nil {
+            return "Assumed charge: " + didDateFormatter.string(from: self.chargeDate!)
+        } else {
+            return "No date of assumption of charge identified"
+        }
+    }
+    func credentialDateString() -> String {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "MMMM dd, yyyy"
+        if self.credentialDate != nil {
+            return "Presented credentials: " + didDateFormatter.string(from: self.credentialDate!)
+        } else {
+            return "No date of presentation of credentials identified"
+        }
+    }
+    func dutyDateString() -> String {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "MMMM dd, yyyy"
+        if self.dutyDate != nil {
+            return "Entry on duty: " + didDateFormatter.string(from: self.dutyDate!)
+        } else {
+            return "No date of entry on duty identified"
+        }
+    }
+    func endDateString() -> String {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "MMMM dd, yyyy"
+        if self.endDate != nil {
+            return "Termination of appointment: " + didDateFormatter.string(from: self.endDate!)
+        } else {
+            return "No date of termination of appointment identified"
+        }
+    }
+    
     init(id: String, personID: String, type: PocomInstanceType) {
         self.id = id
         self.personID = personID
@@ -320,6 +378,10 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         self.provenance = provenance
     }
     
+    func exportChiefCSV() -> String {
+        return "country: \(self.country!), role: \(self.comRole!), person: \(self.personID), \(self.startDateString()), \(self.chargeDateString()), \(self.credentialDateString()), \(self.endDateString())"
+    }
+    
     func exportChiefElement() -> String {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
@@ -369,7 +431,7 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         <note>\(self.note ?? "")</note>
         <created-by>\(self.creationBy ?? "DIDit.app")</created-by>
         <created-date>\(self.creationDate ?? currentDateString)</created-date>
-        <last-modified-by>DIDit.app</last-modified-by>
+        <last-modified-by>\(self.modificationBy ?? "DIDit.app")</last-modified-by>
         <last-modified-date>\(currentDateString)</last-modified-date>
         </chief>
         """
@@ -416,7 +478,7 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         <note>\(self.note ?? "")</note>
         <created-by>\(self.creationBy ?? "DIDit.app")</created-by>
         <created-date>\(self.creationDate ?? currentDateString)</created-date>
-        <last-modified-by>DIDit.app</last-modified-by>
+        <last-modified-by>\(self.modificationBy ?? "DIDit.app")</last-modified-by>
         <last-modified-date>\(currentDateString)</last-modified-date>
         </principal>
         """

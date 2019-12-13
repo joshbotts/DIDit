@@ -27,40 +27,40 @@ struct ChiefEditView: View {
 @State var note: String = ""
 @State var career: Career = Career.none
 @State var stateOfResidence: USState = USState.none
-    static let didDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter
-    }()
-    var startDateString: String {
-        if chief.startDate != nil {
-            return ChiefEditView.self.didDateFormatter.string(from: chief.startDate!)
-        } else {
-            return "None identified"
-        }
-    }
-    var chargeDateString: String {
-        if chief.chargeDate != nil {
-            return ChiefEditView.self.didDateFormatter.string(from: chief.chargeDate!)
-        } else {
-            return "None identified"
-        }
-    }
-    var credentialDateString: String {
-        if chief.credentialDate != nil {
-            return ChiefEditView.self.didDateFormatter.string(from: chief.credentialDate!)
-        } else {
-            return "None identified"
-        }
-    }
-    var endDateString: String {
-        if chief.endDate != nil {
-            return ChiefEditView.self.didDateFormatter.string(from: chief.endDate!)
-        } else {
-            return "None identified"
-        }
-    }
+//    static let didDateFormatter: DateFormatter = {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "en_US")
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        return dateFormatter
+//    }()
+//    var startDateString: String {
+//        if chief.startDate != nil {
+//            return ChiefEditView.self.didDateFormatter.string(from: chief.startDate!)
+//        } else {
+//            return "None identified"
+//        }
+//    }
+//    var chargeDateString: String {
+//        if chief.chargeDate != nil {
+//            return ChiefEditView.self.didDateFormatter.string(from: chief.chargeDate!)
+//        } else {
+//            return "None identified"
+//        }
+//    }
+//    var credentialDateString: String {
+//        if chief.credentialDate != nil {
+//            return ChiefEditView.self.didDateFormatter.string(from: chief.credentialDate!)
+//        } else {
+//            return "None identified"
+//        }
+//    }
+//    var endDateString: String {
+//        if chief.endDate != nil {
+//            return ChiefEditView.self.didDateFormatter.string(from: chief.endDate!)
+//        } else {
+//            return "None identified"
+//        }
+//    }
     
 var body: some View {
     Form {
@@ -83,16 +83,16 @@ var body: some View {
             }
         }
         Section {
-            DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date: (optional) \(startDateString)") })
+            DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date: (optional) \(chief.startDateString())") })
             TextField("Start note: (optional) \(chief.startNote ?? "")", text: self.$startNote)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            DatePicker(selection: self.$chargeDate, in: ...Date(), displayedComponents: .date, label: { Text("Charge date: (optional) \(chargeDateString)") })
+            DatePicker(selection: self.$chargeDate, in: ...Date(), displayedComponents: .date, label: { Text("Charge date: (optional) \(chief.chargeDateString())") })
             TextField("Charge note: (optional) \(chief.chargeNote ?? "")", text: self.$chargeNote)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            DatePicker(selection: self.$credentialDate, in: ...Date(), displayedComponents: .date, label: { Text("Credential date: (optional) \(credentialDateString)") })
+            DatePicker(selection: self.$credentialDate, in: ...Date(), displayedComponents: .date, label: { Text("Credential date: (optional) \(chief.credentialDateString())") })
             TextField("Credential note: (optional) \(chief.credentialNote ?? "")", text: self.$credentialNote)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            DatePicker(selection: self.$endDate, in: ...Date(), displayedComponents: .date, label: { Text("End date: (optional) \(endDateString)") })
+            DatePicker(selection: self.$endDate, in: ...Date(), displayedComponents: .date, label: { Text("End date: (optional) \(chief.endDateString())") })
             TextField("End note: (optional) \(chief.endNote ?? "")", text: self.$endNote)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             TextField("Instance note: (optional) \(chief.note ?? "")", text: self.$note)

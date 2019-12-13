@@ -24,20 +24,20 @@ struct PersonEditView: View {
     @State var stateOfResidence: USState = USState.none
     @State var sex: String = ""
     @State var provenance: String = ""
-    var personBirthYear: String? {
-    if person.birthYear != nil {
-    return String(person.birthYear!)
-    } else {
-        return nil
-        }
-    }
-    var personDeathYear: String? {
-        if person.deathYear != nil {
-        return String(person.deathYear!)
-        } else {
-            return nil
-            }
-    }
+//    var personBirthYear: String? {
+//    if person.birthYear != nil {
+//    return String(person.birthYear!)
+//    } else {
+//        return nil
+//        }
+//    }
+//    var personDeathYear: String? {
+//        if person.deathYear != nil {
+//        return String(person.deathYear!)
+//        } else {
+//            return nil
+//            }
+//    }
     
     var body: some View {
         Form {
@@ -54,9 +54,9 @@ struct PersonEditView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField(person.altName ?? "alternate/common name (optional)", text: self.$altName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField(personBirthYear ?? "birth year (optional)", text: self.$birthYear)
+                TextField(person.birthYearString() ?? "birth year (optional)", text: self.$birthYear)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField(personDeathYear ?? "death year (optional)", text: self.$deathYear)
+                TextField(person.deathYearString() ?? "death year (optional)", text: self.$deathYear)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField(person.sex ?? "sex (optional)", text: self.$sex)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -108,23 +108,15 @@ struct PersonEditView: View {
                     }
                     var birthYearString: String? = self.birthYear
                     if self.birthYear == "" {
-                        if self.person.birthYear != nil {
-                            birthYearString = String(self.person.birthYear!)
-                        } else {
-                            birthYearString = ""
+                        birthYearString = self.person.birthYearString()
                         }
-                    }
                     var birthYearInt: Int? = nil
                     if birthYearString != nil {
                             birthYearInt = Int(birthYearString!)
                         }
                     var deathYearString: String? = self.deathYear
                     if self.deathYear == "" {
-                        if self.person.deathYear != nil {
-                            deathYearString = String(self.person.deathYear!)
-                        } else {
-                            deathYearString = ""
-                        }
+                            deathYearString = self.person.deathYearString()
                     }
                     var deathYearInt: Int? = nil
                     if deathYearString != nil {

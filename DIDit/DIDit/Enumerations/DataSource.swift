@@ -12,4 +12,16 @@ enum DataSource: String {
     case xml
     case json
     case app
+    
+    func getSource() -> String {
+        if self == .xml {
+            return "Native XML"
+        } else if self == .json {
+            return "Tweaked JSON"
+        } else if self == .app {
+            return "DIDit.app"
+        } else {
+            return "Not identified"
+        }
+    }
 }

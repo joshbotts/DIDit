@@ -19,61 +19,22 @@ struct PersonViewDetail: View {
         return roles
     }
     
-    var personMiddleName: String {
-        var middleName = ""
-        if person.middleName  != nil {
-            middleName = " " + person.middleName!
-        }
-        return middleName
-    }
-    var personGenName: String {
-        var genName = ""
-        if person.genName  != nil {
-            genName = " " + person.genName!
-        }
-        return genName
-    }
-    var personName: String {
-        if person.altName != nil {
-            return person.altName!
-        } else {
-        return person.firstName + personMiddleName + " " + person.lastName + personGenName
-    }
-    }
-    var personBirthYearString: String {
-        var birthYear = ""
-        if person.birthYear != nil {
-            birthYear = String(person.birthYear!)
-        } else {
-            birthYear = "No birth year identified"
-        }
-        return birthYear
-    }
-    var personDeathYearString: String {
-        var deathYear = ""
-        if person.deathYear != nil {
-            deathYear = String(person.deathYear!)
-        } else {
-            deathYear = "No year of death identified"
-        }
-        return deathYear
-    }
-        
     var body: some View {
         VStack(alignment: .leading) {
-            Text(personName)
-            .font(.headline)
+            Text(person.getDisplayName())
+                .font(.headline)
             
-            VStack(alignment: .leading) {
-            Text(person.career?.rawValue ?? "No career type identified.")
-            Text(person.stateOfResidence?.getStateName() ?? "No state of residence identified.")
+            HStack  {
+                Text(person.birthYearString() ?? "No birth year identified")
+                Text("-")
+                Text(person.deathYearString() ?? "No year of death identified")
             }
             .font(.body)
             
-            HStack  {
-                Text(personBirthYearString)
-                Text("-")
-                Text(personDeathYearString)
+            VStack(alignment: .leading) {
+                Text(person.sex ?? "No sex identified.")
+                Text(person.stateOfResidence?.getStateName() ?? "No state of residence identified.")
+                Text(person.career?.rawValue ?? "No career type identified.")
             }
             .font(.body)
             
@@ -81,18 +42,18 @@ struct PersonViewDetail: View {
                 PocomInstanceForPersonDetailViewRow(instance: instanceRole)
             }
             
-    }
-    .padding()
-        .navigationBarTitle("\(person.firstName) \(person.lastName)")
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            NavigationLink(destination: ContentView()) {
-//                Text("Back Home")
-//        })
-        .navigationBarItems(trailing:
-            NavigationLink(destination: PersonEditView(person: person)) {
-            Text("Edit")
         }
+        .padding()
+        .navigationBarTitle("\(person.firstName) \(person.lastName)")
+            //        .navigationBarBackButtonHidden(true)
+            //        .navigationBarItems(leading:
+            //            NavigationLink(destination: ContentView()) {
+            //                Text("Back Home")
+            //        })
+            .navigationBarItems(trailing:
+                NavigationLink(destination: PersonEditView(person: person)) {
+                    Text("Edit")
+                }
         )
     }
 }

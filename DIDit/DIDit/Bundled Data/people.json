@@ -57221,5 +57221,38 @@
     "createdDate": "2019-11-05",
     "lastModifiedBy": "DIDit.app",
     "lastModifiedDate": "2019-11-05"
+},
+{
+    "id": "mckee-erin-e",
+    "surname": "McKee",
+    "forename": "Erin E.",
+    "careerType": "career",
+    "stateID": "ca",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-11-13",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-11-13"
+},
+{
+    "id": "cohen-jonathan-r",
+    "surname": "Cohen",
+    "forename": "Jonathan R.",
+    "careerType": "career",
+    "stateID": "ca",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-12-12",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-12"
+},
+{
+    "id": "zuckerman-adrian",
+    "surname": "Zuckerman",
+    "forename": "Adrian",
+    "careerType": "non-career",
+    "stateID": "nj",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-12-12",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-12"
 }
 ]

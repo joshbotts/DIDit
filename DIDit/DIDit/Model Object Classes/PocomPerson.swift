@@ -185,6 +185,38 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
             return id.lowercased()
         }
     
+    func birthYearString() -> String? {
+        if self.birthYear != nil {
+        return String(self.birthYear!)
+        } else {
+            return nil
+            }
+    }
+    
+    func deathYearString() -> String? {
+        if self.deathYear != nil {
+        return String(self.deathYear!)
+        } else {
+            return nil
+            }
+    }
+    
+    func getDisplayName() -> String {
+        var middleName = ""
+            if self.middleName  != nil {
+                middleName = " " + self.middleName!
+            }
+        var genName = ""
+            if self.genName != nil {
+                genName = " " + self.genName!
+        }
+        if self.altName != nil {
+            return self.altName!
+        } else {
+            return self.firstName + middleName + " " + self.lastName + genName
+        }
+    }
+    
     func exportPersonElement() -> String {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
@@ -230,7 +262,7 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         </residence>
         <created-by>\(self.creationBy ?? "DIDit.app")</created-by>
         <created-date>\(self.creationDate ?? currentDateString)</created-date>
-        <last-modified-by>DIDit.app</last-modified-by>
+        <last-modified-by>\(self.modificationBy ?? "DIDit.app")</last-modified-by>
         <last-modified-date>\(currentDateString)</last-modified-date>
         </person>
 """

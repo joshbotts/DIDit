@@ -169,7 +169,7 @@ enum XmlCountry: String, Identifiable, Hashable, CaseIterable {
     case senegal = "senegal"
     case serbia = "serbia"
     case seychelles = "seychelles"
-    case sierrraLeone = "sierra-leone"
+    case sierraLeone = "sierra-leone"
     case singapore = "singapore"
     case slovakia = "slovakia"
     case slovenia = "slovenia"

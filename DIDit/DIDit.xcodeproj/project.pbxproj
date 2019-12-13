@@ -59,6 +59,7 @@
 		8DD766C92360D98B00400C3F /* XmlCOMRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766C32360D98A00400C3F /* XmlCOMRole.swift */; };
 		8DD766CD2360D9D600400C3F /* JsonIntermediateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */; };
 		8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766CE2360DD1700400C3F /* PersonAddView.swift */; };
+		8DFFDCAC23A2E82F00A787F7 /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,8 @@
 		8DD766C32360D98A00400C3F /* XmlCOMRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlCOMRole.swift; sourceTree = "<group>"; };
 		8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIntermediateTypes.swift; sourceTree = "<group>"; };
 		8DD766CE2360DD1700400C3F /* PersonAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
+		8DFFDCAA23A2D6F100A787F7 /* AFRequest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AFRequest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,7 @@
 				8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */,
 				8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */,
 				8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */,
+				8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */,
 			);
 			path = "Workflow Views";
 			sourceTree = "<group>";
@@ -283,6 +287,7 @@
 				8DD766B22360D94B00400C3F /* Info.plist */,
 				8DD766A52360D94A00400C3F /* POCOM.xcdatamodeld */,
 				8DD766AC2360D94B00400C3F /* Preview Content */,
+				8DFFDCAA23A2D6F100A787F7 /* AFRequest.playground */,
 			);
 			path = DIDit;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */,
 				8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */,
 				8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */,
+				8DFFDCAC23A2E82F00A787F7 /* AFRequest.swift in Sources */,
 				8D70069023622D940069850B /* PrincipalRoleViewRow.swift in Sources */,
 				8D70069123622D940069850B /* PrincipalViewRow.swift in Sources */,
 				8D700671236218B30069850B /* ChiefAddView.swift in Sources */,
@@ -551,6 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DIDit/DIDit.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DIDit/Preview Content\"";
@@ -562,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.11.05;
+				MARKETING_VERSION = 2019.12.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -576,6 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DIDit/DIDit.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DIDit/Preview Content\"";
@@ -587,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.11.05;
+				MARKETING_VERSION = 2019.12.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
