@@ -569,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.12.12;
+				MARKETING_VERSION = 2019.12.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -595,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.12.12;
+				MARKETING_VERSION = 2019.12.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;

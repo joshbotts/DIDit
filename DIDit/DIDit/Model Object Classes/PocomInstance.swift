@@ -378,8 +378,8 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         self.provenance = provenance
     }
     
-    func exportChiefCSV() -> String {
-        return "country: \(self.country!), role: \(self.comRole!), person: \(self.personID), \(self.startDateString()), \(self.chargeDateString()), \(self.credentialDateString()), \(self.endDateString())"
+    func exportChiefSCSV() -> String {
+        return "country: \(self.country!); role: \(self.comRole!); person: \(self.personID); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
     }
     
     func exportChiefElement() -> String {
