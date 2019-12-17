@@ -143,7 +143,7 @@ struct AFRequest: View {
         countries.append(XmlCountry.philippines)
         countries.append(XmlCountry.samoa)
         countries.append(XmlCountry.singapore)
-        countries.append(XmlCountry.solomanIslands)
+        countries.append(XmlCountry.solomonIslands)
         countries.append(XmlCountry.thailand)
         countries.append(XmlCountry.timorLeste)
         countries.append(XmlCountry.tonga)
@@ -243,6 +243,14 @@ struct AFRequest: View {
         return afChiefs
     }
     
+    var afChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----AF Chiefs of Mission Since 2000-----"]
+        for chief in afChiefsSince2000 {
+            csv.append(chief.exportChiefSCSV())
+        }
+        return csv
+    }
+    
     var eapChiefsSince2000: [PocomInstance] {
         var eapChiefs: [PocomInstance] = []
         for country in eapCountries {
@@ -252,6 +260,14 @@ struct AFRequest: View {
             eapChiefs += chiefsSince2000
         }
         return eapChiefs
+    }
+    
+    var eapChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----EAP Chiefs of Mission Since 2000-----"]
+        for chief in eapChiefsSince2000 {
+            csv.append(chief.exportChiefSCSV())
+        }
+        return csv
     }
     
     var eurChiefsSince2000: [PocomInstance] {
@@ -265,6 +281,14 @@ struct AFRequest: View {
         return eurChiefs
     }
     
+    var eurChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----EUR Chiefs of Mission Since 2000-----"]
+        for chief in eurChiefsSince2000 {
+            csv.append(chief.exportChiefSCSV())
+        }
+        return csv
+    }
+    
     var neaChiefsSince2000: [PocomInstance] {
         var neaChiefs: [PocomInstance] = []
         for country in neaCountries {
@@ -274,6 +298,14 @@ struct AFRequest: View {
             neaChiefs += chiefsSince2000
         }
         return neaChiefs
+    }
+    
+    var neaChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----NEA Chiefs of Mission Since 2000-----"]
+        for chief in neaChiefsSince2000 {
+            csv.append(chief.exportChiefSCSV())
+        }
+        return csv
     }
     
     var scaChiefsSince2000: [PocomInstance] {
@@ -287,6 +319,14 @@ struct AFRequest: View {
         return scaChiefs
     }
     
+    var scaChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----SCA Chiefs of Mission Since 2000-----"]
+        for chief in scaChiefsSince2000 {
+            csv.append(chief.exportChiefSCSV())
+        }
+        return csv
+    }
+    
     var whaChiefsSince2000: [PocomInstance] {
         var whaChiefs: [PocomInstance] = []
         for country in whaCountries {
@@ -298,9 +338,9 @@ struct AFRequest: View {
         return whaChiefs
     }
     
-    var afChiefsSince2000Export: [String] {
-        var csv: [String] = ["-----AF Chiefs Since 2000-----"]
-        for chief in afChiefsSince2000 {
+    var whaChiefsSince2000Export: [String] {
+        var csv: [String] = ["-----WHA Chiefs of Mission Since 2000-----"]
+        for chief in whaChiefsSince2000 {
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -387,10 +427,10 @@ struct AFRequest: View {
     var body: some View {
         HStack {
         Button("Copy csv data to clipboard") {
-            let exportedElements = self.afChiefsSince2000Export + self.afChargesSince2000Export + self.eapChargesSince2000Export +
-                self.eurChargesSince2000Export +
-                self.neaChargesSince2000Export +
-                self.scaChargesSince2000Export +
+            let exportedElements = self.afChiefsSince2000Export + self.afChargesSince2000Export + self.eapChiefsSince2000Export + self.eapChargesSince2000Export + self.eurChiefsSince2000Export +
+                self.eurChargesSince2000Export + self.neaChiefsSince2000Export +
+                self.neaChargesSince2000Export + self.scaChiefsSince2000Export +
+                self.scaChargesSince2000Export + self.whaChiefsSince2000Export +
                 self.whaChargesSince2000Export
             UIPasteboard.general.string = exportedElements.joined(separator: "\n")
         }
