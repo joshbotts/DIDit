@@ -22,8 +22,8 @@ struct PrincipalEditView: View {
     @State var endDate: Date = Date("3001-01-01")
     @State var endNote: String = ""
     @State var note: String = ""
-    @State var career: Career = Career.none
-    @State var stateOfResidence: USState = USState.none
+//    @State var career: Career = Career.none
+//    @State var stateOfResidence: USState = USState.none
 //    static let didDateFormatter: DateFormatter = {
 //        let dateFormatter = DateFormatter()
 //        dateFormatter.locale = Locale(identifier: "en_US")
@@ -78,20 +78,20 @@ struct PrincipalEditView: View {
                 TextField("Instance note: (optional) \(principal.note ?? "")", text: self.$note)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-            Section {
-                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
-                    ForEach(Career.allCases, id: \.self.rawValue) { status in
-                        Text(status.rawValue).tag(status)
-                    }
-                }
-            }
-            Section {
-                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
-                    ForEach(USState.allCases, id: \.self.rawValue) { state in
-                        Text(state.getStateName()).tag(state)
-                    }
-                }
-            }
+//            Section {
+//                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
+//                    ForEach(Career.allCases, id: \.self.rawValue) { status in
+//                        Text(status.rawValue).tag(status)
+//                    }
+//                }
+//            }
+//            Section {
+//                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
+//                    ForEach(USState.allCases, id: \.self.rawValue) { state in
+//                        Text(state.getStateName()).tag(state)
+//                    }
+//                }
+//            }
             Section {
                 Button("Save edited role and copy xml element to clipboard")
                 {
@@ -136,14 +136,14 @@ struct PrincipalEditView: View {
                     if self.note == "" {
                         note = self.principal.note
                     }
-                    var career: Career? = self.career
-                    if self.career == .none {
-                        career = self.principal.careerFsoOverride
-                    }
-                    var state: USState? = self.stateOfResidence
-                    if self.stateOfResidence == .none {
-                        state = self.principal.stateOfResidenceOverride
-                    }
+//                    var career: Career? = self.career
+//                    if self.career == .none {
+//                        career = self.principal.careerFsoOverride
+//                    }
+//                    var state: USState? = self.stateOfResidence
+//                    if self.stateOfResidence == .none {
+//                        state = self.principal.stateOfResidenceOverride
+//                    }
 //                    self.principal.poRole = poRole
 //                    self.principal.personID = self.person.id
 //                    self.principal.person = self.person
@@ -154,8 +154,8 @@ struct PrincipalEditView: View {
                     self.principal.endDate = endDate
                     self.principal.endNote = endNote
                     self.principal.note = note
-                    self.principal.careerFsoOverride = career
-                    self.principal.stateOfResidenceOverride = state
+//                    self.principal.careerFsoOverride = career
+//                    self.principal.stateOfResidenceOverride = state
                     self.principal.provenance = provenance
                     self.principal.createdWith = DataSource.app
                     self.principal.modificationDate = currentDateString

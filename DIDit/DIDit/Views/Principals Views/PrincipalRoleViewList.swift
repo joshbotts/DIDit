@@ -27,6 +27,8 @@ struct PrincipalRoleViewList: View {
     var body: some View {
         List(principalsForRole) { principal in
             PrincipalRoleViewRow(principal: principal)
+            //                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
+            //                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from PO role list view
         }
         .navigationBarTitle("\(role.getPORoleName())")
 //        .navigationBarBackButtonHidden(true)

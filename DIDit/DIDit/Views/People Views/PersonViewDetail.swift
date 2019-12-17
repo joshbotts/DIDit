@@ -40,6 +40,8 @@ struct PersonViewDetail: View {
             
             List(roles) { instanceRole in
                 PocomInstanceForPersonDetailViewRow(instance: instanceRole)
+//                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
+//                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from person detail view
             }
             
         }

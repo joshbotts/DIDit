@@ -24,8 +24,8 @@ struct ChiefAddView: View {
     @State var endDate: Date = Date("3001-01-01")
     @State var endNote: String = ""
     @State var note: String = ""
-    @State var career: Career = Career.none
-    @State var stateOfResidence: USState = USState.none
+//    @State var career: Career = Career.none
+//    @State var stateOfResidence: USState = USState.none
     
     var body: some View {
         Form {
@@ -63,20 +63,20 @@ struct ChiefAddView: View {
                 TextField("instance note (optional)", text: self.$note)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-            Section {
-                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
-                    ForEach(Career.allCases, id: \.self.rawValue) { status in
-                        Text(status.rawValue).tag(status)
-                    }
-                }
-            }
-            Section {
-                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
-                    ForEach(USState.allCases, id: \.self.rawValue) { state in
-                        Text(state.getStateName()).tag(state)
-                    }
-                }
-            }
+//            Section {
+//                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
+//                    ForEach(Career.allCases, id: \.self.rawValue) { status in
+//                        Text(status.rawValue).tag(status)
+//                    }
+//                }
+//            }
+//            Section {
+//                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
+//                    ForEach(USState.allCases, id: \.self.rawValue) { state in
+//                        Text(state.getStateName()).tag(state)
+//                    }
+//                }
+//            }
             Section {
                 Button("Save new chief role and copy xml element to clipboard")
                 {
@@ -140,19 +140,19 @@ struct ChiefAddView: View {
                     } else {
                         noteForInit = self.note
                     }
-                    var careerForInit: Career?
-                    if self.career == .none {
-                        careerForInit = nil
-                    } else {
-                        careerForInit = self.career
-                    }
-                    var stateOfResidenceForInit: USState?
-                    if self.stateOfResidence == .none {
-                        stateOfResidenceForInit = nil
-                    } else {
-                        stateOfResidenceForInit = self.stateOfResidence
-                    }
-                    let newChiefInstance = PocomInstance.init(comRole: self.comRole, country: self.country, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, chargeDate: chargeDateForInit, chargeNote: chargeNoteForInit, credentialDate: credentialDateForInit, credentialNote: credentialNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: careerForInit, stateOfResidence: stateOfResidenceForInit, provenance: provenance)
+//                    var careerForInit: Career?
+//                    if self.career == .none {
+//                        careerForInit = nil
+//                    } else {
+//                        careerForInit = self.career
+//                    }
+//                    var stateOfResidenceForInit: USState?
+//                    if self.stateOfResidence == .none {
+//                        stateOfResidenceForInit = nil
+//                    } else {
+//                        stateOfResidenceForInit = self.stateOfResidence
+//                    }
+                    let newChiefInstance = PocomInstance.init(comRole: self.comRole, country: self.country, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, chargeDate: chargeDateForInit, chargeNote: chargeNoteForInit, credentialDate: credentialDateForInit, credentialNote: credentialNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: nil, stateOfResidence: nil, provenance: provenance)
                     self.pocom.appendChief(newChiefInstance)
                     let exportedChief = newChiefInstance.exportChiefElement()
                     UIPasteboard.general.string = exportedChief

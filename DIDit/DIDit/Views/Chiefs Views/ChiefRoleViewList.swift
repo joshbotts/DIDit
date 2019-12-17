@@ -27,6 +27,8 @@ struct ChiefRoleViewList: View {
     var body: some View {
         List(chiefsForCountry) { chief in
             ChiefRoleViewRow(chief: chief)
+            //                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
+            //                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from PO role list view
         }
         .navigationBarTitle("Chiefs of Mission in \(country.getCountryName())")
 //        .navigationBarBackButtonHidden(true)
