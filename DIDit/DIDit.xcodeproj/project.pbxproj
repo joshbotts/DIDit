@@ -16,6 +16,7 @@
 		8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */; };
 		8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Helper Extension.swift */; };
 		8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */; };
+		8D6F556623A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */; };
 		8D70066F236218900069850B /* PrincipalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70066E236218900069850B /* PrincipalAddView.swift */; };
 		8D700671236218B30069850B /* ChiefAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D700670236218B30069850B /* ChiefAddView.swift */; };
 		8D70067723622CF20069850B /* chiefs-countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D70067423622CF20069850B /* chiefs-countries.json */; };
@@ -73,6 +74,7 @@
 		8D45394523653A4F008F0283 /* DataControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllers.swift; sourceTree = "<group>"; };
 		8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDataView.swift; sourceTree = "<group>"; };
 		8D5ED6CF23632A6C00F9BE28 /* DIDit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DIDit.entitlements; sourceTree = "<group>"; };
+		8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesConvertCredentialDateToChargeDate.swift; sourceTree = "<group>"; };
 		8D70066E236218900069850B /* PrincipalAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalAddView.swift; sourceTree = "<group>"; };
 		8D700670236218B30069850B /* ChiefAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChiefAddView.swift; sourceTree = "<group>"; };
 		8D70067423622CF20069850B /* chiefs-countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "chiefs-countries.json"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */,
 				8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */,
 				8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */,
+				8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */,
 			);
 			path = "Workflow Views";
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				8D70068E23622D940069850B /* ChiefRoleViewRow.swift in Sources */,
 				8DD766C52360D98B00400C3F /* DataSource.swift in Sources */,
 				8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */,
+				8D6F556623A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift in Sources */,
 				8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */,
 				8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */,
 				8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */,

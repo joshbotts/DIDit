@@ -61,6 +61,13 @@ struct WorkflowListView: View {
                         .font(.headline)
                 }
             }
+            NavigationLink(destination: ChargesConvertCredentialDateToChargeDate()) {
+                HStack {
+                    Image(systemName: "wand.and.rays")
+                    Text("Convert credentialing dates to charge dates for chargés")
+                        .font(.headline)
+                }
+            }
         }
     .navigationBarTitle("DID Team Action Items")
     }

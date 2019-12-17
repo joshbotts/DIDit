@@ -37,11 +37,11 @@ struct ChiefRoleViewRow: View {
         perInstanceDateFormatter.locale = Locale(identifier: "en_US")
         perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
         if chief.chargeDate != nil {
-            return "Assumed charge: " + perInstanceDateFormatter.string(from: chief.chargeDate!)
+            return chief.chargeDateString()
         } else if chief.credentialDate != nil {
-            return "Presented credentials: " + perInstanceDateFormatter.string(from: chief.credentialDate!)
+            return chief.credentialDateString()
         } else if chief.startDate != nil {
-            return "Appointed:  " + perInstanceDateFormatter.string(from: chief.startDate!)
+            return chief.startDateString()
         } else if chief.nominationDate != nil {
             return "Nominated: " + perInstanceDateFormatter.string(from: chief.nominationDate!)
         } else {
@@ -54,7 +54,7 @@ struct ChiefRoleViewRow: View {
         perInstanceDateFormatter.locale = Locale(identifier: "en_US")
         perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
         if chief.endDate != nil {
-            return "Relinquished charge: " + perInstanceDateFormatter.string(from: chief.endDate!)
+            return chief.endDateString()
         } else if chief.nominationEndDate != nil {
             return "Nomination ended: "  + perInstanceDateFormatter.string(from: chief.nominationEndDate!)
         } else {

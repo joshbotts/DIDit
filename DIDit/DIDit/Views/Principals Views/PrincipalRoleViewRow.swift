@@ -37,9 +37,9 @@ struct PrincipalRoleViewRow: View {
         perInstanceDateFormatter.locale = Locale(identifier: "en_US")
         perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
         if principal.dutyDate != nil {
-            return "Entered on Duty: " + perInstanceDateFormatter.string(from: principal.dutyDate!)
+            return principal.dutyDateString()
         } else if principal.startDate != nil {
-            return "Appointed: " + perInstanceDateFormatter.string(from: principal.startDate!)
+            return principal.startDateString()
         } else if principal.nominationDate != nil {
             return "Nominated: " + perInstanceDateFormatter.string(from: principal.nominationDate!)
         } else {
@@ -52,7 +52,7 @@ struct PrincipalRoleViewRow: View {
         perInstanceDateFormatter.locale = Locale(identifier: "en_US")
         perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
         if principal.endDate != nil {
-            return "Termination of Appointment: " + perInstanceDateFormatter.string(from: principal.endDate!)
+            return principal.endDateString()
         } else if principal.nominationEndDate != nil {
             return "Nomination ended: " + perInstanceDateFormatter.string(from: principal.nominationEndDate!)
         } else {

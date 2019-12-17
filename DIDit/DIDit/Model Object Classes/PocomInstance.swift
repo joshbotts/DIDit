@@ -69,18 +69,23 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     // needed unified role parameter for displayed heterogenous information for different (sub)types of pocom instances in the person detail views. defaul of "no role identified" should never be used.
     @Published var poRole: XmlPrincipalOfficerRole?
     @Published var startDate: Date?
+    @Published var startPrecision: String?
     // appointment date
     @Published var startNote: String?
     @Published var chargeDate: Date?
+    @Published var chargePrecision: String?
     // date of arrival at post or transfer of authority to CDA. for .type=chief
     @Published var chargeNote: String?
     @Published var dutyDate: Date?
+    @Published var dutyPrecision: String?
     // entry on duty date. for .type=principal
     @Published var dutyNote: String?
     @Published var credentialDate: Date?
+    @Published var credentialPrecision: String?
     // for .type=chief
     @Published var credentialNote: String?
     @Published var endDate: Date?
+    @Published var endPrecision: String?
     // termination of appointment
     @Published var endNote: String?
     // to add any desired editorial comment or explanation of circumstances for termination of role (reorganization of bureaus)
@@ -202,50 +207,109 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if self.startDate != nil {
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "MMMM, yyyy"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch self.startPrecision {
+        case "day":
             return "Appointed: " + didDateFormatter.string(from: self.startDate!)
-        } else {
+        case "month":
+            return "Appointed: " + didDateFormatterMonthPrecision.string(from: self.startDate!)
+        case "year":
+            return "Appointed: " + didDateFormatterYearPrecision.string(from: self.startDate!)
+        default:
             return "No date of appointment identified."
         }
     }
+    
     func chargeDateString() -> String {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if self.chargeDate != nil {
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "MMMM, yyyy"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch self.chargePrecision {
+        case "day":
             return "Assumed charge: " + didDateFormatter.string(from: self.chargeDate!)
-        } else {
-            return "No date of assumption of charge identified"
+        case "month":
+            return "Assumed charge: " + didDateFormatterMonthPrecision.string(from: self.chargeDate!)
+        case "year":
+            return "Assumed charge: " + didDateFormatterYearPrecision.string(from: self.chargeDate!)
+        default:
+            return "No date of assumption of charge identified."
         }
     }
+    
     func credentialDateString() -> String {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if self.credentialDate != nil {
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "MMMM, yyyy"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch self.credentialPrecision {
+        case "day":
             return "Presented credentials: " + didDateFormatter.string(from: self.credentialDate!)
-        } else {
-            return "No date of presentation of credentials identified"
+        case "month":
+            return "Presented credentials: " + didDateFormatterMonthPrecision.string(from: self.credentialDate!)
+        case "year":
+            return "Presented credentials: " + didDateFormatterYearPrecision.string(from: self.credentialDate!)
+        default:
+            return "No date of presentation of credentials identified."
         }
     }
+    
     func dutyDateString() -> String {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if self.dutyDate != nil {
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "MMMM, yyyy"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch self.dutyPrecision {
+        case "day":
             return "Entry on duty: " + didDateFormatter.string(from: self.dutyDate!)
-        } else {
-            return "No date of entry on duty identified"
+        case "month":
+            return "Entry on duty: " + didDateFormatterMonthPrecision.string(from: self.dutyDate!)
+        case "year":
+            return "Entry on duty: " + didDateFormatterYearPrecision.string(from: self.dutyDate!)
+        default:
+            return "No date of entry on duty identified."
         }
     }
+    
     func endDateString() -> String {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if self.endDate != nil {
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "MMMM, yyyy"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch self.endPrecision {
+        case "day":
             return "Termination of appointment: " + didDateFormatter.string(from: self.endDate!)
-        } else {
-            return "No date of termination of appointment identified"
+        case "month":
+            return "Termination of appointment: " + didDateFormatterMonthPrecision.string(from: self.endDate!)
+        case "year":
+            return "Termination of appointment: " + didDateFormatterYearPrecision.string(from: self.endDate!)
+        default:
+            return "No date of termination of appointment identified."
         }
     }
     
@@ -269,13 +333,74 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "yyyy-MM-dd"
-        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "yyyy-MM"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch service.appointedDate?.count {
+        case 10:
+            self.startDate = didDateFormatter.date(from: service.appointedDate!)
+            self.startPrecision = "day"
+        case 7:
+            self.startDate = didDateFormatterMonthPrecision.date(from: service.appointedDate!)
+            self.startPrecision = "month"
+        case 4:
+            self.startDate = didDateFormatterYearPrecision.date(from: service.appointedDate!)
+            self.startPrecision = "year"
+        default:
+            self.startDate = nil
+        }
+//        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
         self.startNote = service.appointedNote
-        self.chargeDate = didDateFormatter.date(from: service.arrivedDate ?? "")
+        switch service.arrivedDate?.count {
+        case 10:
+            self.chargeDate = didDateFormatter.date(from: service.arrivedDate!)
+            self.chargePrecision = "day"
+        case 7:
+            self.chargeDate = didDateFormatterMonthPrecision.date(from: service.arrivedDate!)
+            self.chargePrecision = "month"
+        case 4:
+            self.chargeDate = didDateFormatterYearPrecision.date(from: service.arrivedDate!)
+            self.chargePrecision = "year"
+        default:
+            self.chargeDate = nil
+            self.chargePrecision = nil
+        }
+//        self.chargeDate = didDateFormatter.date(from: service.arrivedDate ?? "")
         self.chargeNote = service.arrivedNote
-        self.credentialDate = didDateFormatter.date(from: service.startedDate ?? "")
+        switch service.startedDate?.count {
+               case 10:
+                   self.credentialDate = didDateFormatter.date(from: service.startedDate!)
+                   self.credentialPrecision = "day"
+               case 7:
+                   self.credentialDate = didDateFormatterMonthPrecision.date(from: service.startedDate!)
+                   self.credentialPrecision = "month"
+               case 4:
+                   self.credentialDate = didDateFormatterYearPrecision.date(from: service.startedDate!)
+                   self.credentialPrecision = "year"
+               default:
+                   self.credentialDate = nil
+                   self.credentialPrecision = nil
+               }
+//        self.credentialDate = didDateFormatter.date(from: service.startedDate ?? "")
         self.credentialNote = service.startedNote
-        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
+        switch service.endedDate?.count {
+        case 10:
+            self.endDate = didDateFormatter.date(from: service.endedDate!)
+            self.endPrecision = "day"
+        case 7:
+            self.endDate = didDateFormatterMonthPrecision.date(from: service.endedDate!)
+            self.endPrecision = "month"
+        case 4:
+            self.endDate = didDateFormatterYearPrecision.date(from: service.endedDate!)
+            self.endPrecision = "year"
+        default:
+            self.endDate = nil
+            self.endPrecision = nil
+        }
+//        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
         self.endNote = service.endedNote
         self.note = service.note
         self.modificationDate = service.lastModifiedDate
@@ -295,11 +420,59 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
         didDateFormatter.dateFormat = "yyyy-MM-dd"
-        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
+        let didDateFormatterMonthPrecision = DateFormatter()
+        didDateFormatterMonthPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterMonthPrecision.dateFormat = "yyyy-MM"
+        let didDateFormatterYearPrecision = DateFormatter()
+        didDateFormatterYearPrecision.locale = Locale(identifier: "en_US")
+        didDateFormatterYearPrecision.dateFormat = "yyyy"
+        switch service.appointedDate?.count {
+        case 10:
+            self.startDate = didDateFormatter.date(from: service.appointedDate!)
+            self.startPrecision = "day"
+        case 7:
+            self.startDate = didDateFormatterMonthPrecision.date(from: service.appointedDate!)
+            self.startPrecision = "month"
+        case 4:
+            self.startDate = didDateFormatterYearPrecision.date(from: service.appointedDate!)
+            self.startPrecision = "year"
+        default:
+            self.startDate = nil
+            self.startPrecision = nil
+        }
+//        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
         self.startNote = service.appointedNote
-        self.dutyDate = didDateFormatter.date(from: service.startedDate ?? "")
+        switch service.startedDate?.count {
+        case 10:
+            self.dutyDate = didDateFormatter.date(from: service.startedDate!)
+            self.dutyPrecision = "day"
+        case 7:
+            self.dutyDate = didDateFormatterMonthPrecision.date(from: service.startedDate!)
+            self.dutyPrecision = "month"
+        case 4:
+            self.dutyDate = didDateFormatterYearPrecision.date(from: service.startedDate!)
+            self.dutyPrecision = "year"
+        default:
+            self.dutyDate = nil
+            self.dutyPrecision = nil
+        }
+//        self.dutyDate = didDateFormatter.date(from: service.startedDate ?? "")
         self.dutyNote = service.startedNote
-        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
+        switch service.endedDate?.count {
+        case 10:
+            self.endDate = didDateFormatter.date(from: service.endedDate!)
+            self.endPrecision = "day"
+        case 7:
+            self.endDate = didDateFormatterMonthPrecision.date(from: service.endedDate!)
+            self.endPrecision = "month"
+        case 4:
+            self.endDate = didDateFormatterYearPrecision.date(from: service.endedDate!)
+            self.endPrecision = "year"
+        default:
+            self.endDate = nil
+            self.endPrecision = nil
+        }
+//        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
         self.endNote = service.endedNote
         self.note = service.note
         self.modificationDate = service.lastModifiedDate
@@ -330,10 +503,25 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     self.poRole = poRole
     self.personID = person.id
     self.startDate = startDate
+        if startDate != nil {
+            self.startPrecision = "day"
+        } else {
+            self.startPrecision = nil
+        }
     self.startNote = startNote
     self.dutyDate = dutyDate
+        if dutyDate != nil {
+            self.dutyPrecision = "day"
+        } else {
+            self.dutyPrecision = nil
+        }
     self.dutyNote = dutyNote
     self.endDate = endDate
+        if endDate != nil {
+            self.endPrecision = "day"
+        } else {
+            self.endPrecision = nil
+        }
     self.endNote = endNote
     self.note = note
     self.careerFsoOverride = career
@@ -365,12 +553,32 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         self.country = country
         self.personID = person.id
         self.startDate = startDate
+        if startDate != nil {
+            self.startPrecision = "day"
+        } else {
+            self.startPrecision = nil
+        }
         self.startNote = startNote
         self.chargeDate = chargeDate
+        if chargeDate != nil {
+            self.chargePrecision = "day"
+        } else {
+            self.chargePrecision = nil
+        }
         self.chargeNote = chargeNote
         self.credentialDate = credentialDate
+        if credentialDate != nil {
+            self.credentialPrecision = "day"
+        } else {
+            self.credentialPrecision = nil
+        }
         self.credentialNote = credentialNote
         self.endDate = endDate
+        if endDate != nil {
+            self.endPrecision = "day"
+        } else {
+            self.endPrecision = nil
+        }
         self.endNote = endNote
         self.note = note
         self.careerFsoOverride = career
