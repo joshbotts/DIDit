@@ -5352,7 +5352,7 @@
     {
         "id": "bo-2012-memm-01",
         "personID": "memmott-larry-l",
-        "roleTitleID": "charge-daffaires",
+        "roleTitleID": "charge-daffaires-ad-interim",
         "contemporaryTerritoryID": "bolivia",
         "appointedDate": "",
         "appointedNote": "",
@@ -5364,7 +5364,7 @@
         "createdBy": "marrsaw",
         "createdDate": "2015-07-09",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "bo-2014-brenn-01",
@@ -9418,13 +9418,13 @@
         "appointedNote": "",
         "startedDate": "2011-07-09",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2011-09-19",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-01-29",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-01-29"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "ss-2011-page-01",
@@ -13210,7 +13210,7 @@
     {
         "id": "ve-2011-derh-01",
         "personID": "derham-james-michael",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "venezuela",
         "appointedDate": "",
         "appointedNote": "",
@@ -13222,24 +13222,7 @@
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
         "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2014-07-22"
-    },
-    {
-        "id": "ve-2013-laid-01",
-        "personID": "laidlaw-philip-graham",
-        "roleTitleID": "charge-daffaires-ad-interim",
-        "contemporaryTerritoryID": "venezuela",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2013-06",
-        "startedNote": "",
-        "endedDate": "2014-07",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2014-07-22",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-12-07"
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "ve-2014-mccl-01",
@@ -21644,7 +21627,7 @@
     {
         "id": "bu-1999-clap-01",
         "personID": "clapp-priscilla-ann",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "burma",
         "appointedDate": "",
         "appointedNote": "",
@@ -21655,13 +21638,13 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2015-07-09",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-12-06"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "bu-2002-mart-01",
         "personID": "martinez-carmen-maria",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "burma",
         "appointedDate": "",
         "appointedNote": "",
@@ -21672,13 +21655,13 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2015-07-09",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-07-09"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "bu-2005-vill-01",
         "personID": "villarosa-sharon-english-woods",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "burma",
         "appointedDate": "",
         "appointedNote": "",
@@ -21689,13 +21672,13 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-07-09"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "bu-2008-ding-01",
         "personID": "dinger-larry-miles",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "burma",
         "appointedDate": "",
         "appointedNote": "",
@@ -21706,8 +21689,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-07-09"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "bu-2012-mitc-01",
@@ -40038,19 +40021,19 @@
     {
         "id": "om-2001-dry-01",
         "personID": "dry-robert-w",
-        "roleTitleID": "charge-daffaires",
+        "roleTitleID": "charge-daffaires-ad-interim",
         "contemporaryTerritoryID": "oman",
         "appointedDate": "",
         "appointedNote": "",
         "startedDate": "2001-09",
         "startedNote": "",
-        "endedDate": "2002-11",
+        "endedDate": "2002-10-22",
         "endedNote": "",
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-01-04"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "om-2002-balt-01",
@@ -44812,7 +44795,7 @@
     {
         "id": "do-2009-lamb-01",
         "personID": "lambert-christopher",
-        "roleTitleID": "charge-daffaires",
+        "roleTitleID": "charge-daffaires-ad-interim",
         "contemporaryTerritoryID": "dominican-republic",
         "appointedDate": "",
         "appointedNote": "",
@@ -44823,8 +44806,8 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-01-12",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-01-12"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "do-2010-yzag-01",
@@ -55094,7 +55077,7 @@
     },
     {
         "id": "sd-2003-gall-01",
-        "personID": "galluci-gerard-m",
+        "personID": "gallucci-gerard-m",
         "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "sudan",
         "appointedDate": "",
@@ -55106,25 +55089,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-22"
-    },
-    {
-        "id": "sd-2004-whit-01",
-        "personID": "whitehead-robert-e",
-        "roleTitleID": "charge-daffaires",
-        "contemporaryTerritoryID": "sudan",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2004-09",
-        "startedNote": "",
-        "endedDate": "2005-02",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "wicentowskijc",
-        "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-22"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "sd-2005-kaeu-01",
@@ -55136,23 +55102,6 @@
         "startedDate": "2005-02",
         "startedNote": "",
         "endedDate": "2005-05",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2016-08-22",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-22"
-    },
-    {
-        "id": "sd-2005-whit-01",
-        "personID": "whitehead-robert-e",
-        "roleTitleID": "charge-daffaires",
-        "contemporaryTerritoryID": "sudan",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2005-05",
-        "startedNote": "",
-        "endedDate": "2005-07",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
@@ -55229,23 +55178,6 @@
         "lastModifiedDate": "2016-08-22"
     },
     {
-        "id": "sd-2011-hank-01",
-        "personID": "hankins-dennis-b",
-        "roleTitleID": "charge-daffaires",
-        "contemporaryTerritoryID": "sudan",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2011-07",
-        "startedNote": "",
-        "endedDate": "2011-09",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2016-08-22",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-31"
-    },
-    {
         "id": "sd-2011-yate-01",
         "personID": "yates-mary-carlin",
         "roleTitleID": "charge-daffaires",
@@ -55261,23 +55193,6 @@
         "createdDate": "2016-08-22",
         "lastModifiedBy": "marrsaw",
         "lastModifiedDate": "2016-08-22"
-    },
-    {
-        "id": "sd-2012-hank-01",
-        "personID": "hankins-dennis-b",
-        "roleTitleID": "charge-daffaires",
-        "contemporaryTerritoryID": "sudan",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2012-02",
-        "startedNote": "",
-        "endedDate": "2012-06",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2016-08-22",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-31"
     },
     {
         "id": "sd-2012-staf-01",
@@ -59360,23 +59275,6 @@
         "startedDate": "2007-07",
         "startedNote": "",
         "endedDate": "2008-07",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2016-01-29",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-01-29"
-    },
-    {
-        "id": "tm-2009-curr-01",
-        "personID": "curran-sylvia-reed",
-        "roleTitleID": "charge-daffaires-ad-interim",
-        "contemporaryTerritoryID": "turkmenistan",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2009-07",
-        "startedNote": "",
-        "endedDate": "2010-07",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
@@ -63611,7 +63509,7 @@
     {
         "id": "cf-2005-pano-01",
         "personID": "panos-a-james",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "central-african-republic",
         "appointedDate": "",
         "appointedNote": "",
@@ -63622,8 +63520,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-11-06"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "cf-2007-cook-01",
@@ -63662,7 +63560,7 @@
     {
         "id": "cf-2013-brow-01",
         "personID": "brown-david-edward",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "central-african-republic",
         "appointedDate": "",
         "appointedNote": "",
@@ -63673,8 +63571,8 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-08-29",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-12-06"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "cf-2015-hawk-01",
@@ -73422,7 +73320,7 @@
     {
         "id": "by-2009-scan-01",
         "personID": "scanlan-michael-d",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "belarus",
         "appointedDate": "",
         "appointedNote": "",
@@ -73433,8 +73331,8 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2015-07-09",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-07-09"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "by-2013-gold-01",
@@ -73524,19 +73422,19 @@
     {
         "id": "pw-2005-bezn-01",
         "personID": "bezner-mark-j",
-        "roleTitleID": "charge-daffaires-ad-interim",
+        "roleTitleID": "charge-daffaires",
         "contemporaryTerritoryID": "palau",
         "appointedDate": "",
         "appointedNote": "",
-        "startedDate": "2005-08",
+        "startedDate": "2006-08-25",
         "startedNote": "",
-        "endedDate": "2009-10",
+        "endedDate": "2009-10-14",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2015-11-02",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-11-02"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "pw-2010-reed-01",
@@ -90842,7 +90740,7 @@
     },
     {
         "id": "si-2009-frad-01",
-        "personID": "fraden-bradley",
+        "personID": "freden-bradley",
         "roleTitleID": "charge-daffaires-ad-interim",
         "contemporaryTerritoryID": "slovenia",
         "appointedDate": "",
@@ -90854,8 +90752,8 @@
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-01-21",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-01-21"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-18s"
     },
     {
         "id": "si-2010-muss-01",
@@ -97849,7 +97747,7 @@
     {
         "id": "qa-2018-gran-01",
         "personID": "grant-william",
-        "roleTitleID": "charge-daffaires",
+        "roleTitleID": "charge-daffaires-ad-interim",
         "contemporaryTerritoryID": "qatar",
         "appointedDate": "",
         "appointedNote": "",
@@ -97863,7 +97761,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2019-12-16",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-12-16"
+        "lastModifiedDate": "2019-12-18"
     },
     {
         "id": "ve-2018-stor-01",

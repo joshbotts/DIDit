@@ -203,12 +203,12 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
     
     func getDisplayName() -> String {
         var middleName = ""
-            if self.middleName  != nil {
-                middleName = " " + self.middleName!
-            }
+        if self.middleName != nil {
+            middleName = " " + self.middleName!
+        }
         var genName = ""
-            if self.genName != nil {
-                genName = " " + self.genName!
+        if self.genName != nil {
+            genName = " " + self.genName!
         }
         if self.altName != nil {
             return self.altName!

@@ -587,7 +587,7 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     }
     
     func exportChiefSCSV() -> String {
-        return "country: \(self.country!); role: \(self.comRole!); person: \(self.personID); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
+        return "\(self.country!.getCountryName()); \(self.comRole!.getTitle()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
     }
     
     func exportChiefElement() -> String {

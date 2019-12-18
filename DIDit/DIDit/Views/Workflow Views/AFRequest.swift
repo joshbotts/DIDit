@@ -246,6 +246,7 @@ struct AFRequest: View {
     var afChiefsSince2000Export: [String] {
         var csv: [String] = ["-----AF Chiefs of Mission Since 2000-----"]
         for chief in afChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -265,6 +266,7 @@ struct AFRequest: View {
     var eapChiefsSince2000Export: [String] {
         var csv: [String] = ["-----EAP Chiefs of Mission Since 2000-----"]
         for chief in eapChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -284,6 +286,7 @@ struct AFRequest: View {
     var eurChiefsSince2000Export: [String] {
         var csv: [String] = ["-----EUR Chiefs of Mission Since 2000-----"]
         for chief in eurChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -303,6 +306,7 @@ struct AFRequest: View {
     var neaChiefsSince2000Export: [String] {
         var csv: [String] = ["-----NEA Chiefs of Mission Since 2000-----"]
         for chief in neaChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -322,6 +326,7 @@ struct AFRequest: View {
     var scaChiefsSince2000Export: [String] {
         var csv: [String] = ["-----SCA Chiefs of Mission Since 2000-----"]
         for chief in scaChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -341,6 +346,7 @@ struct AFRequest: View {
     var whaChiefsSince2000Export: [String] {
         var csv: [String] = ["-----WHA Chiefs of Mission Since 2000-----"]
         for chief in whaChiefsSince2000 {
+            pocom.associatePerson(instance: chief)
             csv.append(chief.exportChiefSCSV())
         }
         return csv
@@ -354,6 +360,7 @@ struct AFRequest: View {
     var afChargesSince2000Export: [String] {
         var csv: [String] = ["-----AF Charges Since 2000-----"]
         for charge in afChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv
@@ -367,6 +374,7 @@ struct AFRequest: View {
     var eapChargesSince2000Export: [String] {
         var csv: [String] = ["-----EAP Charges Since 2000-----"]
         for charge in eapChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv
@@ -380,6 +388,7 @@ struct AFRequest: View {
     var eurChargesSince2000Export: [String] {
         var csv: [String] = ["-----EUR Charges Since 2000-----"]
         for charge in eurChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv
@@ -393,6 +402,7 @@ struct AFRequest: View {
     var neaChargesSince2000Export: [String] {
         var csv: [String] = ["-----NEA Charges Since 2000-----"]
         for charge in neaChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv
@@ -406,6 +416,7 @@ struct AFRequest: View {
     var scaChargesSince2000Export: [String] {
         var csv: [String] = ["-----SCA Charges Since 2000-----"]
         for charge in scaChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv
@@ -419,6 +430,7 @@ struct AFRequest: View {
     var whaChargesSince2000Export: [String] {
         var csv: [String] = ["-----WHA Charges Since 2000-----"]
         for charge in whaChargesSince2000 {
+            pocom.associatePerson(instance: charge)
             csv.append(charge.exportChiefSCSV())
         }
         return csv

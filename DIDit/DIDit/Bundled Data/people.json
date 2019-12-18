@@ -7132,8 +7132,8 @@
     "lastModifiedDate": "2014-07-21"
 },
 {
-    "id": "galluci-gerard-m",
-    "surname": "Galluci",
+    "id": "gallucci-gerard-m",
+    "surname": "Gallucci",
     "forename": "Gerard M.",
     "birth": 1951,
     
@@ -7141,8 +7141,8 @@
     "stateID": "pa",
     "createdBy": "wicentowskijc",
     "createdDate": "2010-05-20",
-    "lastModifiedBy": "marrsaw",
-    "lastModifiedDate": "2016-12-19"
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-18"
 },
 {
     "id": "goosby-eric",
@@ -17467,11 +17467,11 @@
     
     
     "careerType": "career",
-    "stateID": "",
+    "stateID": "az",
     "createdBy": "marrsaw",
     "createdDate": "2017-01-13",
-    "lastModifiedBy": "marrsaw",
-    "lastModifiedDate": "2017-01-13"
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-18"
 },
 {
     "id": "frazier-arthur-hugh",
@@ -17993,19 +17993,6 @@
     "createdDate": "2010-05-20",
     "lastModifiedBy": "marrsaw",
     "lastModifiedDate": "2013-04-08"
-},
-{
-    "id": "fraden-bradley",
-    "surname": "Fraden",
-    "forename": "Bradley",
-    
-    
-    "careerType": "career",
-    "stateID": "",
-    "createdBy": "marrsaw",
-    "createdDate": "2016-01-21",
-    "lastModifiedBy": "marrsaw",
-    "lastModifiedDate": "2016-01-21"
 },
 {
     "id": "fernandez-jose-w",
@@ -34358,19 +34345,6 @@
     "lastModifiedDate": "2010-05-20"
 },
 {
-    "id": "curran-sylvia-reed",
-    "surname": "Curran",
-    "forename": "Sylvia Reed",
-    "birth": 1958,
-    
-    "careerType": "career",
-    "stateID": "ak",
-    "createdBy": "marrsaw",
-    "createdDate": "2016-01-29",
-    "lastModifiedBy": "marrsaw",
-    "lastModifiedDate": "2016-12-14"
-},
-{
     "id": "carlson-richard-w",
     "surname": "Carlson",
     "forename": "Richard W.",
@@ -49004,20 +48978,6 @@
     "createdDate": "2010-05-20",
     "lastModifiedBy": "wicentowskijc",
     "lastModifiedDate": "2010-05-20"
-},
-{
-    "id": "laidlaw-philip-graham",
-    "old-ids": {"old-id": "laidlaw-philip-c"},
-    "surname": "Laidlaw",
-    "forename": "Philip Graham",
-    "birth": 1967,
-    
-    "careerType": "career",
-    "stateID": "fl",
-    "createdBy": "marrsaw",
-    "createdDate": "2014-07-22",
-    "lastModifiedBy": "marrsaw",
-    "lastModifiedDate": "2016-12-07"
 },
 {
     "id": "learson-thomas-vincent",
