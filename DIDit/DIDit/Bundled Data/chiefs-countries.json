@@ -23477,13 +23477,13 @@
         "appointedNote": "",
         "startedDate": "2018-02-25",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-21",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "am-1992-mann-01",
@@ -37293,13 +37293,13 @@
         "appointedNote": "",
         "startedDate": "2018-02-25",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-23",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-23"
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "to-1973-farl-01",
@@ -83325,13 +83325,13 @@
         "appointedNote": "",
         "startedDate": "2018-02-25",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-21",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "fj-1973-farl-01",
@@ -90628,13 +90628,13 @@
         "appointedNote": "",
         "startedDate": "2018-02-25",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-22",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-22"
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "si-1993-wend-01",
@@ -92963,13 +92963,13 @@
         "appointedNote": "",
         "startedDate": "2015-09-21",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-14",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-08-24",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-08-24"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "ro-1892-beal-01",
@@ -97375,13 +97375,13 @@
         "arrivedNote": "",
         "startedDate": "2018-02-25",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2019-12-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-11-05",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "tv-2019-cell-01",
@@ -97390,7 +97390,7 @@
         "contemporaryTerritoryID": "tuvalu",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-16",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97399,8 +97399,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "to-2019-cell-01",
@@ -97409,7 +97409,7 @@
         "contemporaryTerritoryID": "tonga",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-16",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97418,8 +97418,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "nr-2019-cell-01",
@@ -97428,7 +97428,7 @@
         "contemporaryTerritoryID": "nauru",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-16",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97437,8 +97437,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "ki-2019-cell-01",
@@ -97447,7 +97447,7 @@
         "contemporaryTerritoryID": "kiribati",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-16",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97456,8 +97456,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "fj-2019-cell-01",
@@ -97466,7 +97466,7 @@
         "contemporaryTerritoryID": "fiji",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-16",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97475,8 +97475,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "vu-2019-mcke-01",
@@ -97542,7 +97542,7 @@
         "contemporaryTerritoryID": "romania",
         "appointedDate": "2019-11-21",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2019-12-14",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97551,8 +97551,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-12-12",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-12-12"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2019-12-19"
     },
     {
         "id": "eg-2019-cohe-01",
