@@ -16,6 +16,7 @@
 		8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */; };
 		8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Helper Extension.swift */; };
 		8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */; };
+		8D4BB09323ABE771001C1041 /* update-date.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D4BB09223ABE771001C1041 /* update-date.json */; };
 		8D6F556623A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */; };
 		8D70066F236218900069850B /* PrincipalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70066E236218900069850B /* PrincipalAddView.swift */; };
 		8D700671236218B30069850B /* ChiefAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D700670236218B30069850B /* ChiefAddView.swift */; };
@@ -73,6 +74,7 @@
 		8D45393F23652E4B008F0283 /* Date Helper Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Helper Extension.swift"; sourceTree = "<group>"; };
 		8D45394523653A4F008F0283 /* DataControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllers.swift; sourceTree = "<group>"; };
 		8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDataView.swift; sourceTree = "<group>"; };
+		8D4BB09223ABE771001C1041 /* update-date.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "update-date.json"; sourceTree = "<group>"; };
 		8D5ED6CF23632A6C00F9BE28 /* DIDit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DIDit.entitlements; sourceTree = "<group>"; };
 		8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesConvertCredentialDateToChargeDate.swift; sourceTree = "<group>"; };
 		8D70066E236218900069850B /* PrincipalAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalAddView.swift; sourceTree = "<group>"; };
@@ -120,7 +122,6 @@
 		8DD766C32360D98A00400C3F /* XmlCOMRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlCOMRole.swift; sourceTree = "<group>"; };
 		8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIntermediateTypes.swift; sourceTree = "<group>"; };
 		8DD766CE2360DD1700400C3F /* PersonAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
-		8DFFDCAA23A2D6F100A787F7 /* AFRequest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AFRequest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +143,7 @@
 				8D70067523622CF20069850B /* chiefs-orgs.json */,
 				8D70067623622CF20069850B /* principals.json */,
 				8DD766B82360D96000400C3F /* people.json */,
+				8D4BB09223ABE771001C1041 /* update-date.json */,
 			);
 			path = "Bundled Data";
 			sourceTree = "<group>";
@@ -290,7 +292,6 @@
 				8DD766B22360D94B00400C3F /* Info.plist */,
 				8DD766A52360D94A00400C3F /* POCOM.xcdatamodeld */,
 				8DD766AC2360D94B00400C3F /* Preview Content */,
-				8DFFDCAA23A2D6F100A787F7 /* AFRequest.playground */,
 			);
 			path = DIDit;
 			sourceTree = "<group>";
@@ -362,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD766B92360D96000400C3F /* people.json in Resources */,
+				8D4BB09323ABE771001C1041 /* update-date.json in Resources */,
 				8D70067923622CF20069850B /* principals.json in Resources */,
 				8DD766B12360D94B00400C3F /* LaunchScreen.storyboard in Resources */,
 				8D70067823622CF20069850B /* chiefs-orgs.json in Resources */,
@@ -573,7 +575,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.12.16;
+				MARKETING_VERSION = 2020.01.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -599,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2019.12.16;
+				MARKETING_VERSION = 2020.01.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;

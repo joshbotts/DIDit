@@ -12,6 +12,7 @@ class BundledStore {
     var peopleJson: [PocomPerson]
     var principalsJson: [PocomInstance]
     var chiefsJson: [PocomInstance]
+    // var updateDate: Date
     
     init() {
         func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
@@ -106,6 +107,8 @@ final class PocomStore : ObservableObject {
     @Published var principals: [PocomInstance]
     @Published var chiefs: [PocomInstance]
     @Published var export: [Any]
+    // var localUpdateDate: Date
+    // var serverUpdateDate: Date
     
     func associatePerson(instance: PocomInstance) {
         if instance.person == nil {

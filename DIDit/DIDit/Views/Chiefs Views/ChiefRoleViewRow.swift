@@ -11,55 +11,14 @@ import SwiftUI
 struct ChiefRoleViewRow: View {
     @EnvironmentObject var pocom: PocomStore
     var chief: PocomInstance
-    var personMiddleName: String {
-        var middleName = ""
-        pocom.associatePerson(instance: chief)
-        if chief.person!.middleName  != nil {
-            middleName = chief.person!.middleName!
-        }
-        return middleName
-    }
-    var personGenName: String {
-        var genName = ""
-        pocom.associatePerson(instance: chief)
-        if chief.person!.genName  != nil {
-            genName = chief.person!.genName!
-        }
-        return genName
-    }
+
     var personName: String {
         pocom.associatePerson(instance: chief)
-        return String(chief.person!.firstName + " " + personMiddleName + " " + chief.person!.lastName + " " + personGenName)
+        return String(chief.person!.getDisplayName())
     }
     
-    var instanceStartDate: String {
-        let perInstanceDateFormatter = DateFormatter()
-        perInstanceDateFormatter.locale = Locale(identifier: "en_US")
-        perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if chief.chargeDate != nil {
-            return chief.chargeDateString()
-        } else if chief.credentialDate != nil {
-            return chief.credentialDateString()
-        } else if chief.startDate != nil {
-            return chief.startDateString()
-        } else if chief.nominationDate != nil {
-            return "Nominated: " + perInstanceDateFormatter.string(from: chief.nominationDate!)
-        } else {
-            return "No start date identified"
-        }
-    }
-    
-    var instanceEndDate: String {
-        let perInstanceDateFormatter = DateFormatter()
-        perInstanceDateFormatter.locale = Locale(identifier: "en_US")
-        perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
-        if chief.endDate != nil {
-            return chief.endDateString()
-        } else if chief.nominationEndDate != nil {
-            return "Nomination ended: "  + perInstanceDateFormatter.string(from: chief.nominationEndDate!)
-        } else {
-            return "No end date identified"
-        }
+    var instanceInformation: String {
+        return chief.startDateString() + "\n" + chief.chargeDateString() + "\n" + chief.credentialDateString() + "\n" + chief.endDateString()
     }
     
     var body: some View {
@@ -67,9 +26,7 @@ struct ChiefRoleViewRow: View {
             VStack(alignment: .leading) {
                 Text(personName)
                     .font(.headline)
-                Text(instanceStartDate)
-                    .font(.body)
-                Text(instanceEndDate)
+                Text(instanceInformation)
                     .font(.body)
             }
             Spacer()

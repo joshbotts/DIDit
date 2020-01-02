@@ -57325,5 +57325,27 @@
     "createdDate": "2019-12-16",
     "lastModifiedBy": "DIDit.app",
     "lastModifiedDate": "2019-12-16"
+},
+{
+    "id": "biegun-stephen-e",
+    "surname": "Biegun",
+    "forename": "Stephen E.",
+    "careerType": "non-career",
+    "stateID": "mi",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-12-30",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-30"
+},
+{
+    "id": "fischer-david-t",
+    "surname": "Fischer",
+    "forename": "David T.",
+    "careerType": "non-career",
+    "stateID": "mi",
+    "createdBy": "DIDit.app",
+    "createdDate": "2019-12-30",
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2019-12-30"
 }
 ]

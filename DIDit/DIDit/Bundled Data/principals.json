@@ -20566,5 +20566,21 @@
         "createdDate": "2019-11-05",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2019-11-05"
+    },
+    {
+        "id": "secr-2019-bieg",
+        "personID": "biegun-stephen-e",
+        "roleTitleID": "deputy-secretary",
+        "appointedDate": "2019-12-20",
+        "appointedNote": "",
+        "startedDate": "2019-12-21",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "DIDit.app",
+        "createdDate": "2019-12-30",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-30"
     }
 ]

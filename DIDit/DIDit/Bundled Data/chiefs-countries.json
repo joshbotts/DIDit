@@ -44034,7 +44034,7 @@
         "appointedNote": "",
         "arrivedDate": "2019-11-06",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2019-12-24",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -44042,7 +44042,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2019-09-19",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-13"
+        "lastModifiedDate": "2019-12-30"
     },
     {
         "id": "ng--stei-01",
@@ -97781,5 +97781,43 @@
         "createdDate": "2019-12-16",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2019-12-16"
+    },
+    {
+        "id": "ma-2019-fisc-01",
+        "personID": "fischer-david-t",
+        "roleTitleID": "ambassador-e-p",
+        "contemporaryTerritoryID": "morocco",
+        "appointedDate": "2019-12-20",
+        "appointedNote": "",
+        "arrivedDate": "",
+        "arrivedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "DIDit.app",
+        "createdDate": "2019-12-30",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-30"
+    },
+    {
+        "id": "ru-2019-sull-01",
+        "personID": "sullivan-john-j",
+        "roleTitleID": "ambassador-e-p",
+        "contemporaryTerritoryID": "russia",
+        "appointedDate": "2019-12-20",
+        "appointedNote": "",
+        "arrivedDate": "",
+        "arrivedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "DIDit.app",
+        "createdDate": "2019-12-30",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2019-12-30"
     }
 ]

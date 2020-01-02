@@ -11,29 +11,11 @@ import SwiftUI
 struct PersonViewRow: View {
     @EnvironmentObject var pocom: PocomStore
     var person: PocomPerson
-    var personMiddleName: String {
-        var middleName = ""
-        if person.middleName  != nil {
-            middleName = " " + person.middleName!
-        }
-        return middleName
-    }
-    var personGenName: String {
-        var genName = ""
-        if person.genName  != nil {
-            genName = " " + person.genName!
-        }
-        return genName
-    }
-    var personForeName: String {
-        return String(person.firstName + personMiddleName + personGenName)
-    }
     
     var body: some View {
             HStack {
-                Text(person.lastName)
+                Text(person.getDisplayName())
                 .bold()
-                Text(personForeName)
             }
     }
 }
