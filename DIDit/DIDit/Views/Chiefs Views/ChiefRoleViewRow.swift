@@ -17,26 +17,30 @@ struct ChiefRoleViewRow: View {
         return String(chief.person!.getDisplayName())
     }
     
+    var instanceNote: String {
+        var note = ""
+        if chief.note != nil {
+            note = "\n" + chief.note!
+        }
+        return note
+    }
+    
     var instanceInformation: String {
-        return chief.startDateString() + "\n" + chief.chargeDateString() + "\n" + chief.credentialDateString() + "\n" + chief.endDateString()
+        return chief.startDateString() + "\n" + chief.chargeDateString() + "\n" + chief.credentialDateString() + "\n" + chief.endDateString() + instanceNote
     }
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(personName)
+        NavigationLink(destination: ChiefEditView(chief: chief)) {
+            HStack {
+                VStack(alignment: .leading) {
+//                    NavigationLink(destination: PersonViewDetail(person: chief.person!)) {
+                    Text(personName)
                     .font(.headline)
-                Text(instanceInformation)
+//                }
+                    Text(instanceInformation)
                     .font(.body)
-            }
+                    }
             Spacer()
-//            NavigationLink(destination: PersonViewDetail(person: chief.person!)) {
-//                Text("View Person")
-//            }
-            VStack(alignment: .trailing) {
-            NavigationLink(destination: ChiefEditView(chief: chief)) {
-                Text("Edit Role Data")
-            }
             }
         }
     }

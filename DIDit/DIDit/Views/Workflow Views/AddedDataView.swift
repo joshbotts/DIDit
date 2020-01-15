@@ -49,7 +49,7 @@ struct AddedDataView: View {
         
         VStack(alignment: .leading) {
             HStack {
-            Button("Copy selected elements to clipboard") {
+            Button("Copy selected xml elements to clipboard") {
                 let instancesToExport = self.pocom.export
                 var exportedElements: [String] = []
                 for instance in instancesToExport {
@@ -64,10 +64,10 @@ struct AddedDataView: View {
                         }
                     }
                 }
-                UIPasteboard.general.string = exportedElements.joined(separator: "\n")
+                UIPasteboard.general.string = exportedElements.joined(separator: "\n\n")
             }
                 Spacer()
-            Button("Save selected elements to device") {
+            Button("Save selected xml elements to disk") {
                 let instancesToExport = self.pocom.export
                 var exportedElements: [String] = []
                 for instance in instancesToExport {
@@ -82,14 +82,56 @@ struct AddedDataView: View {
                         }
                     }
                 }
-                let elementsToSave = exportedElements.joined(separator: "\n")
+                let elementsToSave = exportedElements.joined(separator: "\n\n")
                 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                         let exportedElementArchiveURL = documentsDirectory.appendingPathComponent("exportedElements").appendingPathExtension("txt")
-                //        let addedPeopleArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
-                //        let addedPrincipalsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
-                //        let addedChiefsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
                         try? elementsToSave.write(to: exportedElementArchiveURL, atomically: true, encoding: String.Encoding.utf8)
             }
+            }
+            HStack {
+                Button("Copy selected json to clipboard") {
+                    let instancesToExport = self.pocom.export
+                    var exportedElements: [String] = []
+                    for instance in instancesToExport {
+                        if type(of: instance) == PocomPerson.self {
+                            exportedElements.append((instance as! PocomPerson).exportPersonJson())
+                        }
+                        if type(of: instance) == PocomInstance.self {
+                            if (instance as! PocomInstance).instanceType == .chief {
+                                exportedElements.append((instance as! PocomInstance).exportChiefJson())
+                            } else {
+                                exportedElements.append((instance as! PocomInstance).exportPrincipalJson())
+                            }
+                        }
+                    }
+                    UIPasteboard.general.string = exportedElements.joined(separator: ",\n")
+                }
+                Spacer()
+                Button("Save selected json to disk") {
+                    let instancesToExport = self.pocom.export
+                    var exportedElements: [String] = []
+                    for instance in instancesToExport {
+                        if type(of: instance) == PocomPerson.self {
+                            exportedElements.append((instance as! PocomPerson).exportPersonJson())
+                        }
+                        if type(of: instance) == PocomInstance.self {
+                            if (instance as! PocomInstance).instanceType == .chief {
+                                exportedElements.append((instance as! PocomInstance).exportChiefJson())
+                            } else {
+                                exportedElements.append((instance as! PocomInstance).exportPrincipalJson())
+                            }
+                        }
+                    }
+                    let elementsToSave = exportedElements.joined(separator: ",\n")
+                    let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                    let currentDate = Date()
+                    let didDateFormatter = DateFormatter()
+                    didDateFormatter.locale = Locale(identifier: "en_US")
+                    didDateFormatter.dateFormat = "yyyy-MM-dd"
+                    let currentDateString = didDateFormatter.string(from: currentDate)
+                    let exportedJsonArchiveURL = documentsDirectory.appendingPathComponent("\(currentDateString).exportedJson").appendingPathExtension("txt")
+                    try? elementsToSave.write(to: exportedJsonArchiveURL, atomically: true, encoding: String.Encoding.utf8)
+                }
             }
             .padding()
             List(peopleAdded) { instance in

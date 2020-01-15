@@ -646,6 +646,51 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         return exportElement
     }
     
+    func exportChiefJson() -> String {
+        let currentDate = Date()
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        let currentDateString = didDateFormatter.string(from: currentDate)
+        var exportStartDate = ""
+        var exportChargeDate = ""
+        var exportCredentialDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.chargeDate != nil {
+            exportChargeDate = didDateFormatter.string(from: self.chargeDate!)
+        }
+        if self.credentialDate != nil {
+            exportCredentialDate = didDateFormatter.string(from: self.credentialDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        return """
+        {
+            "id": "\(self.id)",
+            "personID": "\(self.personID)",
+            "roleTitleID": "\(self.comRole!.rawValue)",
+            "contemporaryTerritoryID": "\(self.country!.rawValue)",
+            "appointedDate": "\(exportStartDate)",
+            "appointedNote": "\(self.startNote ?? "")",
+            "arrivedDate": "\(exportChargeDate)",
+            "arrivedNote": "\(self.chargeNote ?? "")",
+            "startedDate": "\(exportCredentialDate)",
+            "startedNote": "\(self.credentialNote ?? "")",
+            "endedDate": "\(exportEndDate)",
+            "endedNote": "\(self.endNote ?? "")",
+            "note": "\(self.note ?? "")",
+            "createdBy": "\(self.creationBy ?? "DIDit.app")",
+            "createdDate": "\(self.creationDate ?? currentDateString)",
+            "lastModifiedBy": "\(self.modificationBy ?? "DIDit.app")",
+            "lastModifiedDate": "\(currentDateString)"
+        }
+        """
+    }
+    
     func exportPrincipalElement() -> String {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
@@ -691,6 +736,44 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         </principal>
         """
         return exportElement
+    }
+    
+    func exportPrincipalJson() -> String {
+        let currentDate = Date()
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportDutyDate = ""
+        var exportEndDate = ""
+        let currentDateString = didDateFormatter.string(from: currentDate)
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.dutyDate != nil {
+            exportDutyDate = didDateFormatter.string(from: self.dutyDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        return """
+        {
+            "id": "\(self.id)",
+            "personID": "\(self.personID)",
+            "roleTitleID": "\(self.poRole!.rawValue)",
+            "appointedDate": "\(exportStartDate)",
+            "appointedNote": "\(self.startNote ?? "")",
+            "startedDate": "\(exportDutyDate)",
+            "startedNote": "\(self.dutyNote ?? "")",
+            "endedDate": "\(exportEndDate)",
+            "endedNote": "\(self.endNote ?? "")",
+            "note": "\(self.note ?? "")",
+            "createdBy": "\(self.creationBy ?? "DIDit.app")",
+            "createdDate": "\(self.creationDate ?? currentDateString)",
+            "lastModifiedBy": "\(self.modificationBy ?? "DIDit.app")",
+            "lastModifiedDate": "\(currentDateString)"
+        }
+        """
     }
     
     private enum CodingKeys: String, CodingKey {
@@ -809,6 +892,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     }
     
     deinit {
-    print("POCOM Instance deinitialized.")
+        print("POCOM Instance \(self.id) deinitialized.")
     }
 }

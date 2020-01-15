@@ -17,29 +17,32 @@ struct PrincipalRoleViewRow: View {
         return String(principal.person!.getDisplayName())
     }
     
+    var instanceNote: String {
+        var note = ""
+        if principal.note != nil {
+            note = "\n" + principal.note!
+        }
+        return note
+    }
+    
     var instanceInformation: String {
-        return principal.startDateString() + "\n" + principal.dutyDateString() + "\n" + principal.endDateString()
+        return principal.startDateString() + "\n" + principal.dutyDateString() + "\n" + principal.endDateString() + instanceNote
     }
     
     var body: some View {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(personName)
+            NavigationLink(destination: PrincipalEditView(principal: principal))  {
+                HStack {
+                    VStack(alignment: .leading) {
+//                    NavigationLink(destination: PersonViewDetail(person: principal.person!)) {
+                        Text(personName)
                         .font(.headline)
-                    Text(instanceInformation)
+//                    }
+                        Text(instanceInformation)
                         .font(.body)
-                    
-                }
-                Spacer()
-//                NavigationLink(destination: PersonViewDetail(person: principal.person!)) {
-//                    Text("View Person")
-//                }
-                VStack(alignment: .trailing) {
-                NavigationLink(destination: PrincipalEditView(principal: principal))  {
-                    Text("Edit Role Data")
+                    }
+                    Spacer()
                 }
             }
-        }
     }
 }
 

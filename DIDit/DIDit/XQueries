@@ -1,0 +1,31 @@
+xquery version "3.1";
+
+(: Generates a single file out of all POCOM people records.
+
+   Directions:
+   
+   Run this query in oXygen's XQuery debugger view (using the "Debugger" menu >
+   "XQuery Debugger"), with the query selected in the toolbar's XQuery dropdown.
+   
+   To ensure the query can find the necessary source files, update the $username
+   variable below.
+   
+   The query will generate a new "people.xml" file on your Desktop. To save the
+   file elsewhere, update the $destination-directory variable.
+:)
+
+let $username := "jbotts"
+let $home-directory := "file:/Users/" || $username
+let $pocom-directory := $home-directory || "/workspace/hsg-project/repos/pocom"
+let $saxon-collection-params :=
+    (: https://www.saxonica.com/html/documentation/sourcedocs/collections.html :)
+    "?recurse=yes&amp;select=*.xml"
+let $new-data :=
+    element people {
+        collection($pocom-directory || "/people" || $saxon-collection-params)
+    }
+let $destination-directory := $home-directory || "/Desktop/"
+let $destination-uri := $destination-directory || "people.xml"
+return
+    (: https://www.saxonica.com/html/documentation/functions/fn/put.html :)
+    fn:put($new-data, $destination-uri)

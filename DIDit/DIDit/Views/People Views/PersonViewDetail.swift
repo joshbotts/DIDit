@@ -38,9 +38,53 @@ struct PersonViewDetail: View {
             }
             .font(.body)
             
-            List(roles) { instanceRole in
-                PocomInstanceForPersonDetailViewRow(instance: instanceRole)
-//                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
+            List(roles) { instance in
+                PocomInstanceForPersonDetailViewRow(instance: instance)
+                .contextMenu {
+//                    NavigationLink(destination: InstanceAddView(person: self.person)) { Text("Add New Role") }
+//                    NavigationLink(destination:
+//                        {
+//                            if instance.instanceType == .chief {
+//                                ChiefEditView(chief: instance)
+//                            } else {
+//                                PrincipalEditView(principal: instance)
+//                            }
+//                        }
+//                    )
+//                        { Text("Edit Role") }
+                    Button(action:
+                        {
+                            if instance.instanceType == .chief {
+                                UIPasteboard.general.string = instance.exportChiefElement()
+                            } else {
+                                UIPasteboard.general.string = instance.exportPrincipalElement()
+                            }
+                        })
+                        { Text("Copy Role XML Element")
+                    Image(systemName: "doc.on.doc.fill")
+                }
+                    Button(action:
+                            {
+                                if instance.instanceType == .chief {
+                                    UIPasteboard.general.string = instance.exportChiefJson()
+                                } else {
+                                    UIPasteboard.general.string = instance.exportPrincipalJson()
+                                }
+                            })
+                            { Text("Copy Role JSON Data")
+                        Image(systemName: "doc.on.doc")
+                    }
+                    Button(action:
+                    {
+                        self.pocom.deleteInstance(instance: instance)
+                    })
+                    {
+                        Text("Delete Role")
+                        Image(systemName: "trash.fill")
+                        
+                    }
+                }
+                
 //                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from person detail view
             }
             

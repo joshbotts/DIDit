@@ -15,7 +15,33 @@ struct PersonViewRow: View {
     var body: some View {
             HStack {
                 Text(person.getDisplayName())
-                .bold()
+                .contextMenu {
+                Button(action:
+                {
+                    self.pocom.deletePerson(person: self.person)
+                })
+                {
+                    Text("Delete Person")
+                    Image(systemName: "trash.fill")
+                    
+                }
+                Button(action:
+                {
+                    UIPasteboard.general.string = self.person.exportPersonElement()
+                })
+                {
+                    Text("Copy Person XML Element")
+                    Image(systemName: "doc.on.doc.fill")
+                }
+                Button(action:
+                {
+                    UIPasteboard.general.string = self.person.exportPersonJson()
+                })
+                {
+                    Text("Copy Person JSON Data")
+                    Image(systemName: "doc.on.doc")
+                }
+                }
             }
     }
 }

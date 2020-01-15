@@ -166,6 +166,24 @@ final class PocomStore : ObservableObject {
         return instances
     }
     
+    func deletePerson(person: PocomPerson) {
+        if let i = self.people.firstIndex(where: { $0.id == person.id } ) {
+        self.people.remove(at: i)
+        }
+    }
+    
+    func deleteInstance(instance: PocomInstance) {
+        if instance.instanceType == .chief {
+            if let i = self.chiefs.firstIndex(where: { $0.id == instance.id } ) {
+                self.chiefs.remove(at: i)
+            }
+        } else {
+            if let i = self.principals.firstIndex(where: { $0.id == instance.id } ) {
+                self.principals.remove(at: i)
+            }
+        }
+    }
+    
     
     init() {
         var localPeople: [PocomPerson] = []

@@ -61,6 +61,7 @@
 		8DD766C92360D98B00400C3F /* XmlCOMRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766C32360D98A00400C3F /* XmlCOMRole.swift */; };
 		8DD766CD2360D9D600400C3F /* JsonIntermediateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */; };
 		8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766CE2360DD1700400C3F /* PersonAddView.swift */; };
+		8DECA9F223CFB8D30097B56D /* XQueries in Resources */ = {isa = PBXBuildFile; fileRef = 8DECA9F123CFB8D30097B56D /* XQueries */; };
 		8DFFDCAC23A2E82F00A787F7 /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		8DD766C32360D98A00400C3F /* XmlCOMRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlCOMRole.swift; sourceTree = "<group>"; };
 		8DD766CC2360D9D600400C3F /* JsonIntermediateTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIntermediateTypes.swift; sourceTree = "<group>"; };
 		8DD766CE2360DD1700400C3F /* PersonAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
+		8DECA9F123CFB8D30097B56D /* XQueries */ = {isa = PBXFileReference; lastKnownFileType = text; name = XQueries; path = DIDit/XQueries; sourceTree = SOURCE_ROOT; };
 		8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +293,7 @@
 				8DD766AF2360D94B00400C3F /* LaunchScreen.storyboard */,
 				8DD766B22360D94B00400C3F /* Info.plist */,
 				8DD766A52360D94A00400C3F /* POCOM.xcdatamodeld */,
+				8DECA9F123CFB8D30097B56D /* XQueries */,
 				8DD766AC2360D94B00400C3F /* Preview Content */,
 			);
 			path = DIDit;
@@ -368,6 +371,7 @@
 				8DD766B12360D94B00400C3F /* LaunchScreen.storyboard in Resources */,
 				8D70067823622CF20069850B /* chiefs-orgs.json in Resources */,
 				8D70067723622CF20069850B /* chiefs-countries.json in Resources */,
+				8DECA9F223CFB8D30097B56D /* XQueries in Resources */,
 				8DD766AE2360D94B00400C3F /* Preview Assets.xcassets in Resources */,
 				8DD766AB2360D94B00400C3F /* Assets.xcassets in Resources */,
 			);
@@ -575,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2020.01.02;
+				MARKETING_VERSION = 2020.01.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;
@@ -601,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2020.01.02;
+				MARKETING_VERSION = 2020.01.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bottsywattsy.DIDit;
 				PRODUCT_NAME = DIDit;
 				SUPPORTS_MACCATALYST = YES;

@@ -270,6 +270,51 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         //need strategy for dealing with extraneous spaces in forename when middle name is nil
     }
     
+    func exportPersonJson() -> String {
+        let currentDate = Date()
+                let didDateFormatter = DateFormatter()
+                didDateFormatter.locale = Locale(identifier: "en_US")
+                didDateFormatter.dateFormat = "yyyy-MM-dd"
+                let currentDateString = didDateFormatter.string(from: currentDate)
+                var middleName = ""
+                if self.middleName != nil {
+                    middleName = " " + self.middleName!
+                }
+                var genName = ""
+                if self.genName != nil {
+                    genName = "\"genName\": \"\(self.genName!)\","
+                }
+                var altName = ""
+                if self.altName != nil {
+                    altName = "\"altname\": \"\(self.altName!)\","
+                }
+                var birthYearString = ""
+                if self.birthYear != nil {
+                    birthYearString = "\"birth\": \(self.birthYear!)\","
+                }
+                var deathYearString = ""
+                if self.deathYear != nil {
+                    deathYearString = "\"death\": \(self.deathYear!)\","
+                }
+                return """
+        {
+            "id": "\(self.id)",
+            "surname": "\(self.lastName)",
+            "forename": "\(self.firstName)\(middleName)",
+            \(altName)
+            \(genName)
+            \(birthYearString)
+            \(deathYearString)
+            "careerType": "\(self.career!.getCode())",
+            "stateID": "\(self.stateOfResidence!.rawValue)",
+            "createdBy": "\(self.creationBy ?? "DIDit.app")",
+            "createdDate": "\(self.creationDate ?? currentDateString)",
+            "lastModifiedBy": "\(self.modificationBy ?? "DIDit.app")",
+            "lastModifiedDate": "\(currentDateString)"
+        }
+        """
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case firstName
@@ -339,6 +384,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         self.provenance = try container.decodeIfPresent(String.self, forKey: .provenance)
     }
     deinit {
-    print("POCOM Person deinitialized.")
+        print("POCOM Person \(self.id) deinitialized.")
     }
 }

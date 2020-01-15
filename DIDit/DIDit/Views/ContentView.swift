@@ -65,7 +65,7 @@ struct ContentView: View {
                                     .font(.headline)
                             }
                         }
-                        Button("Delete all POCOM changes in this app") {
+                        Button("Reset POCOM data to bundled files") {
                             self.pocom.resetStore()
                         }
                 }

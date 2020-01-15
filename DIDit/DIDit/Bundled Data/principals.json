@@ -20582,5 +20582,37 @@
         "createdDate": "2019-12-30",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2019-12-30"
+    },
+    {
+        "id": "larg-2019-curr",
+        "personID": "currie-kelley-eckels",
+        "roleTitleID": "ambassador-at-large",
+        "appointedDate": "2019-12-20",
+        "appointedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "Commissioned as Ambassador at Large for Global Women’s Issues",
+        "createdBy": "DIDit.app",
+        "createdDate": "2020-01-15",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-15"
+    },
+    {
+        "id": "larg-2019-tan-",
+        "personID": "tan-morse-h",
+        "roleTitleID": "ambassador-at-large",
+        "appointedDate": "2019-12-31",
+        "appointedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "Commissioned as Ambassador at Large for Global Criminal Justice",
+        "createdBy": "DIDit.app",
+        "createdDate": "2020-01-15",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-15"
     }
 ]
