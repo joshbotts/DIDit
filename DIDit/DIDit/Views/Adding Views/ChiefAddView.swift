@@ -48,7 +48,7 @@ struct ChiefAddView: View {
                 }
             }
             Section {
-                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date (optional)") })
+                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Appointment date (optional)") })
                 TextField("start note (optional)", text: self.$startNote)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 DatePicker(selection: self.$chargeDate, in: ...Date(), displayedComponents: .date, label: { Text("Charge date (optional)") })

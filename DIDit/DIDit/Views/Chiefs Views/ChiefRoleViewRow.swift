@@ -30,20 +30,16 @@ struct ChiefRoleViewRow: View {
     }
     
     var body: some View {
-        NavigationLink(destination: ChiefEditView(chief: chief)) {
-            HStack {
                 VStack(alignment: .leading) {
-//                    NavigationLink(destination: PersonViewDetail(person: chief.person!)) {
                     Text(personName)
                     .font(.headline)
-//                }
                     Text(instanceInformation)
                     .font(.body)
+                    .lineLimit(nil)
+                    .layoutPriority(1)
+                    .fixedSize(horizontal: false, vertical: true)
                     }
-            Spacer()
-            }
         }
-    }
 }
 
 //struct SwiftUIView_Previews: PreviewProvider {

@@ -26,9 +26,36 @@ struct PrincipalRoleViewList: View {
     
     var body: some View {
         List(principalsForRole) { principal in
+            NavigationLink(destination: PrincipalEditView(principal: principal))  {
             PrincipalRoleViewRow(principal: principal)
-            //                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
-            //                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from PO role list view
+            .contextMenu {
+                Button(action:
+                    {
+                        UIPasteboard.general.string = principal.exportPrincipalElement()
+                    })
+                    {
+                        Text("Copy Principal Role XML Element")
+                        Image(systemName: "doc.on.doc.fill")
+                    }
+                Button(action:
+                    {
+                        UIPasteboard.general.string = principal.exportPrincipalJson()
+                    })
+                    {
+                        Text("Copy Principal Role JSON Data")
+                        Image(systemName: "doc.on.doc")
+                }
+                Button(action:
+                    {
+                        self.pocom.deleteInstance(instance: principal)
+                    })
+                    {
+                        Text("Delete Principal Role")
+                        Image(systemName: "trash.fill")
+                    
+                    }
+            }
+        }
         }
         .navigationBarTitle("\(role.getPORoleName())")
 //        .navigationBarBackButtonHidden(true)

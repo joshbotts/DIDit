@@ -149,7 +149,10 @@ struct PocomInstanceForPersonDetailViewRow: View {
         }
     }
     
+    @State var editMode = false
+    
     var body: some View {
+        HStack {
         VStack(alignment: .leading) {
             Text(String(instance.instanceRole()))
                 .font(.headline)
@@ -172,6 +175,21 @@ struct PocomInstanceForPersonDetailViewRow: View {
             Text(String(instanceNote))
                 .font(.body)
                 .lineLimit(nil)
+        }
+            Spacer()
+//            Button(action: {
+//                self.editMode.toggle()
+//                print("editMode toggled for \(self.instance.id)")
+//            })
+//            {
+//                Image(systemName: "square.and.pencil")
+//        }.sheet(isPresented: $editMode) {
+//                if self.instance.instanceType == .chief {
+//                    ChiefEditView(chief: self.instance)
+//            } else {
+//                    PrincipalEditView(principal: self.instance)
+//            }
+//        }
         }
     }
 }

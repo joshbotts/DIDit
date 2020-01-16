@@ -30,20 +30,16 @@ struct PrincipalRoleViewRow: View {
     }
     
     var body: some View {
-            NavigationLink(destination: PrincipalEditView(principal: principal))  {
-                HStack {
                     VStack(alignment: .leading) {
-//                    NavigationLink(destination: PersonViewDetail(person: principal.person!)) {
                         Text(personName)
                         .font(.headline)
-//                    }
                         Text(instanceInformation)
                         .font(.body)
+                        .lineLimit(nil)
+                        .layoutPriority(1)
+                        .fixedSize(horizontal: false, vertical: true)
                     }
-                    Spacer()
-                }
             }
-    }
 }
 
 //struct PrincipalRoleViewRow_Previews: PreviewProvider {

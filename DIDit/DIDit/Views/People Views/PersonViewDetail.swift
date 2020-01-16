@@ -23,7 +23,6 @@ struct PersonViewDetail: View {
         VStack(alignment: .leading) {
             Text(person.getDisplayName())
                 .font(.headline)
-            
             HStack  {
                 Text(person.birthYearString() ?? "No birth year identified")
                 Text("-")
@@ -39,19 +38,9 @@ struct PersonViewDetail: View {
             .font(.body)
             
             List(roles) { instance in
+                NavigationLink(destination: instance.instanceType == .chief ? AnyView(ChiefEditView(chief: instance)) : AnyView(PrincipalEditView(principal: instance))) {
                 PocomInstanceForPersonDetailViewRow(instance: instance)
                 .contextMenu {
-//                    NavigationLink(destination: InstanceAddView(person: self.person)) { Text("Add New Role") }
-//                    NavigationLink(destination:
-//                        {
-//                            if instance.instanceType == .chief {
-//                                ChiefEditView(chief: instance)
-//                            } else {
-//                                PrincipalEditView(principal: instance)
-//                            }
-//                        }
-//                    )
-//                        { Text("Edit Role") }
                     Button(action:
                         {
                             if instance.instanceType == .chief {
@@ -84,10 +73,13 @@ struct PersonViewDetail: View {
                         
                     }
                 }
-                
-//                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from person detail view
+        }
             }
-            
+            VStack(alignment: .leading) {
+                NavigationLink(destination: InstanceAddView(person: self.person)) {
+                    Text("Add New Role")
+                }
+            }
         }
         .padding()
         .navigationBarTitle("\(person.firstName) \(person.lastName)")

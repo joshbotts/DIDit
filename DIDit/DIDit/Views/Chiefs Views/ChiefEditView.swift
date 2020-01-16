@@ -83,7 +83,7 @@ var body: some View {
             }
         }
         Section {
-            DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date: (optional) \(chief.startDateString())") })
+            DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Appointment date: (optional) \(chief.startDateString())") })
             TextField("Start note: (optional) \(chief.startNote ?? "")", text: self.$startNote)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             DatePicker(selection: self.$chargeDate, in: ...Date(), displayedComponents: .date, label: { Text("Charge date: (optional) \(chief.chargeDateString())") })

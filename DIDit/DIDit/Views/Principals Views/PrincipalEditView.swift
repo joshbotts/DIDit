@@ -66,7 +66,7 @@ struct PrincipalEditView: View {
 //                }
 //            }
             Section {
-                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Start date: (optional) \(principal.startDateString())") })
+                DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Appointment date: (optional) \(principal.startDateString())") })
                 TextField("Start note: (optional) \(principal.startNote ?? "")", text: self.$startNote)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 DatePicker(selection: self.$dutyDate, in: ...Date(), displayedComponents: .date, label: { Text("Duty date: (optional) \(principal.dutyDateString())") })

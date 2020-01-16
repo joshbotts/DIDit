@@ -26,9 +26,36 @@ struct ChiefRoleViewList: View {
     
     var body: some View {
         List(chiefsForCountry) { chief in
+            NavigationLink(destination: ChiefEditView(chief: chief)) {
             ChiefRoleViewRow(chief: chief)
-            //                .contextMenu(<#T##contextMenu: ContextMenu<View>?##ContextMenu<View>?#>)
-            //                  to-do: create contextual menu allowing user to add new or edit or delete existing pocom instances directly from PO role list view
+            .contextMenu {
+                Button(action:
+                    {
+                        UIPasteboard.general.string = chief.exportChiefElement()
+                    })
+                    {
+                        Text("Copy Principal Role XML Element")
+                        Image(systemName: "doc.on.doc.fill")
+                    }
+                Button(action:
+                    {
+                        UIPasteboard.general.string = chief.exportChiefJson()
+                    })
+                    {
+                        Text("Copy Principal Role JSON Data")
+                        Image(systemName: "doc.on.doc")
+                }
+                Button(action:
+                    {
+                        self.pocom.deleteInstance(instance: chief)
+                    })
+                    {
+                        Text("Delete Principal Role")
+                        Image(systemName: "trash.fill")
+                    
+                    }
+            }
+            }
         }
         .navigationBarTitle("Chiefs of Mission in \(country.getCountryName())")
 //        .navigationBarBackButtonHidden(true)
