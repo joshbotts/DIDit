@@ -20614,5 +20614,21 @@
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2020-01-15"
+    },
+    {
+        "id": "plan-2019-berk",
+        "personID": "berkowitz-peter",
+        "roleTitleID": "director-policy-planning",
+        "appointedDate": "2019-01-01",
+        "appointedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "DIDit.app",
+        "createdDate": "2020-01-17",
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-17"
     }
 ]
