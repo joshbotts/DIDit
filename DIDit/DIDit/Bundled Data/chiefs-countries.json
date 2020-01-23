@@ -40828,13 +40828,13 @@
         "appointedNote": "",
         "startedDate": "2018-03-09",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-01-16",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-22",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-22"
+        "lastModifiedDate": "2020-01-23"
     },
     {
         "id": "pa-1934-summ-01",
@@ -97789,9 +97789,9 @@
         "contemporaryTerritoryID": "morocco",
         "appointedDate": "2019-12-20",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-21",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-01-22",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97799,7 +97799,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2019-12-30",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-12-30"
+        "lastModifiedDate": "2020-01-23"
     },
     {
         "id": "ru-2019-sull-01",
@@ -97827,7 +97827,7 @@
         "contemporaryTerritoryID": "albania",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-22",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97837,7 +97837,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-23"
     },
     {
         "id": "fm-2019-cant-01",
@@ -97922,7 +97922,7 @@
         "contemporaryTerritoryID": "lithuania",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-22",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97932,7 +97932,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-23"
     },
     {
         "id": "mh-2019-cabr-01",
