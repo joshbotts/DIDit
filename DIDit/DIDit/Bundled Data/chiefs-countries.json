@@ -18074,22 +18074,22 @@
     },
     {
         "id": "mh-2016-stew-01",
-        "personID": "stewart-karen-brevard",
-        "roleTitleID": "ambassador-e-p",
-        "contemporaryTerritoryID": "marshall-islands",
-        "appointedDate": "2016-06-06",
-        "appointedNote": "",
-        "arrivedDate": "2016-07-21",
-        "arrivedNote": "",
-        "startedDate": "2016-07-25",
-        "startedNote": "",
-        "endedDate": "",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2016-08-24",
-        "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-22"
+         "personID": "stewart-karen-brevard",
+         "roleTitleID": "ambassador-e-p",
+         "contemporaryTerritoryID": "marshall-islands",
+         "appointedDate": "2016-06-06",
+         "appointedNote": "",
+         "arrivedDate": "2016-07-21",
+         "arrivedNote": "",
+         "startedDate": "2016-07-25",
+         "startedNote": "",
+         "endedDate": "2020-01-27",
+         "endedNote": "",
+         "note": "",
+         "createdBy": "marrsaw",
+         "createdDate": "2016-08-24",
+         "lastModifiedBy": "DIDit.app",
+         "lastModifiedDate": "2020-01-28"
     },
     {
         "id": "tn-1956-hugh-01",
@@ -19653,13 +19653,13 @@
         "arrivedNote": "",
         "startedDate": "2016-11-01",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-01-26",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-21",
-        "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-28"
     },
     {
         "id": "la-1975-ston-01",
@@ -55577,15 +55577,17 @@
         "contemporaryTerritoryID": "uganda",
         "appointedDate": "2015-12-18",
         "appointedNote": "",
+        "arrivedDate": "",
+        "arrivedNote": "",
         "startedDate": "2016-02-27",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-01-26",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-08-25",
-        "lastModifiedBy": "faithti",
-        "lastModifiedDate": "2019-08-14"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-28"
     },
     {
         "id": "at-1838-muhl-01",
@@ -97508,7 +97510,7 @@
         "appointedNote": "",
         "arrivedDate": "2019-11-21",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-01-23",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97516,7 +97518,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-13",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-12-12"
+        "lastModifiedDate": "2020-01-28"
     },
     {
         "id": "pg-2019-mcke-01",
@@ -97831,7 +97833,7 @@
         "appointedNote": "",
         "arrivedDate": "2020-01-22",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-01-27",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97839,7 +97841,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-23"
+        "lastModifiedDate": "2020-01-28"
     },
     {
         "id": "fm-2019-cant-01",
