@@ -45300,13 +45300,13 @@
         "arrivedNote": "",
         "startedDate": "2016-08-16",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-01-29",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-08-24",
-        "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-24"
+        "lastModifiedBy": "DIDit.app",
+        "lastModifiedDate": "2020-01-31"
     },
     {
         "id": "ag-1981-byrn-01",
@@ -97850,7 +97850,7 @@
         "contemporaryTerritoryID": "micronesia",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-0130",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97860,7 +97860,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-31"
     },
     {
         "id": "ge-2019-degn-01",
@@ -97869,7 +97869,7 @@
         "contemporaryTerritoryID": "georgia",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-29",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97879,7 +97879,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-31"
     },
     {
         "id": "kw-2019-roma-01",
@@ -97888,7 +97888,7 @@
         "contemporaryTerritoryID": "kuwait",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-29",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97898,7 +97898,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-31"
     },
     {
         "id": "la-2019-haym-01",
@@ -97983,7 +97983,7 @@
         "contemporaryTerritoryID": "thailand",
         "appointedDate": "2020-01-09",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-30",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97993,6 +97993,6 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-01-31"
     }
 ]

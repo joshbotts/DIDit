@@ -61,6 +61,13 @@ struct WorkflowListView: View {
                         .font(.headline)
                 }
             }
+            NavigationLink(destination: LastAmbassadorForCountry()) {
+                HStack {
+                    Image(systemName: "printer.fill")
+                    Text("Last Ambassadors for Currently Existing Countries")
+                        .font(.headline)
+                }
+            }
             NavigationLink(destination: ChargesConvertCredentialDateToChargeDate()) {
                 HStack {
                     Image(systemName: "wand.and.rays")

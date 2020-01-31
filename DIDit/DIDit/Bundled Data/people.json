@@ -3576,9 +3576,6 @@
     "id": "norman-robert",
     "surname": "Norman",
     "forename": "Robert",
-    "altname": "",
-    
-    
     "careerType": "career",
     "stateID": "oh",
     "createdBy": "marrsaw",
@@ -18402,8 +18399,6 @@
     "id": "friedman-david-m",
     "surname": "Friedman",
     "forename": "David M.",
-    
-    
     "careerType": "non-career",
     "stateID": "ny",
     "createdBy": "bottsjd",
@@ -18415,9 +18410,7 @@
     "id": "fingar-thomas",
     "surname": "Fingar",
     "forename": "Thomas",
-    "altname": "",
     "birth": 1946,
-    
     "careerType": "non-career",
     "stateID": "va",
     "createdBy": "eckrothsl",
@@ -18443,7 +18436,6 @@
     "surname": "Ferguson",
     "forename": "Thomas C.",
     "birth": 1950,
-    
     "careerType": "career",
     "stateID": "fl",
     "createdBy": "wicentowskijc",
@@ -18469,7 +18461,6 @@
     "surname": "Freeman",
     "forename": "Russell F.",
     "birth": 1939,
-    
     "careerType": "non-career",
     "stateID": "nd",
     "createdBy": "wicentowskijc",
@@ -37306,14 +37297,13 @@
     "id": "duffy-thomas-m",
     "surname": "Duffy",
     "forename": "Thomas M.",
-    
-    
+    "birth": 1962,
     "careerType": "career",
-    "stateID": "va",
+    "stateID": "ca",
     "createdBy": "bottsjd",
     "createdDate": "2019-05-15",
-    "lastModifiedBy": "bottsjd",
-    "lastModifiedDate": "2019-05-15"
+    "lastModifiedBy": "DIDit.app",
+    "lastModifiedDate": "2020-01-29"
 },
 {
     "id": "dana-john-winchester",
@@ -52649,7 +52639,6 @@
     "id": "pastor-robert-a",
     "surname": "Pastor",
     "forename": "Robert A.",
-    "altname": "",
     "birth": 1947,
     "death": 2014,
     "careerType": "non-career",
@@ -57351,10 +57340,6 @@
     "id": "cantor-carmen-g",
     "surname": "Cantor",
     "forename": "Carmen G.",
-    
-    
-    
-    
     "careerType": "non-career",
     "stateID": "pr",
     "createdBy": "DIDit.app",
@@ -57366,10 +57351,6 @@
     "id": "currie-kelley-eckels",
     "surname": "Currie",
     "forename": "Kelley Eckels",
-    
-    
-    
-    
     "careerType": "non-career",
     "stateID": "ga",
     "createdBy": "DIDit.app",
@@ -57381,10 +57362,6 @@
     "id": "degnan-kelly-c",
     "surname": "Degnan",
     "forename": "Kelly C.",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "ca",
     "createdBy": "DIDit.app",
@@ -57396,10 +57373,6 @@
     "id": "desombre-michael-g",
     "surname": "DeSombre",
     "forename": "Michael G.",
-    
-    
-    
-    
     "careerType": "non-career",
     "stateID": "il",
     "createdBy": "DIDit.app",
@@ -57411,10 +57384,6 @@
     "id": "gilchrist-robert-s",
     "surname": "Gilchrist",
     "forename": "Robert S.",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "fl",
     "createdBy": "DIDit.app",
@@ -57426,10 +57395,6 @@
     "id": "haymond-peter-m",
     "surname": "Haymond",
     "forename": "Peter M.",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "va",
     "createdBy": "DIDit.app",
@@ -57441,10 +57406,6 @@
     "id": "kim-yuri",
     "surname": "Kim",
     "forename": "Yuri",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "gu",
     "createdBy": "DIDit.app",
@@ -57456,10 +57417,6 @@
     "id": "romanowski-alina-l",
     "surname": "Romanowski",
     "forename": "Alina L.",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "il",
     "createdBy": "DIDit.app",
@@ -57471,10 +57428,6 @@
     "id": "tan-morse-h",
     "surname": "Tan",
     "forename": "Morse H.",
-    
-    
-    
-    
     "careerType": "non-career",
     "stateID": "il",
     "createdBy": "DIDit.app",
@@ -57486,10 +57439,6 @@
     "id": "tsou-leslie-m",
     "surname": "Tsou",
     "forename": "Leslie M.",
-    
-    
-    
-    
     "careerType": "career",
     "stateID": "va",
     "createdBy": "DIDit.app",
@@ -57501,10 +57450,6 @@
     "id": "berkowitz-peter",
     "surname": "Berkowitz",
     "forename": "Peter",
-    
-    
-    
-    
     "careerType": "non-career",
     "stateID": "",
     "createdBy": "DIDit.app",

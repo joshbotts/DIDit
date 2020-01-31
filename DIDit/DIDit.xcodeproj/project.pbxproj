@@ -36,6 +36,7 @@
 		8D70069623622D940069850B /* PocomInstanceForPersonDetailViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70068923622D940069850B /* PocomInstanceForPersonDetailViewRow.swift */; };
 		8D70069723622D940069850B /* PersonViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70068A23622D940069850B /* PersonViewList.swift */; };
 		8D70069823622D940069850B /* PersonEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70068B23622D940069850B /* PersonEditView.swift */; };
+		8D76321023E48C1C00EF12C2 /* LastAmbassadorForCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76320F23E48C1C00EF12C2 /* LastAmbassadorForCountry.swift */; };
 		8D82C56523637E1600962BFF /* InstanceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D82C56423637E1600962BFF /* InstanceAddView.swift */; };
 		8D991AF02363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */; };
 		8DBE75B6236750E9008C3101 /* WorkflowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B5236750E9008C3101 /* WorkflowListView.swift */; };
@@ -96,6 +97,7 @@
 		8D70068923622D940069850B /* PocomInstanceForPersonDetailViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocomInstanceForPersonDetailViewRow.swift; sourceTree = "<group>"; };
 		8D70068A23622D940069850B /* PersonViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewList.swift; sourceTree = "<group>"; };
 		8D70068B23622D940069850B /* PersonEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
+		8D76320F23E48C1C00EF12C2 /* LastAmbassadorForCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastAmbassadorForCountry.swift; sourceTree = "<group>"; };
 		8D82C56423637E1600962BFF /* InstanceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceAddView.swift; sourceTree = "<group>"; };
 		8D991AEF2363EA8D00A03CB6 /* PersonForNewInstanceViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonForNewInstanceViewList.swift; sourceTree = "<group>"; };
 		8DBE75B5236750E9008C3101 /* WorkflowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowListView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				8D2261402368918D009C2D23 /* ChiefsWithoutCredentialsView.swift */,
 				8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */,
 				8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */,
+				8D76320F23E48C1C00EF12C2 /* LastAmbassadorForCountry.swift */,
 			);
 			path = "Workflow Views";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				8D2261492368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift in Sources */,
 				8D2261432368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift in Sources */,
 				8DD766C82360D98B00400C3F /* Career.swift in Sources */,
+				8D76321023E48C1C00EF12C2 /* LastAmbassadorForCountry.swift in Sources */,
 				8D70069323622D940069850B /* PrincipalViewList.swift in Sources */,
 				8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */,
 				8DBE75B6236750E9008C3101 /* WorkflowListView.swift in Sources */,
