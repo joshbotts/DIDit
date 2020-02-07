@@ -61526,13 +61526,13 @@
         "appointedNote": "",
         "startedDate": "2015-05-12",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2018-02-25",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2015-07-13",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-07-13"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-02-03"
     },
     {
         "id": "mu-1968-huss-01",
@@ -97850,9 +97850,9 @@
         "contemporaryTerritoryID": "micronesia",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "2020-0130",
+        "arrivedDate": "2020-01-30",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-01-31",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97860,7 +97860,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-31"
+        "lastModifiedDate": "2020-02-02"
     },
     {
         "id": "ge-2019-degn-01",
@@ -97907,7 +97907,7 @@
         "contemporaryTerritoryID": "laos",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-01-31",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97917,7 +97917,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-02-04"
     },
     {
         "id": "lt-2019-gilc-01",
@@ -97928,7 +97928,7 @@
         "appointedNote": "",
         "arrivedDate": "2020-01-22",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-02-04",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97936,7 +97936,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-23"
+        "lastModifiedDate": "2020-02-07"
     },
     {
         "id": "mh-2019-cabr-01",
@@ -97945,9 +97945,9 @@
         "contemporaryTerritoryID": "marshall-islands",
         "appointedDate": "2019-12-31",
         "appointedNote": "",
-        "arrivedDate": "",
+        "arrivedDate": "2020-02-06",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-02-06",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -97955,7 +97955,7 @@
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedDate": "2020-02-07"
     },
     {
         "id": "om-2019-tsou-01",
