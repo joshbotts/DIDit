@@ -2262,12 +2262,12 @@
         "id": "rosenblum-daniel-n",
         "surname": "Rosenblum",
         "forename": "Daniel N.",
-        "careerType": "career",
+        "careerType": "non-career",
         "stateID": "md",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-23",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-23"
+        "lastModifiedDate": "2020-03-02"
     },
     {
         "id": "rugh-william-arthur",
@@ -10475,12 +10475,12 @@
         "surname": "Sheaks",
         "forename": "Owen James",
         "birth": 1943,
-        "careerType": "career",
+        "careerType": "non-career",
         "stateID": "va",
         "createdBy": "marrsaw",
         "createdDate": "2013-10-01",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-03-04"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-03-02"
     },
     {
         "id": "steeves-john-milton",
@@ -42872,13 +42872,13 @@
         "id": "benjamin-daniel",
         "surname": "Benjamin",
         "forename": "Daniel",
-        "birth": 1941,
+        "birth": 1961,
         "careerType": "non-career",
         "stateID": "dc",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-11-05",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2014-07-15"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-02-26"
     },
     {
         "id": "bassett-leslie-ann",
@@ -55160,12 +55160,12 @@
         "id": "romanowski-alina-l",
         "surname": "Romanowski",
         "forename": "Alina L.",
-        "careerType": "career",
+        "careerType": "non-career",
         "stateID": "il",
         "createdBy": "DIDit.app",
         "createdDate": "2020-01-15",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2020-01-15"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-03-02"
     },
     {
         "id": "tan-morse-h",
@@ -55199,5 +55199,27 @@
         "createdDate": "2020-01-17",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2020-01-17"
+    },
+    {
+        "id": "shea-dorothy",
+        "surname": "Shea",
+        "forename": "Dorothy",
+        "careerType": "career",
+        "stateID": "nc",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-03-04",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-03-04"
+    },
+    {
+        "id": "hennessey-niland-john",
+        "surname": "Hennessey-Niland",
+        "forename": "John",
+        "careerType": "career",
+        "stateID": "il",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-03-04",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-03-04"
     }
 ]
