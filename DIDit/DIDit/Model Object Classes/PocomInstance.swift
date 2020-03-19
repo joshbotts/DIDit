@@ -587,7 +587,7 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     }
     
     func exportChiefSCSV() -> String {
-        return "\(self.country!.getCountryName()); \(self.comRole!.getTitle()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
+        return "chief of mission; \(self.country!.getCountryName()); \(self.comRole!.getTitle()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
     }
     
     func exportChiefElement() -> String {
@@ -689,6 +689,10 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             "lastModifiedDate": "\(currentDateString)"
         }
         """
+    }
+    
+    func exportPrincipalSCSV() -> String {
+        return "principal officer; \(self.poRole!.getPORoleName()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.dutyDateString()); \(self.endDateString())"
     }
     
     func exportPrincipalElement() -> String {

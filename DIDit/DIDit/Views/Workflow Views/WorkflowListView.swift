@@ -57,7 +57,7 @@ struct WorkflowListView: View {
             NavigationLink(destination: AFRequest()) {
                 HStack {
                     Image(systemName: "printer.fill")
-                    Text("Chiefs of Mission and Charges, by Regional Bureau, Since 2000 (for Aaron)")
+                    Text("Chiefs of Mission and Charges, by Regional Bureau, Since 2000")
                         .font(.headline)
                 }
             }
@@ -75,8 +75,15 @@ struct WorkflowListView: View {
                         .font(.headline)
                 }
             }
+            NavigationLink(destination: HWBushAndClintonPOCOM()) {
+                HStack {
+                    Image(systemName: "printer.fill")
+                    Text("POCOM Officials During the HW Bush and Clinton Administrations")
+                        .font(.headline)
+                }
+            }
         }
-    .navigationBarTitle("DID Team Action Items")
+    .navigationBarTitle("DID Actions")
     }
 }
 
