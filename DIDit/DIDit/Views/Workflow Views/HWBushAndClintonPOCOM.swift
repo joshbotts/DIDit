@@ -79,7 +79,7 @@ struct HWBushAndClintonPOCOM: View {
     
     var clintonPrincipalsExport: [String] {
         var csv: [String] = ["-----Principal Officers During the Clinton Administration-----"]
-        for principal in bushPrincipals {
+        for principal in clintonPrincipals {
             pocom.associatePerson(instance: principal)
             csv.append(principal.exportPrincipalSCSV())
         }
