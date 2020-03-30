@@ -23,8 +23,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
     @Published var creationBy: String?
     @Published var modificationDate: String?
     @Published var modificationBy: String?
-    @Published var sex: String?
-    // for future expansion of POCOM dataset to address demographic and diversity-related queries. other expansions possible: race, ethnicity, religion, undergraduate college attended, others?
     @Published var createdWith: DataSource = .app
     @Published var provenance: String?
     
@@ -33,32 +31,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         self.firstName = firstName
         self.lastName = lastName
     }
-    
-//    init(from service: PocomPersonFromXML) {
-//        self.firstName = service.forename.components(separatedBy: " ").first!
-//        self.lastName = service.surname
-//        let xmlForenameComponents = service.forename.components(separatedBy: " ")
-//        let xmlMiddleNameComponents = xmlForenameComponents.dropFirst()
-//        self.middleName = xmlMiddleNameComponents.joined(separator: " ")
-//        self.genName = service.genName
-//        self.altName = service.altname
-//        self.birthYear = service.birth
-//        self.deathYear = service.death
-//        let xmlCareer = service.careerType
-//        if xmlCareer == "career" {
-//            self.career = .careerFSO
-//        } else if xmlCareer == "non-career" {
-//            self.career = .nonCareer
-//        } else if xmlCareer == "pre-1915" {
-//            self.career = .pre1915
-//        }
-//        self.stateOfResidence = State.init(rawValue: service.stateID)
-//        self.idFromXML = service.id
-//        self.creationDate = service.createdDate
-//        self.creationBy = service.createdBy
-//        self.modificationDate = service.lastModifiedDate
-//        self.modificationBy = service.lastModifiedBy
-//    }
     
     init(from service: PocomPersonFromJson) {
         self.createdWith = .json
@@ -87,7 +59,7 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         self.modificationBy = service.lastModifiedBy
     }
     
-    init(firstName: String, lastName: String, middleName: String?, genName: String?, altName: String?, birthYear: Int?, deathYear: Int?, career: Career?, stateOfResidence: USState?, sex: String?, provenance: String?) {
+    init(firstName: String, lastName: String, middleName: String?, genName: String?, altName: String?, birthYear: Int?, deathYear: Int?, career: Career?, stateOfResidence: USState?, provenance: String?) {
         var id: String {
             var idFirstName = ""
             var idLastName = ""
@@ -143,7 +115,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         }
         self.career = career
         self.stateOfResidence = stateOfResidence
-        self.sex = sex
         self.creationBy = "DIDit.app"
         self.creationDate = currentDateString
         self.modificationBy = "DIDit.app"
@@ -266,8 +237,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         <last-modified-date>\(currentDateString)</last-modified-date>
         </person>
 """
-        // add uipasteboard or uimessenger view handling to export via system clipboard or email
-        //need strategy for dealing with extraneous spaces in forename when middle name is nil
     }
     
     func exportPersonJson() -> String {
@@ -330,7 +299,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         case creationBy
         case modificationDate
         case modificationBy
-        case sex
         case createdWith
         case provenance
     }
@@ -351,7 +319,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
     try container.encode(creationDate, forKey: .creationDate)
     try container.encode(modificationBy, forKey: .modificationBy)
     try container.encode(modificationDate, forKey: .modificationDate)
-    try container.encode(sex, forKey: .sex)
     try container.encode(createdWith.rawValue, forKey: .createdWith)
     try container.encode(provenance, forKey: .provenance)
     }
@@ -378,7 +345,6 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         self.creationDate = try container.decodeIfPresent(String.self, forKey: .creationDate)
         self.modificationBy = try container.decodeIfPresent(String.self, forKey: .modificationBy)
         self.modificationDate = try container.decodeIfPresent(String.self, forKey: .modificationDate)
-        self.sex = try container.decodeIfPresent(String.self, forKey: .sex)
         let userAgent = try container.decodeIfPresent(String.self, forKey: .createdWith)
         self.createdWith = DataSource(rawValue: userAgent!)!
         self.provenance = try container.decodeIfPresent(String.self, forKey: .provenance)

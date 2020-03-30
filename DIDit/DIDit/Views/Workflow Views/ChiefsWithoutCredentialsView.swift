@@ -13,7 +13,7 @@ struct ChiefsWithoutCredentialsView: View {
     var chiefsWithoutCredentials: [PocomInstance] {
         var chiefs: [PocomInstance] = []
         for chief in pocom.chiefs {
-            if (chief.startDate != nil || chief.chargeDate != nil) && chief.credentialDate == nil {
+            if (chief.startDate != nil || chief.chargeDate != nil) && chief.credentialDate == nil && chief.comRole == XmlCOMRole.ambassadorEP {
                 chiefs.append(chief)
             }
         }
@@ -27,7 +27,7 @@ struct ChiefsWithoutCredentialsView: View {
                 ChiefRoleViewRow(chief: chief)
             }
         }
-    .navigationBarTitle("Chiefs without credential dates")
+    .navigationBarTitle("Ambassadors without credential dates")
     }
 }
 

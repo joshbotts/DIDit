@@ -12,7 +12,6 @@ class BundledStore {
     var peopleJson: [PocomPerson]
     var principalsJson: [PocomInstance]
     var chiefsJson: [PocomInstance]
-    // var updateDate: Date
     
     init() {
         func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
@@ -43,7 +42,6 @@ class BundledStore {
            for jsonPerson in jsonPersonData {
                let newPerson = PocomPerson.init(from: jsonPerson)
                pocomPersonData.append(newPerson)
-//               pocomPersonData.sort { $0.id < $1.id }
            }
            return pocomPersonData
        }
@@ -107,8 +105,6 @@ final class PocomStore : ObservableObject {
     @Published var principals: [PocomInstance]
     @Published var chiefs: [PocomInstance]
     @Published var export: [Any]
-    // var localUpdateDate: Date
-    // var serverUpdateDate: Date
     
     func associatePerson(instance: PocomInstance) {
         if instance.person == nil {
@@ -333,18 +329,8 @@ final class PocomStore : ObservableObject {
             return peopleAddedElements + "\n" + principalsAddedElements + "\n" + chiefsAddedElements
         }
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let propertyListEncoder = PropertyListEncoder()
         let addedElementArchiveURL = documentsDirectory.appendingPathComponent("addedElements").appendingPathExtension("txt")
-//        let addedPeopleArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
-//        let addedPrincipalsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
-//        let addedChiefsArchiveURL = documentsDirectory.appendingPathComponent("addedPeople").appendingPathExtension("plist")
         try? allAddedElements.write(to: addedElementArchiveURL, atomically: true, encoding: String.Encoding.utf8)
-//        let encodedPersonData = try? propertyListEncoder.encode(peopleAdded)
-//        try? encodedPersonData?.write(to: addedPeopleArchiveURL, options: .noFileProtection)
-//        let encodedPrincipalData = try? propertyListEncoder.encode(principalsAdded)
-//        try? encodedPrincipalData?.write(to: addedPrincipalsArchiveURL, options: .noFileProtection)
-//        let encodedChiefData = try? propertyListEncoder.encode(chiefsAdded)
-//        try? encodedChiefData?.write(to: addedChiefsArchiveURL, options: .noFileProtection)
     }
     
     deinit {

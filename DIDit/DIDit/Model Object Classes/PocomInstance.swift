@@ -11,124 +11,33 @@ import Foundation
 final class PocomInstance: Identifiable, Codable, ObservableObject {
     @Published var instanceType: PocomInstanceType
     @Published var id: String
-//    var idComputed: String {
-//        if self.instanceType == PocomInstanceType.chief {
-//            var id = self.country!.getCountryCode()
-//            if startDate != nil {
-//                let didDateFormatter = DateFormatter()
-//                didDateFormatter.locale = Locale(identifier: "en_US")
-//                didDateFormatter.dateFormat = "yyyy-MM-dd"
-//                let startDateString = didDateFormatter.string(from: startDate!)
-//                let startYear = startDateString.prefix(4)
-//                id += "-\(startYear)-\(person.id.prefix(4))"
-//            } else {
-//                id += "-----\(person.id.prefix(4))"
-//            }
-//            return id.lowercased()}
-//        else {
-//            var id = self.poRole!.getPORoleCode()
-//            if startDate != nil {
-//                let didDateFormatter = DateFormatter()
-//                didDateFormatter.locale = Locale(identifier: "en_US")
-//                didDateFormatter.dateFormat = "yyyy-MM-dd"
-//                let startDateString = didDateFormatter.string(from: startDate!)
-//                let startYear = startDateString.prefix(4)
-//                id += "-\(startYear)-\(person.id.prefix(4))"
-//            } else {
-//                id += "-----\(person.id.prefix(4))"
-//            }
-//            return id.lowercased()
-//        }
-//    }
-//    var id: String {
-//        if idFromService != nil {
-//            return idFromService!
-//        } else {
-//            return idComputed
-//        }
-//    }
-    // ensures that pocom instance id from xml is used whenever available, but that computed property ready to go for app-generated instances (id parameter required for compliance with identifiable protocol, which is required for deployment in list views)
     @Published var personID: String
-    // ensures that person ID associated with pocom instance reflects existing values in xml whenever available. only uses computed property of assigned person parameter if person instance was initialized by the app itself (which would ensure that the person.id parameter would be aligned between the person instance and pocom instance).
     weak var person: PocomPerson?
-//    {
-//        let pocomStore = PocomStore()
-//        return pocomStore.personForInstance(instance: self)
-//    }
     @Published var comRole: XmlCOMRole?
     @Published var country: XmlCountry?
-//    var instanceRole: String {
-//        if self.instanceType == .chief {
-//            return String(self.comRole!.getTitle() + " to " + self.country!.getCountryName())
-//        } else if self.instanceType == .principal {
-//            return String(self.poRole!.getPORoleName())
-//        } else {
-//            return "No role identified."
-//        }
-//    }
-    // needed unified role parameter for displayed heterogenous information for different (sub)types of pocom instances in the person detail views. defaul of "no role identified" should never be used.
     @Published var poRole: XmlPrincipalOfficerRole?
     @Published var startDate: Date?
     @Published var startPrecision: String?
-    // appointment date
     @Published var startNote: String?
     @Published var chargeDate: Date?
     @Published var chargePrecision: String?
-    // date of arrival at post or transfer of authority to CDA. for .type=chief
     @Published var chargeNote: String?
     @Published var dutyDate: Date?
     @Published var dutyPrecision: String?
-    // entry on duty date. for .type=principal
     @Published var dutyNote: String?
     @Published var credentialDate: Date?
     @Published var credentialPrecision: String?
-    // for .type=chief
     @Published var credentialNote: String?
     @Published var endDate: Date?
     @Published var endPrecision: String?
-    // termination of appointment
     @Published var endNote: String?
-    // to add any desired editorial comment or explanation of circumstances for termination of role (reorganization of bureaus)
     @Published var note: String?
-    @Published var nominationDate: Date?
-    // only for failed nomination
-    @Published var nominationEndDate: Date?
-    // only for failed nomination - date of withdrawal, rejection, or return of nomination
-    @Published var nominationNote: String?
-    // only for failed nomination - statement of type of nomination failure
-    @Published var careerFsoOverride: Career?
-    // use in cases when career foreign service officer with a pocom role leaves the foreign service and is later appointed to additional pocom roles (e.g. Lawrence Eagleberger (D and S) and George Kennan (Amb to Yugoslavia in Kennedy admin). allows for per-instance reporting of career status while maintaining default value for property in person struct.
-    @Published var stateOfResidenceOverride: USState?
-    // use in cases where pocom person state of residence changes from initial value. defaults to nil.
     @Published var creationDate: String?
     @Published var creationBy: String?
     @Published var modificationDate: String?
     @Published var modificationBy: String?
     @Published var createdWith: DataSource = .app
     @Published var provenance: String?
-    
-//    var sortDate: Date {
-//        let didDateFromIDFormatter = DateFormatter()
-//        didDateFromIDFormatter.locale = Locale(identifier: "en_US")
-//        didDateFromIDFormatter.dateFormat = "yyyy"
-//        let dateStringFromID = String((self.id.prefix(7)).suffix(4))
-//        let dateStringFromOrg4ID = String((self.id.prefix(9)).suffix(4))
-//        let dateStringFromOrg3ID = String((self.id.prefix(8)).suffix(4))
-//        if startDate != nil {
-//            return startDate!
-//        } else if nominationDate != nil {
-//            return nominationDate!
-//        } else if Int(dateStringFromID) != nil {
-//            return didDateFromIDFormatter.date(from: dateStringFromID)!
-//        } else if Int(dateStringFromOrg4ID) != nil {
-//        return didDateFromIDFormatter.date(from: dateStringFromOrg4ID)!
-//        } else if Int(dateStringFromOrg3ID) != nil {
-//        return didDateFromIDFormatter.date(from: dateStringFromOrg3ID)!
-//        } else {
-//            return didDateFromIDFormatter.date(from: "9999")!
-//        }
-//    }
-    // sort date needed to properly order pocom instance rows in person detail view and within chief and principal subviews (by country and role, respectively). start date is preferred sourcce of sort date. nomination dates can be used once they are extracted from notes. the date string from ID conditionals attempt to extract years from the pocom instance ids (which have variable length prefixes among the chiefs-orgs roles). the default value of "9999" is used to ensure instances where none of these methoids work (usually a failed nomination) are positioned at the end of whatever list they are being placed within.
     
     enum PocomInstanceType: String, RawRepresentable {
         case chief, principal
@@ -183,8 +92,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         let dateStringFromOrg3ID = String((self.id.prefix(8)).suffix(4))
         if startDate != nil {
             return startDate!
-        } else if nominationDate != nil {
-            return nominationDate!
         } else if Int(dateStringFromID) != nil {
             return didDateFromIDFormatter.date(from: dateStringFromID)!
         } else if Int(dateStringFromOrg4ID) != nil {
@@ -195,13 +102,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             return didDateFromIDFormatter.date(from: "9999")!
         }
     }
-    
-//    static let didDateFormatter: DateFormatter = {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.locale = Locale(identifier: "en_US")
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        return dateFormatter
-//    }()
     
     func startDateString() -> String {
         let didDateFormatter = DateFormatter()
@@ -352,7 +252,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         default:
             self.startDate = nil
         }
-//        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
         self.startNote = service.appointedNote
         switch service.arrivedDate?.count {
         case 10:
@@ -368,7 +267,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             self.chargeDate = nil
             self.chargePrecision = nil
         }
-//        self.chargeDate = didDateFormatter.date(from: service.arrivedDate ?? "")
         self.chargeNote = service.arrivedNote
         switch service.startedDate?.count {
                case 10:
@@ -384,7 +282,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
                    self.credentialDate = nil
                    self.credentialPrecision = nil
                }
-//        self.credentialDate = didDateFormatter.date(from: service.startedDate ?? "")
         self.credentialNote = service.startedNote
         switch service.endedDate?.count {
         case 10:
@@ -400,7 +297,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             self.endDate = nil
             self.endPrecision = nil
         }
-//        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
         self.endNote = service.endedNote
         self.note = service.note
         self.modificationDate = service.lastModifiedDate
@@ -440,7 +336,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             self.startDate = nil
             self.startPrecision = nil
         }
-//        self.startDate = didDateFormatter.date(from: service.appointedDate ?? "")
         self.startNote = service.appointedNote
         switch service.startedDate?.count {
         case 10:
@@ -456,7 +351,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             self.dutyDate = nil
             self.dutyPrecision = nil
         }
-//        self.dutyDate = didDateFormatter.date(from: service.startedDate ?? "")
         self.dutyNote = service.startedNote
         switch service.endedDate?.count {
         case 10:
@@ -472,14 +366,13 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
             self.endDate = nil
             self.endPrecision = nil
         }
-//        self.endDate = didDateFormatter.date(from: service.endedDate ?? "")
         self.endNote = service.endedNote
         self.note = service.note
         self.modificationDate = service.lastModifiedDate
         self.modificationBy = service.lastModifiedBy
     }
     
-    init(poRole: XmlPrincipalOfficerRole, person: PocomPerson, startDate: Date?, startNote: String?, dutyDate: Date?, dutyNote: String?, endDate: Date?, endNote: String?, note: String?, career: Career?, stateOfResidence: USState?, provenance: String?) {
+    init(poRole: XmlPrincipalOfficerRole, person: PocomPerson, startDate: Date?, startNote: String?, dutyDate: Date?, dutyNote: String?, endDate: Date?, endNote: String?, note: String?, provenance: String?) {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
@@ -524,11 +417,9 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         }
     self.endNote = endNote
     self.note = note
-    self.careerFsoOverride = career
-    self.stateOfResidenceOverride = stateOfResidence
     self.provenance = provenance
 }
-    init(comRole: XmlCOMRole, country: XmlCountry, person: PocomPerson, startDate: Date?, startNote: String?, chargeDate: Date?, chargeNote: String?, credentialDate: Date?, credentialNote: String?, endDate: Date?, endNote: String?, note: String?, career: Career?, stateOfResidence: USState?, provenance: String?) {
+    init(comRole: XmlCOMRole, country: XmlCountry, person: PocomPerson, startDate: Date?, startNote: String?, chargeDate: Date?, chargeNote: String?, credentialDate: Date?, credentialNote: String?, endDate: Date?, endNote: String?, note: String?, provenance: String?) {
             let currentDate = Date()
             let didDateFormatter = DateFormatter()
             didDateFormatter.locale = Locale(identifier: "en_US")
@@ -581,8 +472,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         }
         self.endNote = endNote
         self.note = note
-        self.careerFsoOverride = career
-        self.stateOfResidenceOverride = stateOfResidence
         self.provenance = provenance
     }
     
@@ -801,8 +690,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         case nominationDate
         case nominationEndDate
         case nominationNote
-        case careerFsoOverride
-        case stateOfResidenceOverride
         case creationDate
         case creationBy
         case modificationDate
@@ -840,17 +727,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         self.endDate = try container.decodeIfPresent(Date.self, forKey: .endDate)
         self.endNote = try container.decodeIfPresent(String.self, forKey: .endNote)
         self.note = try container.decodeIfPresent(String.self, forKey: .note)
-        self.nominationDate = try container.decodeIfPresent(Date.self, forKey: .nominationDate)
-        self.nominationEndDate = try container.decodeIfPresent(Date.self, forKey: .nominationEndDate)
-        self.nominationNote = try container.decodeIfPresent(String.self, forKey: .nominationNote)
-        let career = try container.decodeIfPresent(String.self, forKey: .careerFsoOverride)
-        if career != nil {
-        self.careerFsoOverride = Career(rawValue: career!)!
-        }
-        let state = try container.decodeIfPresent(String.self, forKey: .stateOfResidenceOverride)
-        if state != nil {
-            self.stateOfResidenceOverride = USState(rawValue: state!)!
-        }
         self.creationBy = try container.decodeIfPresent(String.self, forKey: .creationBy)
         self.creationDate = try container.decodeIfPresent(String.self, forKey: .creationDate)
         self.modificationBy = try container.decodeIfPresent(String.self, forKey: .modificationBy)
@@ -882,11 +758,6 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         try container.encode(endDate, forKey: .endDate)
         try container.encode(endNote, forKey: .endNote)
         try container.encode(note, forKey: .note)
-        try container.encode(nominationDate, forKey: .nominationDate)
-        try container.encode(nominationEndDate, forKey: .nominationEndDate)
-        try container.encode(nominationNote, forKey: .nominationNote)
-        try container.encode(careerFsoOverride?.rawValue, forKey: .careerFsoOverride)
-        try container.encode(stateOfResidenceOverride?.rawValue, forKey: .stateOfResidenceOverride)
         try container.encode(creationBy, forKey: .creationBy)
         try container.encode(creationDate, forKey: .creationDate)
         try container.encode(modificationBy, forKey: .modificationBy)

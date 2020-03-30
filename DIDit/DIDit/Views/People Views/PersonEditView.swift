@@ -24,20 +24,6 @@ struct PersonEditView: View {
     @State var stateOfResidence: USState = USState.none
     @State var sex: String = ""
     @State var provenance: String = ""
-//    var personBirthYear: String? {
-//    if person.birthYear != nil {
-//    return String(person.birthYear!)
-//    } else {
-//        return nil
-//        }
-//    }
-//    var personDeathYear: String? {
-//        if person.deathYear != nil {
-//        return String(person.deathYear!)
-//        } else {
-//            return nil
-//            }
-//    }
     
     var body: some View {
         Form {
@@ -57,8 +43,6 @@ struct PersonEditView: View {
                 TextField(person.birthYearString() ?? "birth year (optional)", text: self.$birthYear)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField(person.deathYearString() ?? "death year (optional)", text: self.$deathYear)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField(person.sex ?? "sex (optional)", text: self.$sex)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             Section {
@@ -122,10 +106,6 @@ struct PersonEditView: View {
                     if deathYearString != nil {
                             deathYearInt = Int(deathYearString!)
                         }
-                    var sex: String? = self.sex
-                    if self.sex == "" {
-                        sex = self.person.sex
-                    }
                     var career: Career? = self.career
                     if self.career == .none {
                         career = self.person.career
@@ -143,7 +123,6 @@ struct PersonEditView: View {
                     self.person.deathYear = deathYearInt
                     self.person.career = career
                     self.person.stateOfResidence = state
-                    self.person.sex = sex
                     self.person.createdWith = DataSource.app
                     self.person.modificationDate = currentDateString
                     self.person.modificationBy = "DIDit.app"
@@ -155,11 +134,6 @@ struct PersonEditView: View {
             }
         }
         .navigationBarTitle("Edit \(person.lastName)")
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            NavigationLink(destination: ContentView()) {
-//                Text("Back Home")
-//        })
         .navigationBarItems(trailing:
             NavigationLink(destination: PersonViewList()) {
                 Text("Back to People Data")

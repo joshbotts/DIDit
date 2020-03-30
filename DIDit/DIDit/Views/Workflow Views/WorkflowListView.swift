@@ -33,13 +33,6 @@ struct WorkflowListView: View {
                         .font(.headline)
                 }
             }
-            NavigationLink(destination: PersonWithoutSexViewList()) {
-                HStack {
-                    Image(systemName: "person.crop.circle.fill.badge.exclam")
-                    Text("People without identified sex")
-                        .font(.headline)
-                }
-            }
             NavigationLink(destination: CountryWithoutChiefViewList()) {
                 HStack {
                     Image(systemName: "briefcase.fill")

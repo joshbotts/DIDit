@@ -31,7 +31,6 @@ struct PersonViewDetail: View {
             .font(.body)
             
             VStack(alignment: .leading) {
-                Text(person.sex ?? "No sex identified.")
                 Text(person.stateOfResidence?.getStateName() ?? "No state of residence identified.")
                 Text(person.career?.rawValue ?? "No career type identified.")
             }

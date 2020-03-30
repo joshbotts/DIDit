@@ -12,11 +12,8 @@
 		8D2261432368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */; };
 		8D2261452368BAF1009C2D23 /* PrincipalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */; };
 		8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261462368BB04009C2D23 /* ChiefEditView.swift */; };
-		8D2261492368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */; };
-		8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */; };
 		8D45394023652E4B008F0283 /* Date Helper Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45393F23652E4B008F0283 /* Date Helper Extension.swift */; };
 		8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */; };
-		8D4BB09323ABE771001C1041 /* update-date.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D4BB09223ABE771001C1041 /* update-date.json */; };
 		8D6F556623A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */; };
 		8D70066F236218900069850B /* PrincipalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70066E236218900069850B /* PrincipalAddView.swift */; };
 		8D700671236218B30069850B /* ChiefAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D700670236218B30069850B /* ChiefAddView.swift */; };
@@ -42,7 +39,6 @@
 		8DBE75B6236750E9008C3101 /* WorkflowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B5236750E9008C3101 /* WorkflowListView.swift */; };
 		8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */; };
 		8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */; };
-		8DBE75BC23675417008C3101 /* PersonWithoutSexViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */; };
 		8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */; };
 		8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A12360D94A00400C3F /* AppDelegate.swift */; };
 		8DD766A42360D94A00400C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A32360D94A00400C3F /* SceneDelegate.swift */; };
@@ -72,12 +68,9 @@
 		8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWithoutChiefViewRow.swift; sourceTree = "<group>"; };
 		8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalEditView.swift; sourceTree = "<group>"; };
 		8D2261462368BB04009C2D23 /* ChiefEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiefEditView.swift; sourceTree = "<group>"; };
-		8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonForChiefInstanceEditViewList.swift; sourceTree = "<group>"; };
-		8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonForPrincipalInstanceEditViewList.swift; sourceTree = "<group>"; };
 		8D45393F23652E4B008F0283 /* Date Helper Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Helper Extension.swift"; sourceTree = "<group>"; };
 		8D45394523653A4F008F0283 /* DataControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllers.swift; sourceTree = "<group>"; };
 		8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedDataView.swift; sourceTree = "<group>"; };
-		8D4BB09223ABE771001C1041 /* update-date.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "update-date.json"; sourceTree = "<group>"; };
 		8D5ED6CF23632A6C00F9BE28 /* DIDit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DIDit.entitlements; sourceTree = "<group>"; };
 		8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesConvertCredentialDateToChargeDate.swift; sourceTree = "<group>"; };
 		8D70066E236218900069850B /* PrincipalAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalAddView.swift; sourceTree = "<group>"; };
@@ -104,7 +97,6 @@
 		8DBE75B5236750E9008C3101 /* WorkflowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowListView.swift; sourceTree = "<group>"; };
 		8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonWithoutBirthYearViewList.swift; path = "DIDit/Views/Workflow Views/PersonWithoutBirthYearViewList.swift"; sourceTree = SOURCE_ROOT; };
 		8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonWithoutDeathYearViewList.swift; sourceTree = "<group>"; };
-		8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonWithoutSexViewList.swift; sourceTree = "<group>"; };
 		8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryWithoutChiefViewList.swift; path = "DIDit/Views/Workflow Views/CountryWithoutChiefViewList.swift"; sourceTree = SOURCE_ROOT; };
 		8DD7669E2360D94A00400C3F /* DIDit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIDit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD766A12360D94A00400C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +141,6 @@
 				8D70067523622CF20069850B /* chiefs-orgs.json */,
 				8D70067623622CF20069850B /* principals.json */,
 				8DD766B82360D96000400C3F /* people.json */,
-				8D4BB09223ABE771001C1041 /* update-date.json */,
 			);
 			path = "Bundled Data";
 			sourceTree = "<group>";
@@ -218,7 +209,6 @@
 				8D70067E23622D940069850B /* ChiefRoleViewList.swift */,
 				8D70067F23622D940069850B /* ChiefRoleViewRow.swift */,
 				8D2261462368BB04009C2D23 /* ChiefEditView.swift */,
-				8D2261482368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift */,
 			);
 			path = "Chiefs Views";
 			sourceTree = "<group>";
@@ -231,7 +221,6 @@
 				8D70068423622D940069850B /* PrincipalRoleViewList.swift */,
 				8D70068223622D940069850B /* PrincipalRoleViewRow.swift */,
 				8D2261442368BAF1009C2D23 /* PrincipalEditView.swift */,
-				8D22614A2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift */,
 			);
 			path = "Principals Views";
 			sourceTree = "<group>";
@@ -254,7 +243,6 @@
 				8DBE75B5236750E9008C3101 /* WorkflowListView.swift */,
 				8D4B8ED82363D2DD00CE427C /* AddedDataView.swift */,
 				8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */,
-				8DBE75BB23675417008C3101 /* PersonWithoutSexViewList.swift */,
 				8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */,
 				8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */,
 				8D2261422368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift */,
@@ -372,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD766B92360D96000400C3F /* people.json in Resources */,
-				8D4BB09323ABE771001C1041 /* update-date.json in Resources */,
 				8D70067923622CF20069850B /* principals.json in Resources */,
 				8DD766B12360D94B00400C3F /* LaunchScreen.storyboard in Resources */,
 				8D70067823622CF20069850B /* chiefs-orgs.json in Resources */,
@@ -392,7 +379,6 @@
 			files = (
 				8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */,
 				8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */,
-				8D2261492368C006009C2D23 /* PersonForChiefInstanceEditViewList.swift in Sources */,
 				8D2261432368B3CA009C2D23 /* CountryWithoutChiefViewRow.swift in Sources */,
 				8DD766C82360D98B00400C3F /* Career.swift in Sources */,
 				8D76321023E48C1C00EF12C2 /* LastAmbassadorForCountry.swift in Sources */,
@@ -420,8 +406,6 @@
 				8DD766C42360D98B00400C3F /* XmlPrincipalOfficerRole.swift in Sources */,
 				8DD766A92360D94A00400C3F /* ContentView.swift in Sources */,
 				8D70068D23622D940069850B /* ChiefRoleViewList.swift in Sources */,
-				8D22614B2368C00E009C2D23 /* PersonForPrincipalInstanceEditViewList.swift in Sources */,
-				8DBE75BC23675417008C3101 /* PersonWithoutSexViewList.swift in Sources */,
 				8D4B8ED92363D2DD00CE427C /* AddedDataView.swift in Sources */,
 				8D2261412368918D009C2D23 /* ChiefsWithoutCredentialsView.swift in Sources */,
 				8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */,

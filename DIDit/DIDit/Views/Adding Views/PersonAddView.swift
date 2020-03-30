@@ -23,7 +23,6 @@ struct PersonAddView: View {
     @State var deathYear: String = ""
     @State var career: Career = Career.none
     @State var stateOfResidence: USState = USState.none
-    @State var sex: String = ""
     
     var body: some View {
         Form {
@@ -43,8 +42,6 @@ struct PersonAddView: View {
             TextField("birth year (optional)", text: self.$birthYear)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             TextField("death year (optional)", text: self.$deathYear)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("sex (optional)", text: self.$sex)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             Section {
@@ -100,13 +97,7 @@ struct PersonAddView: View {
                     } else {
                         deathYearInt = Int(self.deathYear)
                     }
-                    var sex: String?
-                    if self.sex == "" {
-                        sex = nil
-                    } else {
-                        sex = self.sex
-                    }
-                    let newPerson = PocomPerson.init(firstName: self.firstName, lastName: self.lastName, middleName: middleName, genName: genName, altName: altName, birthYear: birthYearInt, deathYear: deathYearInt, career: self.career, stateOfResidence: self.stateOfResidence, sex: sex, provenance: provenance)
+                    let newPerson = PocomPerson.init(firstName: self.firstName, lastName: self.lastName, middleName: middleName, genName: genName, altName: altName, birthYear: birthYearInt, deathYear: deathYearInt, career: self.career, stateOfResidence: self.stateOfResidence, provenance: provenance)
                     self.pocom.appendPerson(newPerson)
                     let exportedPerson = newPerson.exportPersonElement()
                     UIPasteboard.general.string = exportedPerson
@@ -115,11 +106,6 @@ struct PersonAddView: View {
             
         }
         .navigationBarTitle("Add Person")
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            NavigationLink(destination: ContentView()) {
-//                Text("Back Home")
-//        })
         .navigationBarItems(trailing:
             NavigationLink(destination: PersonViewList()) {
                 Text("Back to People Data")

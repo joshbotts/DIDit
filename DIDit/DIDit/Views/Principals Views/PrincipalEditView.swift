@@ -12,9 +12,7 @@ import Combine
 struct PrincipalEditView: View {
     @ObservedObject var principal: PocomInstance
     @EnvironmentObject var pocom: PocomStore
-//    var person: PocomPerson
     @State var provenance: String = ""
-//    @State var poRole = XmlPrincipalOfficerRole.none
     @State var startDate: Date = Date("3001-01-01")
     @State var startNote: String = ""
     @State var dutyDate: Date = Date("3001-01-01")
@@ -22,35 +20,6 @@ struct PrincipalEditView: View {
     @State var endDate: Date = Date("3001-01-01")
     @State var endNote: String = ""
     @State var note: String = ""
-//    @State var career: Career = Career.none
-//    @State var stateOfResidence: USState = USState.none
-//    static let didDateFormatter: DateFormatter = {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.locale = Locale(identifier: "en_US")
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        return dateFormatter
-//    }()
-//    var startDateString: String {
-//        if principal.startDate != nil {
-//            return PrincipalEditView.self.didDateFormatter.string(from: principal.startDate!)
-//        } else {
-//            return "None identified"
-//        }
-//    }
-//    var dutyDateString: String {
-//        if principal.dutyDate != nil {
-//            return PrincipalEditView.self.didDateFormatter.string(from: principal.dutyDate!)
-//        } else {
-//            return "None identified"
-//        }
-//    }
-//    var endDateString: String {
-//        if principal.endDate != nil {
-//            return PrincipalEditView.self.didDateFormatter.string(from: principal.endDate!)
-//        } else {
-//            return "None identified"
-//        }
-//    }
 
     var body: some View {
         Form {
@@ -58,13 +27,6 @@ struct PrincipalEditView: View {
                 TextField("Provenance: (recommended) \(principal.provenance ?? "")", text: self.$provenance)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-//            Section {
-//                Picker(selection: self.$poRole, label: Text("Principal Officer role")) {
-//                    ForEach(XmlPrincipalOfficerRole.allCases, id: \.self.rawValue) { XmlPrincipalOfficer in
-//                        Text(XmlPrincipalOfficerRole.getPORoleName()).tag(XmlPrincipalOfficerRole)
-//                    }
-//                }
-//            }
             Section {
                 DatePicker(selection: self.$startDate, in: ...Date(), displayedComponents: .date, label: { Text("Appointment date: (optional) \(principal.startDateString())") })
                 TextField("Start note: (optional) \(principal.startNote ?? "")", text: self.$startNote)
@@ -78,20 +40,6 @@ struct PrincipalEditView: View {
                 TextField("Instance note: (optional) \(principal.note ?? "")", text: self.$note)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-//            Section {
-//                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
-//                    ForEach(Career.allCases, id: \.self.rawValue) { status in
-//                        Text(status.rawValue).tag(status)
-//                    }
-//                }
-//            }
-//            Section {
-//                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
-//                    ForEach(USState.allCases, id: \.self.rawValue) { state in
-//                        Text(state.getStateName()).tag(state)
-//                    }
-//                }
-//            }
             Section {
                 Button("Save edited role and copy xml element to clipboard")
                 {
@@ -100,10 +48,6 @@ struct PrincipalEditView: View {
                     didDateFormatter.locale = Locale(identifier: "en_US")
                     didDateFormatter.dateFormat = "yyyy-MM-dd"
                     let currentDateString = didDateFormatter.string(from: currentDate)
-//                    var poRole: XmlPrincipalOfficerRole = self.poRole
-//                    if self.poRole == .none {
-//                        poRole = self.principal.poRole!
-//                    }
                     var provenance: String? = self.provenance
                     if self.provenance == "" {
                         provenance = self.principal.provenance
@@ -136,17 +80,6 @@ struct PrincipalEditView: View {
                     if self.note == "" {
                         note = self.principal.note
                     }
-//                    var career: Career? = self.career
-//                    if self.career == .none {
-//                        career = self.principal.careerFsoOverride
-//                    }
-//                    var state: USState? = self.stateOfResidence
-//                    if self.stateOfResidence == .none {
-//                        state = self.principal.stateOfResidenceOverride
-//                    }
-//                    self.principal.poRole = poRole
-//                    self.principal.personID = self.person.id
-//                    self.principal.person = self.person
                     self.principal.startDate = startDate
                     self.principal.startNote = startNote
                     self.principal.dutyDate = dutyDate
@@ -154,8 +87,6 @@ struct PrincipalEditView: View {
                     self.principal.endDate = endDate
                     self.principal.endNote = endNote
                     self.principal.note = note
-//                    self.principal.careerFsoOverride = career
-//                    self.principal.stateOfResidenceOverride = state
                     self.principal.provenance = provenance
                     self.principal.createdWith = DataSource.app
                     self.principal.modificationDate = currentDateString
@@ -167,11 +98,6 @@ struct PrincipalEditView: View {
         }
     .padding()
         .navigationBarTitle("Edit PO Role")
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            NavigationLink(destination: ContentView()) {
-//                Text("Back Home")
-//        })
         .navigationBarItems(trailing:
             NavigationLink(destination: PrincipalViewList()) {
                 Text("Back to Principals Data")

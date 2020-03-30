@@ -21,8 +21,6 @@ struct PrincipalAddView: View {
     @State var endDate: Date = Date("3001-01-01")
     @State var endNote: String = ""
     @State var note: String = ""
-//    @State var career: Career = Career.none
-//    @State var stateOfResidence: USState = USState.none
     
     var body: some View {
         Form {
@@ -50,20 +48,6 @@ struct PrincipalAddView: View {
                 TextField("instance note (optional)", text: self.$note)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-//            Section {
-//                Picker(selection: self.$career, label: Text("Career status override (optional)")) {
-//                    ForEach(Career.allCases, id: \.self.rawValue) { status in
-//                        Text(status.rawValue).tag(status)
-//                    }
-//                }
-//            }
-//            Section {
-//                Picker(selection: self.$stateOfResidence, label: Text("State of residence override (optional)")) {
-//                    ForEach(USState.allCases, id: \.self.rawValue) { state in
-//                        Text(state.getStateName()).tag(state)
-//                    }
-//                }
-//            }
             Section {
                 Button("Save new principal role and copy xml element to clipboard")
                 {
@@ -115,19 +99,7 @@ struct PrincipalAddView: View {
                     } else {
                         noteForInit = self.note
                     }
-//                    var careerForInit: Career?
-//                    if self.career == .none {
-//                        careerForInit = nil
-//                    } else {
-//                        careerForInit = self.career
-//                    }
-//                    var stateOfResidenceForInit: USState?
-//                    if self.stateOfResidence == .none {
-//                        stateOfResidenceForInit = nil
-//                    } else {
-//                        stateOfResidenceForInit = self.stateOfResidence
-//                    }
-                    let newPrincipalInstance = PocomInstance.init(poRole: self.poRole, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, dutyDate: dutyDateForInit, dutyNote: dutyNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, career: nil, stateOfResidence: nil, provenance: provenance)
+                    let newPrincipalInstance = PocomInstance.init(poRole: self.poRole, person: self.person, startDate: startDateForInit, startNote: startNoteForInit, dutyDate: dutyDateForInit, dutyNote: dutyNoteForInit, endDate: endDateForInit, endNote: endNoteForInit, note: noteForInit, provenance: provenance)
                     self.pocom.appendPrincipal(newPrincipalInstance)
                     let exportedPrincipal = newPrincipalInstance.exportPrincipalElement()
                     UIPasteboard.general.string = exportedPrincipal
@@ -135,11 +107,6 @@ struct PrincipalAddView: View {
             }
         }
         .navigationBarTitle("Add PO Role for \(person.lastName)")
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            NavigationLink(destination: ContentView()) {
-//                Text("Back Home")
-//        })
         .navigationBarItems(trailing:
             NavigationLink(destination: PrincipalViewList()) {
                 Text("Back to Principals Data")
