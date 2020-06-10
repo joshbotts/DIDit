@@ -479,6 +479,74 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         return "chief of mission; \(self.country!.getCountryName()); \(self.comRole!.getTitle()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.chargeDateString()); \(self.credentialDateString()); \(self.endDateString())"
     }
     
+    func exportChiefFullCSV() -> String? {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportChargeDate = ""
+        var exportCredentialDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.chargeDate != nil {
+            exportChargeDate = didDateFormatter.string(from: self.chargeDate!)
+        }
+        if self.credentialDate != nil {
+            exportCredentialDate = didDateFormatter.string(from: self.credentialDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        // person id; role; country; appointment date; charge date; credential date; end date; note
+        if (self.startDate != nil || self.chargeDate != nil || self.credentialDate != nil || self.endDate != nil) {
+            return "\(self.person!.getExportName()); \(self.comRole!.getTitle()); \(self.country!.getCountryName()); \(exportStartDate); \(exportChargeDate); \(exportCredentialDate); \(exportEndDate); \(self.note ?? "")"
+        } else {
+            return nil
+        }
+    }
+    
+    func exportChiefXMLForAirTable() -> String? {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportChargeDate = ""
+        var exportCredentialDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.chargeDate != nil {
+            exportChargeDate = didDateFormatter.string(from: self.chargeDate!)
+        }
+        if self.credentialDate != nil {
+            exportCredentialDate = didDateFormatter.string(from: self.credentialDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        
+        if (self.startDate != nil || self.chargeDate != nil || self.credentialDate != nil || self.endDate != nil) {
+            print("\(self.id) exported")
+            return """
+            <diplomaticPosition>
+            <person>\(self.person!.getExportName())</person>
+            <diplomaticRole>\(self.comRole!.getTitle())</domesticRole>
+            <countryAccredited>\(self.country!.getCountryName())</countryAccredited>
+            <startDate>\(exportStartDate)</startDate>
+            <chargeDate>\(exportChargeDate)</chargeDate>
+            <credentialDate>\(exportCredentialDate)</credentialDate>
+            <endDate>\(exportEndDate)</endDate>
+            <note>\(self.note ?? "")</note>
+            <diplomaticPosition>
+            """
+        } else {
+            return nil
+        }
+    }
+    
     func exportChiefElement() -> String {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
@@ -582,6 +650,63 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     
     func exportPrincipalSCSV() -> String {
         return "principal officer; \(self.poRole!.getPORoleName()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.dutyDateString()); \(self.endDateString())"
+    }
+    
+    func exportPrincipalFullCSV() -> String? {
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportDutyDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.dutyDate != nil {
+            exportDutyDate = didDateFormatter.string(from: self.dutyDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        // person id; role; appointment date; duty date; end date; note
+        if (self.startDate != nil || self.dutyDate != nil || self.endDate != nil) {
+            return "\(self.person!.getExportName()); \(self.poRole!.getPORoleName()); \(exportStartDate); \(exportDutyDate); \(exportEndDate); \(self.note ?? "")"
+        } else {
+            return nil
+        }
+    }
+    
+    func exportPrincipalXMLForAirTable() -> String? {
+            let didDateFormatter = DateFormatter()
+            didDateFormatter.locale = Locale(identifier: "en_US")
+            didDateFormatter.dateFormat = "yyyy-MM-dd"
+            var exportStartDate = ""
+            var exportDutyDate = ""
+            var exportEndDate = ""
+            if self.startDate != nil {
+                exportStartDate = didDateFormatter.string(from: self.startDate!)
+            }
+            if self.dutyDate != nil {
+                exportDutyDate = didDateFormatter.string(from: self.dutyDate!)
+            }
+            if self.endDate != nil {
+                exportEndDate = didDateFormatter.string(from: self.endDate!)
+            }
+            if (self.startDate != nil || self.dutyDate != nil || self.endDate != nil) {
+                print("\(self.id) exported")
+                return """
+                <domesticPosition>
+                <person>\(self.person!.getExportName())</person>
+                <domesticRole>\(self.poRole!.getPORoleName())</domesticRole>
+                <startDate>\(exportStartDate)</startDate>
+                <dutyDate>\(exportDutyDate)</dutyDate>
+                <endDate>\(exportEndDate)</endDate>
+                <note>\(self.note ?? "")</note>
+                </domesticPosition>
+                """
+            } else {
+                return nil
+            }
     }
     
     func exportPrincipalElement() -> String {

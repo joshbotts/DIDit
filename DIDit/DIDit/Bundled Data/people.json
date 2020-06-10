@@ -11886,18 +11886,6 @@
         "lastModifiedDate": "2011-05-26"
     },
     {
-        "id": "sepulveda-daniel-alejandro",
-        "surname": "Sepulveda",
-        "forename": "Daniel Alejandro",
-        "birth": 1972,
-        "careerType": "non-career",
-        "stateID": "fl",
-        "createdBy": "marrsaw",
-        "createdDate": "2014-07-15",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2014-07-15"
-    },
-    {
         "id": "shelton-sally-angela",
         "surname": "Shelton",
         "forename": "Sally Angela",
@@ -33443,8 +33431,8 @@
         "lastModifiedDate": "2010-05-20"
     },
     {
-        "id": "canavan-katherine-hubay-peterson",
-        "surname": "Canavan",
+        "id": "peterson-katherine-hubay",
+        "surname": "Peterson",
         "forename": "Katherine Hubay",
         "altname": "Katherine Hubay Peterson",
         "birth": 1949,
@@ -33452,8 +33440,8 @@
         "stateID": "ca",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "awmarrs",
-        "lastModifiedDate": "2013-02-04"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-04-29"
     },
     {
         "id": "cornstein-david-b",
@@ -36757,7 +36745,6 @@
     },
     {
         "id": "verveer-melanne",
-        "old-ids": {"old-id": "verveer-mellane"},
         "surname": "Verveer",
         "forename": "Melanne",
         "birth": 1944,
@@ -36793,18 +36780,6 @@
         "createdDate": "2010-05-20",
         "lastModifiedBy": "wicentowskijc",
         "lastModifiedDate": "2010-05-20"
-    },
-    {
-        "id": "verveer-mellane",
-        "surname": "Verveer",
-        "forename": "Mellane",
-        "birth": 1944,
-        "careerType": "non-career",
-        "stateID": "dc",
-        "createdBy": "wicentowskijc",
-        "createdDate": "2010-11-05",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2015-03-04"
     },
     {
         "id": "von-damm-helene-a",
@@ -40041,14 +40016,14 @@
         "surname": "Byrnes",
         "forename": "James Francis",
         "altname": "James F. Byrnes",
-        "birth": 1879,
+        "birth": 1882,
         "death": 1972,
         "careerType": "non-career",
         "stateID": "sc",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "wicentowskijc",
-        "lastModifiedDate": "2010-05-20"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-05-04"
     },
     {
         "id": "bryan-william-jennings",
@@ -46401,11 +46376,11 @@
         "forename": "Mary Beth",
         "birth": 1962,
         "careerType": "career",
-        "stateID": "pa",
+        "stateID": "ma",
         "createdBy": "wicentowskijc",
         "createdDate": "2012-09-24",
-        "lastModifiedBy": "wicentowskijc",
-        "lastModifiedDate": "2012-09-24"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-05-04"
     },
     {
         "id": "lawson-edward-burnett",
@@ -50673,18 +50648,6 @@
         "lastModifiedDate": "2010-05-20"
     },
     {
-        "id": "peterson-katherine-h",
-        "surname": "Peterson",
-        "forename": "Katherine H.",
-        "birth": 1949,
-        "careerType": "career",
-        "stateID": "ca",
-        "createdBy": "wicentowskijc",
-        "createdDate": "2010-11-05",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2016-12-15"
-    },
-    {
         "id": "peterson-frederick-valdemar-erastus",
         "surname": "Peterson",
         "forename": "Frederick Valdemar Erastus",
@@ -53852,12 +53815,12 @@
         "surname": "Watt",
         "forename": "Linda Ellen",
         "birth": 1951,
-        "careerType": "non-career",
+        "careerType": "career",
         "stateID": "fl",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "wicentowskijc",
-        "lastModifiedDate": "2010-05-20"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-04-22"
     },
     {
         "id": "woerth-duane-e",

@@ -16466,7 +16466,7 @@
     },
     {
         "id": "ls-1998-cana-01",
-        "personID": "canavan-katherine-hubay-peterson",
+        "personID": "peterson-katherine-hubay",
         "roleTitleID": "ambassador-e-p",
         "contemporaryTerritoryID": "lesotho",
         "appointedDate": "1998-06-29",
@@ -16478,8 +16478,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "awmarrs",
-        "lastModifiedDate": "2013-02-04"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-04-29"
     },
     {
         "id": "ls-2001-loft-01",
@@ -21720,13 +21720,13 @@
         "arrivedNote": "",
         "startedDate": "2016-04-27",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-05-15",
         "endedNote": "",
         "note": "",
         "createdBy": "marrsaw",
         "createdDate": "2016-08-24",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2020-05-18"
     },
     {
         "id": "bu--vree-01",
@@ -94269,7 +94269,7 @@
     },
     {
         "id": "bw-2005-cana-01",
-        "personID": "canavan-katherine-hubay-peterson",
+        "personID": "peterson-katherine-hubay",
         "roleTitleID": "ambassador-e-p",
         "contemporaryTerritoryID": "botswana",
         "appointedDate": "2005-08-02",
@@ -94281,8 +94281,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "awmarrs",
-        "lastModifiedDate": "2013-02-04"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-04-29"
     },
     {
         "id": "bw-2008-nola-01",

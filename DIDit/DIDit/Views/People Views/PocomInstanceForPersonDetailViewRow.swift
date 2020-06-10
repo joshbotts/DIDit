@@ -104,32 +104,6 @@ struct PocomInstanceForPersonDetailViewRow: View {
 //        }
 //    }
     
-    var instanceNominationDateString: String {
-        let perInstanceDateFormatter = DateFormatter()
-        perInstanceDateFormatter.locale = Locale(identifier: "en_US")
-        perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
-        var instanceNominationDateString = "Nominated:"
-        if instance.nominationDate != nil {
-        instanceNominationDateString += " " + perInstanceDateFormatter.string(from: instance.nominationDate!)
-            } else {
-            instanceNominationDateString += " no date identified."
-            }
-        return instanceNominationDateString
-    }
-    
-    var instanceNominationEndDateString: String {
-        let perInstanceDateFormatter = DateFormatter()
-        perInstanceDateFormatter.locale = Locale(identifier: "en_US")
-        perInstanceDateFormatter.dateFormat = "MMMM dd, yyyy"
-        var instanceNominationEndDateString = "Nomination ended:"
-        if instance.nominationEndDate != nil {
-        instanceNominationEndDateString += " " + perInstanceDateFormatter.string(from: instance.nominationEndDate!)
-            } else {
-            instanceNominationEndDateString += " no date identified."
-            }
-        return instanceNominationEndDateString
-    }
-    
     var instanceInformation: String {
         var information: String = instance.startDateString()
         if instance.instanceType == .chief {

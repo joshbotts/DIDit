@@ -107,9 +107,11 @@ final class PocomStore : ObservableObject {
     @Published var export: [Any]
     
     func associatePerson(instance: PocomInstance) {
+        print("associating \(instance.id)")
         if instance.person == nil {
         instance.person = self.personForInstance(instance: instance)
     }
+        print("\(instance.person!.lastName) is now associated")
     }
     
     func sortPeople() -> [PocomPerson] {
@@ -128,7 +130,9 @@ final class PocomStore : ObservableObject {
     }
     
     func personForInstance(instance: PocomInstance) -> PocomPerson {
+        print("finding person for \(instance.id)")
         let personArray = self.people.filter { $0.id == instance.personID }
+        print("found \(personArray[0].lastName)")
         return personArray[0]
     }
     

@@ -188,6 +188,13 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         }
     }
     
+    func getExportName() -> String {
+        let middleName: String = (self.middleName != nil) ? " " + self.middleName! : ""
+        let birthYear: String = (self.birthYear != nil) ? String(self.birthYear!) : ""
+        let genName: String = (self.genName != nil) ? " " + self.genName! : ""
+        return self.lastName + ", " + self.firstName + middleName + genName + " (" + birthYear + ")"
+    }
+    
     func exportPersonElement() -> String {
         let currentDate = Date()
         let didDateFormatter = DateFormatter()
@@ -237,6 +244,26 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
         <last-modified-date>\(currentDateString)</last-modified-date>
         </person>
 """
+    }
+    
+    func exportPersonFullSCSV() -> String {
+        // last name; first name; middle name; gen name; alt name; birth year; death year
+        return "\(self.lastName), \(self.firstName), \(self.middleName ?? ""), \(self.genName ?? ""), \(self.altName ?? ""), \(self.birthYear != nil ? String(self.birthYear!) : ""), \(self.deathYear != nil ? String(self.deathYear!) : "")"
+    }
+    
+    func exportPersonXMLForAirTable() -> String {
+        print("\(self.id) exported")
+        return """
+        <person>
+        <lastName>\(self.lastName)</lastName>
+        <firstName>\(self.firstName)</firstName>
+        <middleName>\(self.middleName ?? "")</middleName>
+        <genName>\(self.genName ?? "")</genName>
+        <altName>\(self.altName ?? "")</altName>
+        <birthYear>\(self.birthYear != nil ? String(self.birthYear!) : "")</birthYear>
+        <deathYear>\(self.deathYear != nil ? String(self.deathYear!) : "")</deathYear>
+        </person>
+        """
     }
     
     func exportPersonJson() -> String {

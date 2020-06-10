@@ -321,7 +321,7 @@
     },
     {
         "id": "inst-2001-cana",
-        "personID": "canavan-katherine-hubay-peterson",
+        "personID": "peterson-katherine-hubay",
         "roleTitleID": "director-foreign-service-institute",
         "appointedDate": "2001-06-18",
         "appointedNote": "",
@@ -332,24 +332,8 @@
         "note": "",
         "createdBy": "wicentowskijc",
         "createdDate": "2010-05-20",
-        "lastModifiedBy": "awmarrs",
-        "lastModifiedDate": "2013-02-04"
-    },
-    {
-        "id": "inst-2001-pete",
-        "personID": "peterson-katherine-h",
-        "roleTitleID": "director-foreign-service-institute",
-        "appointedDate": "",
-        "appointedNote": "",
-        "startedDate": "2001-06-18",
-        "startedNote": "",
-        "endedDate": "2005-07-05",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "wicentowskijc",
-        "createdDate": "2010-11-05",
-        "lastModifiedBy": "wicentowskijc",
-        "lastModifiedDate": "2010-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-04-29"
     },
     {
         "id": "inst-2006-whit",
@@ -5323,22 +5307,6 @@
         "createdDate": "2010-05-20",
         "lastModifiedBy": "wicentowskijc",
         "lastModifiedDate": "2010-05-20"
-    },
-    {
-        "id": "poli-2013-sepu",
-        "personID": "sepulveda-daniel-alejandro",
-        "roleTitleID": "coordinator-intl-communications-information-policy",
-        "appointedDate": "2013-08-06",
-        "appointedNote": "",
-        "startedDate": "",
-        "startedNote": "",
-        "endedDate": "",
-        "endedNote": "",
-        "note": "",
-        "createdBy": "marrsaw",
-        "createdDate": "2014-07-15",
-        "lastModifiedBy": "marrsaw",
-        "lastModifiedDate": "2014-07-15"
     },
     {
         "id": "assi-1962-mans",

@@ -40,6 +40,7 @@
 		8DBE75B823675254008C3101 /* PersonWithoutBirthYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */; };
 		8DBE75BA23675375008C3101 /* PersonWithoutDeathYearViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */; };
 		8DBE75BE23675490008C3101 /* CountryWithoutChiefViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */; };
+		8DD224C8249021000017ACF3 /* debug.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DD224C7249021000017ACF3 /* debug.json */; };
 		8DD766A22360D94A00400C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A12360D94A00400C3F /* AppDelegate.swift */; };
 		8DD766A42360D94A00400C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A32360D94A00400C3F /* SceneDelegate.swift */; };
 		8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766A52360D94A00400C3F /* POCOM.xcdatamodeld */; };
@@ -60,6 +61,7 @@
 		8DD766CF2360DD1700400C3F /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD766CE2360DD1700400C3F /* PersonAddView.swift */; };
 		8DE6BD602422F79800825F29 /* HWBushAndClintonPOCOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6BD5F2422F79800825F29 /* HWBushAndClintonPOCOM.swift */; };
 		8DECA9F223CFB8D30097B56D /* XQueries in Resources */ = {isa = PBXBuildFile; fileRef = 8DECA9F123CFB8D30097B56D /* XQueries */; };
+		8DFEEDD6248DCA99005443A1 /* CSVExportAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFEEDD5248DCA99005443A1 /* CSVExportAll.swift */; };
 		8DFFDCAC23A2E82F00A787F7 /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,7 @@
 		8DBE75B723675254008C3101 /* PersonWithoutBirthYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonWithoutBirthYearViewList.swift; path = "DIDit/Views/Workflow Views/PersonWithoutBirthYearViewList.swift"; sourceTree = SOURCE_ROOT; };
 		8DBE75B923675375008C3101 /* PersonWithoutDeathYearViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonWithoutDeathYearViewList.swift; sourceTree = "<group>"; };
 		8DBE75BD23675490008C3101 /* CountryWithoutChiefViewList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryWithoutChiefViewList.swift; path = "DIDit/Views/Workflow Views/CountryWithoutChiefViewList.swift"; sourceTree = SOURCE_ROOT; };
+		8DD224C7249021000017ACF3 /* debug.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = debug.json; sourceTree = "<group>"; };
 		8DD7669E2360D94A00400C3F /* DIDit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIDit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD766A12360D94A00400C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD766A32360D94A00400C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		8DD766CE2360DD1700400C3F /* PersonAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
 		8DE6BD5F2422F79800825F29 /* HWBushAndClintonPOCOM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWBushAndClintonPOCOM.swift; sourceTree = "<group>"; };
 		8DECA9F123CFB8D30097B56D /* XQueries */ = {isa = PBXFileReference; lastKnownFileType = text; name = XQueries; path = DIDit/XQueries; sourceTree = SOURCE_ROOT; };
+		8DFEEDD5248DCA99005443A1 /* CSVExportAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExportAll.swift; sourceTree = "<group>"; };
 		8DFFDCAB23A2E82F00A787F7 /* AFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8D70067423622CF20069850B /* chiefs-countries.json */,
+				8DD224C7249021000017ACF3 /* debug.json */,
 				8D70067523622CF20069850B /* chiefs-orgs.json */,
 				8D70067623622CF20069850B /* principals.json */,
 				8DD766B82360D96000400C3F /* people.json */,
@@ -251,6 +256,7 @@
 				8DE6BD5F2422F79800825F29 /* HWBushAndClintonPOCOM.swift */,
 				8D6F556523A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift */,
 				8D76320F23E48C1C00EF12C2 /* LastAmbassadorForCountry.swift */,
+				8DFEEDD5248DCA99005443A1 /* CSVExportAll.swift */,
 			);
 			path = "Workflow Views";
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				8D70067923622CF20069850B /* principals.json in Resources */,
 				8DD766B12360D94B00400C3F /* LaunchScreen.storyboard in Resources */,
 				8D70067823622CF20069850B /* chiefs-orgs.json in Resources */,
+				8DD224C8249021000017ACF3 /* debug.json in Resources */,
 				8D70067723622CF20069850B /* chiefs-countries.json in Resources */,
 				8DECA9F223CFB8D30097B56D /* XQueries in Resources */,
 				8DD766AE2360D94B00400C3F /* Preview Assets.xcassets in Resources */,
@@ -414,6 +421,7 @@
 				8D70068E23622D940069850B /* ChiefRoleViewRow.swift in Sources */,
 				8DD766C52360D98B00400C3F /* DataSource.swift in Sources */,
 				8DE6BD602422F79800825F29 /* HWBushAndClintonPOCOM.swift in Sources */,
+				8DFEEDD6248DCA99005443A1 /* CSVExportAll.swift in Sources */,
 				8DD766A72360D94A00400C3F /* POCOM.xcdatamodeld in Sources */,
 				8D6F556623A91DCD0009DC11 /* ChargesConvertCredentialDateToChargeDate.swift in Sources */,
 				8D2261472368BB04009C2D23 /* ChiefEditView.swift in Sources */,

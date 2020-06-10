@@ -75,6 +75,13 @@ struct WorkflowListView: View {
                         .font(.headline)
                 }
             }
+            NavigationLink(destination: CSVExportAll()) {
+                HStack {
+                    Image(systemName: "printer.fill")
+                    Text("Export SCSV For POCOM")
+                        .font(.headline)
+                }
+            }
         }
     .navigationBarTitle("DID Actions")
     }
