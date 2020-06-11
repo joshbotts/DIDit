@@ -13,47 +13,82 @@ struct CSVExportAll: View {
     
     var body: some View {
         VStack {
-        Button("Copy person data as CSV")
-            {
-            var exportCSV: [String] = ["last name; first name; middle name; gen name; alt name; birth year; death year"]
-            for person in self.pocom.people {
-                exportCSV.append(person.exportPersonFullSCSV())
-                print(person.lastName + " added to export array")
-            }
-            UIPasteboard.general.string = exportCSV.joined(separator: "\n")
-        }
-            Button("Copy principal instance data as CSV")
+            VStack {
+                Button("Copy person data as CSV")
                 {
-                var exportCSV: [String] = ["person id; role; appointment date; duty date; end date; note"]
-                for principal in self.pocom.principals {
-                    self.pocom.associatePerson(instance: principal)
-                    exportCSV.append(principal.exportPrincipalFullCSV() ?? "")
-                    print(principal.person!.lastName + " " + principal.poRole!.getPORoleName() + " added to export array")
+                    var exportCSV: [String] = ["last name; first name; middle name; gen name; alt name; birth year; death year"]
+                    for person in self.pocom.people {
+                        exportCSV.append(person.exportPersonFullSCSV())
+                        print(person.lastName + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
                 }
-                UIPasteboard.general.string = exportCSV.joined(separator: "\n")
-            }
-            Button("Copy chief instance data as CSV")
+                Button("Copy principal instance data as CSV")
                 {
-                var exportCSV: [String] = ["person id; role; appointment date; duty date; end date; note"]
-                for chief in self.pocom.chiefs {
-                    self.pocom.associatePerson(instance: chief)
-                    exportCSV.append(chief.exportChiefFullCSV() ?? "")
-                    print(chief.person!.lastName + " " + chief.country!.getCountryName() + " added to export array")
+                    var exportCSV: [String] = ["person id; role; appointment date; duty date; end date; note"]
+                    for principal in self.pocom.principals {
+                        self.pocom.associatePerson(instance: principal)
+                        exportCSV.append(principal.exportPrincipalFullCSV() ?? "")
+                        print(principal.person!.lastName + " " + principal.poRole!.getPORoleName() + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
                 }
-                UIPasteboard.general.string = exportCSV.joined(separator: "\n")
-            }
-            Spacer()
-            Button("Copy person data as xml")
+                Button("Copy chief instance data as CSV")
                 {
-                var exportCSV: [String] = []
-                for person in self.pocom.people {
-                    exportCSV.append(person.exportPersonXMLForAirTable())
-                    print(person.lastName + " added to export array")
+                    var exportCSV: [String] = ["person id; role; country; appointment date; charge date; credential date; end date; note"]
+                    for chief in self.pocom.chiefs {
+                        self.pocom.associatePerson(instance: chief)
+                        exportCSV.append(chief.exportChiefFullCSV() ?? "")
+                        print(chief.person!.lastName + " " + chief.country!.getCountryName() + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
                 }
-                UIPasteboard.general.string = exportCSV.joined(separator: "\n")
             }
+            .padding()
+            VStack {
+                Button("Copy person data as escaped CSV")
+                {
+                    var exportCSV: [String] = ["last name; first name; middle name; gen name; alt name; birth year; death year"]
+                    for person in self.pocom.people {
+                        exportCSV.append(person.exportPersonFullEscapedCSV())
+                        print(person.lastName + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
+                }
+                Button("Copy principal instance data as escaped CSV")
+                {
+                    var exportCSV: [String] = ["person id; role; appointment date; duty date; end date; note"]
+                    for principal in self.pocom.principals {
+                        self.pocom.associatePerson(instance: principal)
+                        exportCSV.append(principal.exportPrincipalFullEscapedCSV() ?? "")
+                        print(principal.person!.lastName + " " + principal.poRole!.getPORoleName() + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
+                }
+                Button("Copy chief instance data as escaped CSV")
+                {
+                    var exportCSV: [String] = ["person id; role; country; appointment date; charge date; credential date; end date; note"]
+                    for chief in self.pocom.chiefs {
+                        self.pocom.associatePerson(instance: chief)
+                        exportCSV.append(chief.exportChiefFullEscapedCSV() ?? "")
+                        print(chief.person!.lastName + " " + chief.country!.getCountryName() + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
+                }
+            }
+            .padding()
+            VStack {
+                Button("Copy person data as xml")
+                {
+                    var exportCSV: [String] = []
+                    for person in self.pocom.people {
+                        exportCSV.append(person.exportPersonXMLForAirTable())
+                        print(person.lastName + " added to export array")
+                    }
+                    UIPasteboard.general.string = exportCSV.joined(separator: "\n")
+                }
                 Button("Copy principal instance data as xml")
-                    {
+                {
                     var exportCSV: [String] = []
                     for principal in self.pocom.principals {
                         self.pocom.associatePerson(instance: principal)
@@ -63,7 +98,7 @@ struct CSVExportAll: View {
                     UIPasteboard.general.string = exportCSV.joined(separator: "\n")
                 }
                 Button("Copy chief instance data as xml")
-                    {
+                {
                     var exportCSV: [String] = []
                     for chief in self.pocom.chiefs {
                         self.pocom.associatePerson(instance: chief)
@@ -72,8 +107,11 @@ struct CSVExportAll: View {
                     }
                     UIPasteboard.general.string = exportCSV.joined(separator: "\n")
                 }
+            }
+        .padding()
+        }
+    .padding()
     }
-}
 }
 
 //struct CSVExportAll_Previews: PreviewProvider {

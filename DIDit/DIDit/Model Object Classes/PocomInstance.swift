@@ -507,6 +507,45 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
         }
     }
     
+    func exportChiefFullEscapedCSV() -> String? {
+        func escapeCommas(_ a: String?) -> String {
+            if a != nil {
+                if a!.contains(",") {
+                    return "\"\(a!)\""
+                } else {
+                    return a!
+                }
+            } else {
+                return ""
+            }
+        }
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportChargeDate = ""
+        var exportCredentialDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.chargeDate != nil {
+            exportChargeDate = didDateFormatter.string(from: self.chargeDate!)
+        }
+        if self.credentialDate != nil {
+            exportCredentialDate = didDateFormatter.string(from: self.credentialDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        // person id; role; country; appointment date; charge date; credential date; end date; note
+        if (self.startDate != nil || self.chargeDate != nil || self.credentialDate != nil || self.endDate != nil) {
+            return "\(escapeCommas(self.person!.getExportName())); \(escapeCommas(self.comRole!.getTitle())); \(escapeCommas(self.country!.getCountryName())); \(exportStartDate); \(exportChargeDate); \(exportCredentialDate); \(exportEndDate); \(escapeCommas(self.note))"
+        } else {
+            return nil
+        }
+    }
+    
     func exportChiefXMLForAirTable() -> String? {
         let didDateFormatter = DateFormatter()
         didDateFormatter.locale = Locale(identifier: "en_US")
@@ -651,6 +690,42 @@ final class PocomInstance: Identifiable, Codable, ObservableObject {
     func exportPrincipalSCSV() -> String {
         return "principal officer; \(self.poRole!.getPORoleName()); \(self.person!.getDisplayName()); \(self.startDateString()); \(self.dutyDateString()); \(self.endDateString())"
     }
+    
+    func exportPrincipalFullEscapedCSV() -> String? {
+        func escapeCommas(_ a: String?) -> String {
+            if a != nil {
+                if a!.contains(",") {
+                    return "\"\(a!)\""
+                } else {
+                    return a!
+                }
+            } else {
+                return ""
+            }
+        }
+        let didDateFormatter = DateFormatter()
+        didDateFormatter.locale = Locale(identifier: "en_US")
+        didDateFormatter.dateFormat = "yyyy-MM-dd"
+        var exportStartDate = ""
+        var exportDutyDate = ""
+        var exportEndDate = ""
+        if self.startDate != nil {
+            exportStartDate = didDateFormatter.string(from: self.startDate!)
+        }
+        if self.dutyDate != nil {
+            exportDutyDate = didDateFormatter.string(from: self.dutyDate!)
+        }
+        if self.endDate != nil {
+            exportEndDate = didDateFormatter.string(from: self.endDate!)
+        }
+        // person id; role; appointment date; duty date; end date; note
+        if (self.startDate != nil || self.dutyDate != nil || self.endDate != nil) {
+            return "\(escapeCommas(self.person!.getExportName())); \(escapeCommas(self.poRole!.getPORoleName())); \(exportStartDate); \(exportDutyDate); \(exportEndDate); \(escapeCommas(self.note))"
+        } else {
+            return nil
+        }
+    }
+    
     
     func exportPrincipalFullCSV() -> String? {
         let didDateFormatter = DateFormatter()

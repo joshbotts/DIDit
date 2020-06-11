@@ -189,10 +189,8 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
     }
     
     func getExportName() -> String {
-        let middleName: String = (self.middleName != nil) ? " " + self.middleName! : ""
         let birthYear: String = (self.birthYear != nil) ? String(self.birthYear!) : ""
-        let genName: String = (self.genName != nil) ? " " + self.genName! : ""
-        return self.lastName + ", " + self.firstName + middleName + genName + " (" + birthYear + ")"
+        return self.lastName + " " + self.firstName + " (" + birthYear + ")"
     }
     
     func exportPersonElement() -> String {
@@ -249,6 +247,22 @@ final class PocomPerson: Identifiable, Codable, ObservableObject {
     func exportPersonFullSCSV() -> String {
         // last name; first name; middle name; gen name; alt name; birth year; death year
         return "\(self.lastName), \(self.firstName), \(self.middleName ?? ""), \(self.genName ?? ""), \(self.altName ?? ""), \(self.birthYear != nil ? String(self.birthYear!) : ""), \(self.deathYear != nil ? String(self.deathYear!) : "")"
+    }
+    
+    func exportPersonFullEscapedCSV() -> String {
+        func escapeCommas(_ a: String?) -> String {
+            if a != nil {
+                if a!.contains(",") {
+                    return "\"\(a!)\""
+                } else {
+                    return a!
+                }
+            } else {
+                return ""
+            }
+        }
+        // last name; first name; middle name; gen name; alt name; birth year; death year
+        return "\(escapeCommas(self.lastName)), \(escapeCommas(self.firstName)), \(escapeCommas(self.middleName)), \(escapeCommas(self.genName)), \(escapeCommas(self.altName)), \(self.birthYear != nil ? String(self.birthYear!) : ""), \(self.deathYear != nil ? String(self.deathYear!) : "")"
     }
     
     func exportPersonXMLForAirTable() -> String {
