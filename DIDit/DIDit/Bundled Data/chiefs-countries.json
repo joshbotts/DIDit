@@ -14954,13 +14954,13 @@
         "appointedNote": "",
         "startedDate": "2017-06-05",
         "startedNote": "",
-        "endedDate": "",
+        "endedDate": "2020-06-22",
         "endedNote": "",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-23",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-23"
+        "lastModifiedDate": "2020-06-23"
     },
     {
         "id": "jm-1962-ches-01",
@@ -18869,13 +18869,13 @@
         "arrivedNote": "",
         "startedDate": "2019-03-04",
         "startedNote": "",
-        "endedDate": "",
-        "endedNote": "",
+        "endedDate": "2020-06-09",
+        "endedNote": "Died at post.",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-21",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2020-06-16"
     },
     {
         "id": "gn-1986-rent-01",
@@ -36968,7 +36968,7 @@
         "appointedNote": "",
         "arrivedDate": "2019-08-14",
         "arrivedNote": "",
-        "startedDate": "",
+        "startedDate": "2020-06-22",
         "startedNote": "",
         "endedDate": "",
         "endedNote": "",
@@ -36976,7 +36976,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2019-08-12",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-08-14"
+        "lastModifiedDate": "2020-06-23"
     },
     {
         "id": "to-1972-fran-01",
@@ -72136,13 +72136,13 @@
         "arrivedNote": "",
         "startedDate": "2019-04-15",
         "startedNote": "",
-        "endedDate": "",
-        "endedNote": "",
+        "endedDate": "2020-05-20",
+        "endedNote": "Died at post.",
         "note": "",
         "createdBy": "bottsjd",
         "createdDate": "2019-05-22",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-21"
+        "lastModifiedDate": "2020-06-16"
     },
     {
         "id": "nz-1942-hurl-01",
