@@ -1,4 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="20A4300b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChiefOfMissionPosition" representedClassName="ChiefOfMissionPosition" syncable="YES" codeGenerationType="class">
+        <attribute name="appointedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="appointedDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="appointedNote" optional="YES" attributeType="String"/>
+        <attribute name="chargeDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="chargeDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="chargeNote" optional="YES" attributeType="String"/>
+        <attribute name="createdBy" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="credentialDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="credentialDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="credentialNote" optional="YES" attributeType="String"/>
+        <attribute name="endedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endedDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="endedNote" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedBy" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="chiefOfMissionRole" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChiefOfMissionRole" inverseName="chiefOfMIssionPositions" inverseEntity="ChiefOfMissionRole"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="chiefsOfMission" inverseEntity="Country"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="USGPerson" inverseName="chiefOfMissionPositions" inverseEntity="USGPerson"/>
+    </entity>
+    <entity name="ChiefOfMissionRole" representedClassName="ChiefOfMissionRole" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="pluralTitle" optional="YES" attributeType="String"/>
+        <attribute name="singularTitle" optional="YES" attributeType="String"/>
+        <relationship name="chiefOfMIssionPositions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChiefOfMissionPosition" inverseName="chiefOfMissionRole" inverseEntity="ChiefOfMissionPosition"/>
+    </entity>
+    <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
+        <attribute name="mrdImportCountry" optional="YES" attributeType="String"/>
+        <attribute name="mrdImportName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="cities" inverseEntity="Country"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="cities" inverseEntity="Event"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="mrdImportFullName" optional="YES" attributeType="String"/>
+        <attribute name="mrdImportShortName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="associatedCountries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="associatedCountries" inverseEntity="Country"/>
+        <relationship name="chiefsOfMission" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChiefOfMissionPosition" inverseName="country" inverseEntity="ChiefOfMissionPosition"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="country" inverseEntity="City"/>
+        <relationship name="events" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="countries" inverseEntity="Event"/>
+        <relationship name="foreignLeaders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonUSGPerson" inverseName="country" inverseEntity="NonUSGPerson"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="createdBy" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="eventType" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedBy" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startDatePrecision" optional="YES" attributeType="String"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="events" inverseEntity="City"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="events" inverseEntity="Country"/>
+        <relationship name="nonUSGPeople" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonUSGPerson" inverseName="events" inverseEntity="NonUSGPerson"/>
+        <relationship name="usgPeople" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="USGPerson" inverseName="events" inverseEntity="USGPerson"/>
+    </entity>
+    <entity name="NonUSGPerson" representedClassName="NonUSGPerson" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="foreignLeaders" inverseEntity="Country"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="nonUSGPeople" inverseEntity="Event"/>
+    </entity>
+    <entity name="PrincipalOfficerPosition" representedClassName="PrincipalOfficerPosition" syncable="YES" codeGenerationType="class">
+        <attribute name="appointedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="appointedDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="appointedNote" optional="YES" attributeType="String"/>
+        <attribute name="createdBy" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endedDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="endedNote" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedBy" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="startedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startedDatePrecision" optional="YES" attributeType="String"/>
+        <attribute name="startedNote" optional="YES" attributeType="String"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="USGPerson" inverseName="principalOfficerPositions" inverseEntity="USGPerson"/>
+        <relationship name="roleTitle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PrincipalOfficerRole" inverseName="principalOfficerPositions" inverseEntity="PrincipalOfficerRole"/>
+    </entity>
+    <entity name="PrincipalOfficerRole" representedClassName="PrincipalOfficerRole" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="pluralTitle" optional="YES" attributeType="String"/>
+        <attribute name="singularTitle" optional="YES" attributeType="String"/>
+        <relationship name="principalOfficerPositions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrincipalOfficerPosition" inverseName="roleTitle" inverseEntity="PrincipalOfficerPosition"/>
+    </entity>
+    <entity name="USGPerson" representedClassName="USGPerson" syncable="YES" codeGenerationType="class">
+        <attribute name="altName" optional="YES" attributeType="String"/>
+        <attribute name="birthYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="careerStatus" optional="YES" attributeType="String"/>
+        <attribute name="createdBy" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="deathYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="foreName" optional="YES" attributeType="String"/>
+        <attribute name="generationalName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedBy" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="stateOfResidence" optional="YES" attributeType="String"/>
+        <relationship name="chiefOfMissionPositions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChiefOfMissionPosition" inverseName="person" inverseEntity="ChiefOfMissionPosition"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="usgPeople" inverseEntity="Event"/>
+        <relationship name="principalOfficerPositions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrincipalOfficerPosition" inverseName="person" inverseEntity="PrincipalOfficerPosition"/>
+    </entity>
+    <elements>
+        <element name="USGPerson" positionX="-216.3182983398438" positionY="-338.1693115234375" width="128" height="269"/>
+        <element name="NonUSGPerson" positionX="-72.13739013671875" positionY="-336.6151885986328" width="128" height="74"/>
+        <element name="PrincipalOfficerPosition" positionX="-679.1743774414062" positionY="-282.5005493164062" width="128" height="284"/>
+        <element name="ChiefOfMissionPosition" positionX="-578.8325805664062" positionY="127.1867065429688" width="128" height="329"/>
+        <element name="Country" positionX="150.31494140625" positionY="290.2071533203125" width="128" height="164"/>
+        <element name="City" positionX="112.9765625" positionY="-41.731689453125" width="128" height="104"/>
+        <element name="Event" positionX="-366.8706665039062" positionY="14.0538330078125" width="128" height="254"/>
+        <element name="PrincipalOfficerRole" positionX="-391.5914916992188" positionY="-387.5465087890625" width="126.3878784179688" height="103"/>
+        <element name="ChiefOfMissionRole" positionX="110.266357421875" positionY="-225.4331970214844" width="128" height="103"/>
+    </elements>
 </model>
