@@ -55184,5 +55184,27 @@
         "createdDate": "2020-03-04",
         "lastModifiedBy": "bottsjd",
         "lastModifiedDate": "2020-03-04"
+    },
+    {
+        "id": "doocey-sean-e",
+        "surname": "Doocey",
+        "forename": "Sean E.",
+        "careerType": "non-career",
+        "stateID": "ma",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-08-03",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-08-03"
+    },
+    {
+        "id": "wright-donald-j",
+        "surname": "Wright",
+        "forename": "Donald J.",
+        "careerType": "non-career",
+        "stateID": "va",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-08-03",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-08-03"
     }
 ]

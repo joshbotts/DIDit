@@ -3670,5 +3670,24 @@
         "createdDate": "2019-08-27",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2019-11-05"
+    },
+    {
+        "id": "icao-2020-dooc",
+        "personID": "doocey-sean-e",
+        "contemporaryTerritoryID": "representative-to-icao",
+        "roleTitleID": "representative",
+        "appointedDate": "2020-04-17",
+        "appointedNote": "",
+        "arrivedDate": "2020-07-21",
+        "arrivedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-08-03",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-08-03"
     }
 ]
