@@ -55206,5 +55206,39 @@
         "createdDate": "2020-08-03",
         "lastModifiedBy": "bottsjd",
         "lastModifiedDate": "2020-08-03"
+    },
+    {
+        "id": "sasahara-karen-h",
+        "surname": "Sasahara",
+        "forename": "Karen H.",
+        "careerType": "career",
+        "stateID": "ma",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-09-10",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-09-10"
+    },
+    {
+        "id": "phillips-charisse",
+        "surname": "Phillips",
+        "forename": "Charisse",
+        "careerType": "career",
+        "stateID": "fl",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-09-10",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-09-10"
+    },
+    {
+        "id": "hunt-baxter",
+        "surname": "Hunt",
+        "forename": "J. Baxter",
+        "genName": "III",
+        "careerType": "career",
+        "stateID": "va",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-09-10",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-09-10"
     }
 ]
