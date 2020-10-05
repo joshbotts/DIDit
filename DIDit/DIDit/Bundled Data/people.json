@@ -55240,5 +55240,27 @@
         "createdDate": "2020-09-10",
         "lastModifiedBy": "bottsjd",
         "lastModifiedDate": "2020-09-10"
+    },
+    {
+        "id": "clark-sandra-e",
+        "surname": "Clark",
+        "forename": "Sandra E.",
+        "careerType": "career",
+        "stateID": "md",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-10-05",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-10-05"
+    },
+    {
+        "id": "ringel-aaron-ellis",
+        "surname": "Ringel",
+        "forename": "Aaron Ellis",
+        "careerType": "non-career",
+        "stateID": "va",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-10-05",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-10-05"
     }
 ]

@@ -20598,5 +20598,21 @@
         "createdDate": "2020-01-17",
         "lastModifiedBy": "DIDit.app",
         "lastModifiedDate": "2020-01-17"
+    },
+    {
+        "id": "affa-2020-ring",
+        "personID": "ringel-aaron-ellis",
+        "roleTitleID": "assistant-secretary-for-public-affairs",
+        "appointedDate": "2020-09-08",
+        "appointedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-10-05",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-10-05"
     }
 ]
