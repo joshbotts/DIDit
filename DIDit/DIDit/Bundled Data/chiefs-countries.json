@@ -20352,7 +20352,7 @@
         "contemporaryTerritoryID": "tajikistan",
         "appointedDate": "2019-01-07",
         "appointedNote": "",
-        "arrivedDate": "2019-03-10",
+        "arrivedDate": "2019-03-11",
         "arrivedNote": "",
         "startedDate": "2019-03-15",
         "startedNote": "",
@@ -20362,7 +20362,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2019-05-29",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-29"
+        "lastModifiedDate": "2020-10-06"
     },
     {
         "id": "cu-1902-squi-01",
@@ -23659,7 +23659,7 @@
     },
     {
         "id": "am-2019-trac-01",
-        "personID": "tracey-lynne-m",
+        "personID": "tracy-lynne-m",
         "roleTitleID": "ambassador-e-p",
         "contemporaryTerritoryID": "armenia",
         "appointedDate": "2019-01-07",
@@ -23672,7 +23672,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2019-05-29",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2019-05-29"
+        "lastModifiedDate": "2020-10-06"
     },
     {
         "id": "am-2006-hoag-01",
@@ -44036,7 +44036,7 @@
         "contemporaryTerritoryID": "nigeria",
         "appointedDate": "2019-09-11",
         "appointedNote": "",
-        "arrivedDate": "2019-11-06",
+        "arrivedDate": "2019-11-07",
         "arrivedNote": "",
         "startedDate": "2019-12-24",
         "startedNote": "",
@@ -44046,7 +44046,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2019-09-19",
         "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-12-30"
+        "lastModifiedDate": "2020-10-06"
     },
     {
         "id": "ng--stei-01",
@@ -97303,7 +97303,7 @@
         "contemporaryTerritoryID": "united-arab-emirates",
         "appointedDate": "2019-09-26",
         "appointedNote": "",
-        "arrivedDate": "2019-10-27",
+        "arrivedDate": "2019-10-28",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -97312,8 +97312,8 @@
         "note": "",
         "createdBy": "DIDit.app",
         "createdDate": "2019-11-05",
-        "lastModifiedBy": "DIDit.app",
-        "lastModifiedDate": "2019-11-05"
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-10-06"
     },
     {
         "id": "za-2019-mark-01",
@@ -98120,7 +98120,7 @@
         "contemporaryTerritoryID": "gabon",
         "appointedDate": "",
         "appointedNote": "",
-        "arrivedDate": "2019-07-09",
+        "arrivedDate": "2019-07-08",
         "arrivedNote": "",
         "startedDate": "",
         "startedNote": "",
@@ -98130,7 +98130,7 @@
         "createdBy": "bottsjd",
         "createdDate": "2020-09-10",
         "lastModifiedBy": "bottsjd",
-        "lastModifiedDate": "2020-09-10"
+        "lastModifiedDate": "2020-10-06"
     },
     {
         "id": "cl-2019-hunt-01",
@@ -98245,5 +98245,24 @@
         "createdDate": "2020-10-05",
         "lastModifiedBy": "bottsjd",
         "lastModifiedDate": "2020-10-05"
+    },
+    {
+        "id": "bi-2019-redd-01",
+        "personID": "reddick-eunice-s",
+        "roleTitleID": "charge-daffaires-ad-interim",
+        "contemporaryTerritoryID": "burundi",
+        "appointedDate": "",
+        "appointedNote": "",
+        "arrivedDate": "2019-07-07",
+        "arrivedNote": "",
+        "startedDate": "",
+        "startedNote": "",
+        "endedDate": "",
+        "endedNote": "",
+        "note": "",
+        "createdBy": "bottsjd",
+        "createdDate": "2020-10-06",
+        "lastModifiedBy": "bottsjd",
+        "lastModifiedDate": "2020-10-06"
     }
 ]
